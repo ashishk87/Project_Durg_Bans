@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Indian Pharmaceutical Market’s Response to Regulation</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Team: Chirantan Chatterjee, Anindya S. Chakrabarti, Ashish Kumar" />
+    <meta name="date" content="2020-10-22" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Indian Pharmaceutical Market’s Response to Regulation
+### Team: Chirantan Chatterjee, Anindya S. Chakrabarti, Ashish Kumar
+### IIM-Ahmedabad
+### 2020-10-22
+
+---
+
+
+
+
+
+&lt;style type="text/css"&gt;
+@media print {
+  .has-continuation {
+    display: block !important;
+  }
+}
+&lt;/style&gt;
+
+
+
+
+
+# .center.pull[Introduction]
+
+`\(\hspace{2cm}\)`
+
+1. Treat drug-bans as exogenous shocks to the industry and distinguish some of the pertinent patterns that are shaping the market structure of pharma-industry in India.
+
+2. For this we are utilizing two sources of data:
+
+  - AIOCD Data : Monthly Panel Data on information concerning drug sales across the country for the period 2008-13.
+  
+  - All information on drug related bans for the period 2008-13.
+
+3. By using the DID regressions and event-study design, we intend to shed light on the impact of these bans on the pricing, output and other relevant indicators at the molecule-time, molecule-firm-time, and geography-molecule-time level, which would help us in deciphering the differential demand and supply response to these regulations varying by regions, companies, product categories etc.
+
+4. This study could potentially have a huge impact in designing better regulatory events by carefully analyzing the strategic decisions undertaken on both producer and consumer side in response to the earlier regulations, which determines the welfare of both the agents.
+
+
+---
+
+# .center.pull[Ban Information]
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#anqxcdvetm .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#anqxcdvetm .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#anqxcdvetm .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#anqxcdvetm .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#anqxcdvetm .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#anqxcdvetm .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#anqxcdvetm .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#anqxcdvetm .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#anqxcdvetm .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#anqxcdvetm .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#anqxcdvetm .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#anqxcdvetm .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#anqxcdvetm .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#anqxcdvetm .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#anqxcdvetm .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#anqxcdvetm .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#anqxcdvetm .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#anqxcdvetm .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#anqxcdvetm .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#anqxcdvetm .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#anqxcdvetm .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#anqxcdvetm .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#anqxcdvetm .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#anqxcdvetm .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#anqxcdvetm .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#anqxcdvetm .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#anqxcdvetm .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#anqxcdvetm .gt_left {
+  text-align: left;
+}
+
+#anqxcdvetm .gt_center {
+  text-align: center;
+}
+
+#anqxcdvetm .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#anqxcdvetm .gt_font_normal {
+  font-weight: normal;
+}
+
+#anqxcdvetm .gt_font_bold {
+  font-weight: bold;
+}
+
+#anqxcdvetm .gt_font_italic {
+  font-style: italic;
+}
+
+#anqxcdvetm .gt_super {
+  font-size: 65%;
+}
+
+#anqxcdvetm .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="anqxcdvetm" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <th colspan="2" class="gt_heading gt_title gt_font_normal" style>Molecules and their formulations that were banned between the period of April 2007-Oct 2013</th>
+    </tr>
+    <tr>
+      <th colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style></th>
+    </tr>
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Molecule Name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Ban Date</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr>
+      <td class="gt_row gt_center" style="text-align: center;">Gatifloxacin</td>
+      <td class="gt_row gt_center" style="text-align: center;">March 2011</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center" style="text-align: center;">Sibutramine</td>
+      <td class="gt_row gt_center" style="text-align: center;">Feb 2011</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center" style="text-align: center;">Cisapride</td>
+      <td class="gt_row gt_center" style="text-align: center;">Feb 2011</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center" style="text-align: center;">Letrozole</td>
+      <td class="gt_row gt_center" style="text-align: center;">Oct 2011</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center" style="text-align: center;">Rosiglitazone</td>
+      <td class="gt_row gt_center" style="text-align: center;">November 2010</td>
+    </tr>
+  </tbody>
+  
+  
+</table></div>
+
+
+- So, we have data on 14 treated and 270 control drugs, which were selected through the three-digit classification procedure provided in the AIOCD data.
+
+- Also, we repeat our analysis by retricting our attention to the  narrower set of controls, which were selected through the four-digit classification procedure provided in the AIOCD data.
+
+
+---
+# .center.pull[Basic Statistics]
+
+
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#zilzwtxfcq .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#zilzwtxfcq .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#zilzwtxfcq .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#zilzwtxfcq .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#zilzwtxfcq .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#zilzwtxfcq .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#zilzwtxfcq .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#zilzwtxfcq .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#zilzwtxfcq .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#zilzwtxfcq .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#zilzwtxfcq .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#zilzwtxfcq .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#zilzwtxfcq .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#zilzwtxfcq .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#zilzwtxfcq .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#zilzwtxfcq .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#zilzwtxfcq .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#zilzwtxfcq .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zilzwtxfcq .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#zilzwtxfcq .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zilzwtxfcq .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#zilzwtxfcq .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#zilzwtxfcq .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#zilzwtxfcq .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#zilzwtxfcq .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#zilzwtxfcq .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#zilzwtxfcq .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#zilzwtxfcq .gt_left {
+  text-align: left;
+}
+
+#zilzwtxfcq .gt_center {
+  text-align: center;
+}
+
+#zilzwtxfcq .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#zilzwtxfcq .gt_font_normal {
+  font-weight: normal;
+}
+
+#zilzwtxfcq .gt_font_bold {
+  font-weight: bold;
+}
+
+#zilzwtxfcq .gt_font_italic {
+  font-style: italic;
+}
+
+#zilzwtxfcq .gt_super {
+  font-size: 65%;
+}
+
+#zilzwtxfcq .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="zilzwtxfcq" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <th colspan="5" class="gt_heading gt_title gt_font_normal" style>Distribution of Banned Molecules in the Indian Market by Number of Firms for 2007 and 2013</th>
+    </tr>
+    <tr>
+      <th colspan="5" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style></th>
+    </tr>
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_center gt_columns_bottom_border" rowspan="2" colspan="1">Number of Firms</th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2">
+        <span class="gt_column_spanner">For Year 2007</span>
+      </th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2">
+        <span class="gt_column_spanner">For Year 2013</span>
+      </th>
+    </tr>
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Percent of Molecules</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Percent of Sales Weighted Molecules</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Percent of Molecules</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Percent of Sales Weighted Molecules</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr>
+      <td class="gt_row gt_center" style="text-align: center;">1</td>
+      <td class="gt_row gt_center" style="text-align: center;">13.40</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.26</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.00</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.00</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center" style="text-align: center;">2</td>
+      <td class="gt_row gt_center" style="text-align: center;">6.70</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.11</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.00</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.00</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center" style="text-align: center;">3</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.00</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.00</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.00</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.00</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center" style="text-align: center;">4</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.00</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.00</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.00</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.00</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center" style="text-align: center;">5-9</td>
+      <td class="gt_row gt_center" style="text-align: center;">26.60</td>
+      <td class="gt_row gt_center" style="text-align: center;">29.18</td>
+      <td class="gt_row gt_center" style="text-align: center;">33.34</td>
+      <td class="gt_row gt_center" style="text-align: center;">27.75</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center" style="text-align: center;">10-29</td>
+      <td class="gt_row gt_center" style="text-align: center;">40.01</td>
+      <td class="gt_row gt_center" style="text-align: center;">11.78</td>
+      <td class="gt_row gt_center" style="text-align: center;">49.90</td>
+      <td class="gt_row gt_center" style="text-align: center;">42.16</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center" style="text-align: center;">30-59</td>
+      <td class="gt_row gt_center" style="text-align: center;">6.67</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.02</td>
+      <td class="gt_row gt_center" style="text-align: center;">8.34</td>
+      <td class="gt_row gt_center" style="text-align: center;">0.75</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center" style="text-align: center;">60+</td>
+      <td class="gt_row gt_center" style="text-align: center;">6.67</td>
+      <td class="gt_row gt_center" style="text-align: center;">57.90</td>
+      <td class="gt_row gt_center" style="text-align: center;">8.34</td>
+      <td class="gt_row gt_center" style="text-align: center;">29.30</td>
+    </tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="5">AIOCD Data 2007-13</td>
+    </tr>
+  </tfoot>
+  
+</table></div>
+
+---
+# .center.pull[Difference-in-Difference - An Overview]
+- In a regression DID setup, we can estimate the co-efficient using the following specification:
+`$$\tag{1} y_{it} = \alpha + \beta_1 TREAT_i + \beta_2 POST_t + \delta (TREAT_i \cdot POST_t) + \epsilon_{it}$$`
+- `\(\color{red}{\text{Angrist &amp; Pischke (2008)}}\)` stated that we can map the above regression as a fixed-effect estimator.
+- In terms of potential outcomes:
+  - `\(Y_{i,t}^{0} = \text{Outcome variable for unit i in period t with no treatment}\)`
+  - `\(Y_{i,t}^{1} = \text{Outcome variable for unit i in period t with treatment}\)`
+
+- The expected outcome is a linear function of unit and time fixed effects:
+`$$\mathbf{E}(Y_{i,t}^{0}) = \alpha_{i} + \alpha_{t} \\
+\mathbf{E}(Y_{i,t}^{1}) = \alpha_{i} + \alpha_{t} + \delta\text{D}_{it}$$`
+- To get an unbiased estimate of `\(\delta\)`, we just have to solve a system of linear equations.
+- Estimating the change in counter-factual through control variable:
+`$$\mathbf{E}(Y_{C,0}^{0}) = \alpha_{C} + \alpha_{0}, \space \space \space \space \space \space
+\mathbf{E}(Y_{C,1}^{0}) = \alpha_{C} + \alpha_{1}$$`
+
+
+---
+# .center.pull[Difference-in-Difference - An Overview]
+
+`$$\mathbf{E}(Y_{C,1}^{0}) - \mathbf{E}(Y_{C,0}^{0}) = \alpha_{1} - \alpha_{0}$$`
+
+
+- Estimating the change in treatment variable:
+`$$\mathbf{E}(Y_{T,0}^{1}) = \alpha_{T} + \alpha_{0} \\
+\mathbf{E}(Y_{T,1}^{1}) = \alpha_{T} + \alpha_{1} + \delta\\
+\mathbf{E}(Y_{T,1}^{1}) - \mathbf{E}(Y_{T,0}^{1}) = \alpha_{1} - \alpha_{0} + \delta$$`
+
+- Then the diff-in-diff estimate is given by:
+`$$\delta = [\mathbf{E}(Y_{T,1}^{1}) - \mathbf{E}(Y_{T,0}^{1})] - [\mathbf{E}(Y_{C,1}^{0}) - \mathbf{E}(Y_{C,0}^{0})]$$`
+- This shows that (1) can be estimated using two-way fixed estimator also:
+`$$\tag{2}   y_{it} = \alpha_i + \alpha_t + \delta^{DD} D_{it} + \epsilon_{it}$$`
+  - `\(\alpha_i\)` and `\(\alpha_t\)` are unit and time fixed effects, `\(D_{it}\)` is the unit-time indicator for treatment.
+  - `\(TREAT_i\)` and `\(POST_t\)` now subsumed by the fixed effects.
+  - can be easily modified to include covariate matrix `\(X_{it}\)`, time trends, dynamic treatment effects estimation, etc.
+
+
+
+---
+# .center.pull[Staggered Diff-in-Diff]
+
+- Staggered diff-in-diff is simply when different units receive treatment at different periods in time.
+
+- Even until some time back, little was known on how `\(\delta^{DD}\)` is computed for this case.
+(i.e. how means are compared across groups).
+
+- A recent strand of literature has erupted concerning issues surrounding staggered treatment timing.
+
+  - &lt;span style="color:red"&gt; (Abraham and Sun (2018),Strezhnev (2018), Athey and Imbens (2018), Borusyak and Jaravel (2018), Callaway and Sant'Anna (2019), Goodman-Bacon (2019))&lt;span&gt;
+  
+  - These studies show that the `\(\delta^{DD}\)` is a weighted average of many treatment effects.
+  
+  - But in many cases, weights come out to be negative for some treatment effects, which is completely non-intuitive.
+  
+  - Today, I will briefly summarise the important findings of `\(\color{red}{\text{Goodman-Bacon (2019)}}\)`, which lays out a rigorous as well as an intuitive structure to analyze this issue.
+
+---
+# .center.pull[Graphical Illustration]
+
+- `\(\color{red}{\text{Goodman-Bacon (2019)}}\)` paper uses graphical illustration to provide an intuitive explanation for the bias induced by the two-way fe estimator.
+
+- Suppose we have three treatment groups- never treated (U), early treated (k), and late treated (l) units.
+
+
+&lt;img src="Banned_Molecules_files/figure-html/d3-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+---
+# .center.pull[Mapping the current setup to Simple Diff-in-Diff]
+
+- `\(\color{red}{\text{Goodman-Bacon (2019)}}\)` then describes how staggered diff-in-diff estimate is nothing but a weighted average of different simple diff-in-diff cases.
+
+&lt;img src="Banned_Molecules_files/figure-html/d4-1.png" width="504" style="display: block; margin: auto;" /&gt;
+---
+# .center.pull[Key Insights]
+
+- Final estimate `\(\delta^{DD}\)` would be a weighted average of all 2x2 treatment effects, where the weights are a function of the following parameters:
+
+  - Size of the sub-sample.
+  - Relative size of the treatment and control units.
+  - Treatment window. (Higher weight for those who gets treated in the middle of the panel in comparison to extremes.)
+  
+
+- These weights have a potential to engender bias. For instance: panel-length, treatment window for individual cases can change the weights thereby changing the final estimate, even though the true `\(\delta^{DD}\)` remains intact.
+  - For instance: `\(s_{ku}\)` = 0.37 and `\(s_{lu}\)` = 0.22 in our example because `\(\bar{D_{k}} = 0.66\)` and `\(\bar{D_{l}} = 0.16\)`
+  
+  
+- Similarly, for the timing-only 2x2 DiD's (Panel (c) and (d)), `\(s^{k}_{kl}\)` = 0.28 and `\(s^{l}_{lk}\)` = 0.13, because the former uses more data and have higher treatment variation than the latter.
+
+- Another important thing to note here is that some units,after getting treated, act as controls for other units. That opens up the myriad possibilities of biased estimates which could only be circumvented by placing restrictive assumptions on trend vs level treatment effects. (More on this later).
+
+&lt;!-- comment.:But why should this affect the final estimate is not very clear.--&gt;
+
+---
+# .center.pull[Identifying Assumptions]
+
+- Mapping the estimates to the potential outcome framework:
+
+- The Average effect on Treated (ATT) for  groups k (units that receive treatment in a certain period) at time `\(\tau\)` as:
+`$$ATT_{k}(\tau) = \mathbf{E}[Y_{it}^{1} - Y_{it}^{0} | k, t = \tau ]$$`
+
+- The TWFE DiD estimators averages the pre and post periods, so, we can redefine the average `\(ATT_{k}(\tau)\)` in a date range W as:
+`$$ATT_{k}(W) = \mathbf{E}[Y_{it}^{1} - Y_{it}^{0} | k, t \in W ]$$`
+- The central result of the paper decomposes the final estimate as:
+`$$\text{plim}_{n\to\infty} \hat{\beta}^{DD} = \text{VWATT + VWCT - } \Delta\text{ATT}$$`
+  - `\(\textbf{VWATT:}\)` Variance weighted Average Treatment effect on the treated.
+  
+    - It is just the positively weighted average of ATT's for the unit-period treatment groups across all the 2x2 DID estimates that together make up `\(\beta^{DD}\)`.
+
+
+
+---
+# .center.pull[Identifying Assumptions]
+
+- `\(\textbf{VWCT:}\)` Variance weighted common trend. It is a generalized version of the common trend assumption for the differential treatment time setting.
+
+  - It averages the difference in counterfactual trends across all pairs of treated and control units while using the decomposed weights as described earlier.
+  
+  - Essentially, this provides us an estimate of the bias arising out of the differential trends across groups that does not have the same dynamics over time.
+  
+  - Although, the extent to which we can justify this assumption in a staggered diff-in-diff gets extremely tough in comparison to a normal diff-in-diff model, nevertheless, this is not the main cause behind the substantial bias observed in staggered models.
+  
+  
+- `\(\Delta\textbf{ATT:}\)` A weighted sum of the change in treatment effects within each unit's post-period with respect to another unit's treatment timing.This affects coefficient estimate because some early treated units acts as controls for the later treated units.
+
+  - This could be a source for substantial heterogeneity.For ex. If an earlier treated unit have a time-varying treatment effect, then, while it is acting as a control for the later treated unit, some of the treatment effect would be wiped out when the change in average effect  is subtracted from the average change in treated unit. 
+  - This would undermine the final treatment effect and sometimes even lead to a wrong sign of the estimate.
+
+
+
+
+---
+# .center.pull[Model Specification-(I)]
+- How does Price and Sales quantity gets affected by these bans at the molecule level?
+
+- We see this effect by utilizing the staggered diff-in-diff model.
+
+- Here, we specify our model at the molecule-geography-time level to allow for the region-level hetrogeneity.
+
+- In particular, I will be estimating the following specification.
+$$
+`\begin{aligned}
+y_{mgt} = \alpha_{g}  + \alpha_{m} + \alpha_{t} + \lambda*\alpha_{t}*I(Ever Ban) +  
+\alpha_{m}*\alpha_{g} +  \alpha_{g}*\alpha_{t} \\ + X_{mgt}  + \delta^{DD} D_{fmt} + \epsilon_{mgt}
+\end{aligned}`
+$$
+- Here, `\(y_{mgt}\)` corresponds to either log sales or variety of SKU's at the geography molecule time level.
+- In addition to that, we also control for region specific fixed effects represented by `\(\alpha_{g}\)`, molecule fe's varying by different regions captured by `\(\alpha_{m}*\alpha_{g}\)`, and time fe's varying by regions represented by `\(\alpha_{g}*\alpha_{t}\)`. We also control for time trend of those molecules that were subjected to the ban, represented by `\(\lambda*\alpha_{t}*I(Ever Ban)\)`.
+- `\(X_{mgt}\)` term represents other necessary controls such as HHI, and log Price instrumented by Price to Retailers in case, `\(y_{mgt}\)` corresponds to log output.
+- We are primarily interested in the `\(\delta^{DD}\)` coefficient which estimates the differential impact on the treated molecules.
+- Several variants of the above specification are also estimated, where we exclude either `\(\alpha_{m}*\alpha_{g}\)` or `\(\alpha_{g}*\alpha_{t}\)`, while keeping everything else intact.
+- Also, conduct an analysis for log average Price, price volatility, and price dispersion (at different quantiles).
+
+---
+# .center.pull[Results]
+
+&lt;img src="Table_1_B.png" width="373" style="display: block; margin: auto;" /&gt;
+
+---
+# .center.pull[Event Study Estimates]
+
+- Again, I will run the following specification to extract the event study estimates:
+
+$$
+`\begin{aligned}
+y_{mgt} = \alpha_{g}  + \alpha_{m} + \alpha_{t} + \lambda*\alpha_{t}*I(Ever Ban) \\ 
+\sum_{k = k_*}^{k^*} \delta_k D_{mt} + X_{mgt}  + \epsilon_{mgt}
+\end{aligned}`
+$$
+
+where all the terms follow from the previous specification, and `\(\delta_k\)` are the coefficients on the lead/lag indicators for years around treatment. 
+
+- Here also, I will restrict the estimates to 12 and 12 months pre and post treatment respectively.
+
+- `\(y_{mt}\)` corresponds to either Log Sales or Variety at the region molecule time level. 
+
+- The error bars represent confidence intervals at 95% level constructed from the robust s.e.'s clustered at the molecule-geography level.
+
+- In case of log sales estimates, I control for log prices by instrumenting it through Price to retailers, as specified earlier.
+
+- Variety estimates are derived from a Poisson regressions using MLE.
+
+---
+
+# .center.pull[Results]
+
+&lt;img src="Fig_1_B.png" width="50%" /&gt;&lt;img src="Fig_2_B.png" width="50%" /&gt;
+
+
+---
+# .center.pull[Results]
+
+&lt;img src="Table_2_B.png" width="412" style="display: block; margin: auto;" /&gt;
+
+---
+
+# .center.pull[Results]
+
+&lt;img src="Fig_3_B.png" width="50%" /&gt;&lt;img src="Fig_4_B.png" width="50%" /&gt;
+
+---
+# .center.pull[Results]
+
+&lt;img src="Table_3_B.png" width="403" style="display: block; margin: auto;" /&gt;
+
+---
+
+# .center.pull[Results]
+
+&lt;img src="Fig_5_B.png" width="50%" /&gt;&lt;img src="Fig_6_B.png" width="50%" /&gt;
+
+---
+# .center.pull[Results]
+
+&lt;img src="Table_4_B.png" width="408" style="display: block; margin: auto;" /&gt;
+
+---
+
+# .center.pull[Results]
+
+&lt;img src="Fig_7_B.png" width="50%" /&gt;&lt;img src="Fig_8_B.png" width="50%" /&gt;
+
+
+
+---
+# .center.pull[Model Specification-(II)]
+
+
+- Here, we specify our model at the molecule-time level to see results at the national level.
+
+- In particular, we use two-way fixed effect estimator as specified in the equation below:
+`$$y_{mt} = \alpha_m + \alpha_t + \delta^{DD} D_{mt} + \epsilon_{mt}$$`
+  - `\(\alpha_m\)` and `\(\alpha_t\)` are molecule and time fixed effects, `\(D_{mt}\)` is the molecule-time indicator for treatment.
+  - `\(TREAT_m\)` and `\(POST_t\)` are subsumed by the fixed effects.
+  - `\(y_{mt}\)` corresponds to either log quantity, log average price, Price Volatility, or Price dispersion at the molecule-time level.
+  - In case of log quantity, we also control for log prices(per mg), by instrumenting it through prices to retailers to allay the endogeneity concerns.
+  
+- In addition, we also consider a model after controlling for the differential monthly time trend for all the molecules that were subjected to a ban:
+`$$y_{mt} = \alpha_m + \alpha_t +  \lambda * t * I(Ban) + \delta^{DD} D_{mt} + \epsilon_{it}$$`
+      - where I(Ban) is a dummy indicating whether a molecule was banned or not in our sample.
+
+
+
+
+
+
+---
+# .center.pull[Results]
+
+&lt;img src="Table_5_B.png" width="360" style="display: block; margin: auto;" /&gt;
+
+---
+#.center.pull[Event Study Estimates]
+
+- Estimating standard DID with no controls over the two periods:
+
+  `$$y_{mt} = \alpha_m + \alpha_t + \sum_{k = k_*}^{k^*} \delta_{k} D_{mt} + \epsilon_{mt}$$`
+where `\(\alpha_m\)` and `\(\alpha_t\)` are molecule and year fixed effects respectively, and `\(\delta_k\)` are the coefficients on the lead/lag indicators for years around treatment. 
+
+- For now, I will restrict the estimates to 18 and 20 months pre and post treatment respectively.
+
+- `\(y_{mt}\)` corresponds to all the outcome variables that we have considered so far. 
+
+- The error bars represent confidence intervals at 95% level constructed from the robust s.e.'s clustered at the molecule level.
+
+- In case of log sales estimates, I control for log prices by instrumenting it through Price to retailers, as specified earlier.
+
+
+---
+# .center.pull[Results]
+
+&lt;img src="Fig_9_B.png" width="50%" /&gt;&lt;img src="Fig_10_B.png" width="50%" /&gt;
+
+---
+# .center.pull[Results]
+
+&lt;img src="Table_6_B.png" width="369" style="display: block; margin: auto;" /&gt;
+
+---
+# .center.pull[Results]
+
+- Following from the previous event study specification, we breakdown estimates for Price Volatility and Price Dispersion.
+
+&lt;img src="Fig_11_B.png" width="50%" /&gt;&lt;img src="Fig_12_B.png" width="50%" /&gt;
+
+---
+#.center.pull[Market Concentration Results]
+- We also test for change in market power in response to the ban, within a molecule with the following specification:
+`$$HHI_{mt} = \alpha_m + \alpha_t + \delta^{DD} D_{mt} + \epsilon_{mt}$$`
+- We also replace HHI with number of firms to test for the impact of ban on the presence of firms within a molecule.
+
+- Again we run an event study regression to understand the differential impact of the regulation on the market structure of pharma-industry in India with the following specification:
+
+  `$$HHI_{mt} = \alpha_m + \alpha_t + \sum_{k = k_*}^{k^*} \delta_k D_{mt} + \epsilon_{mt}$$`
+where all the terms follow from the previous specifications. Leads, Lags are restricted to 18 and 20 respectively for the current design.
+
+
+---
+# .center.pull[Results]
+&lt;img src="Table_7_B.png" width="382" style="display: block; margin: auto;" /&gt;
+
+
+---
+# .center.pull[Results]
+
+
+&lt;img src="Fig_13_B.png" width="50%" /&gt;&lt;img src="Fig_14_B.png" width="50%" /&gt;
+
+---
+# .center.pull[Results]
+&lt;img src="Table_8_B.png" width="372" style="display: block; margin: auto;" /&gt;
+
+
+---
+# .center.pull[Results]
+
+&lt;img src="Fig_15_B.png" width="50%" /&gt;&lt;img src="Fig_16_B.png" width="50%" /&gt;
+
+---
+# .center.pull[Model Specification-(III)]
+
+- Here, we specify our model at the firm-molcule-time level to allow for the firm-level hetrogeneity.
+`$$y_{fmt} = \alpha_{f}  + \alpha_{m} + \alpha_{t} + \alpha_{m}*calendarmonth_{t} + \alpha_{m}*\alpha_{f} + X_{fmt}   + \delta^{DD} D_{fmt} +  \epsilon_{fmt}$$`  
+  - Here, `\(\alpha_{f}\)` corresponds to firm-level fixed effects.
+  - We are also allowing for molecule fe's to vary at an yearly level, and molecule-specific firm fe's.
+  - We are interested in the DID-coefficient `\(\delta^{DD}\)`.
+
+- Similarly, we also test for differential impact of these bans on the domestic vis-a-vis MNC firms, by utilizing triple diff-in-diff setting, as specified below:
+$$
+`\begin{aligned}
+y_{fmt} = \alpha_{f}  + \alpha_{m} + \alpha_{t} + \alpha_{m}*calendarmonth_{t} + \alpha_{m}*\alpha_{f} + X_{fmt} +\\ \delta^{DD} D_{fmt}   + \gamma^{DDD} D_{fmt}*MNC_{f} + \epsilon_{fmt}
+\end{aligned}`
+$$
+  - Here, `\(MNC_{f}\)` is a dummy indicating the firm being an MNC.
+  - Notice that, all other interactions have already been subsumed in the fixed effects and their      respective interaction terms.
+
+&lt;!-- - Doubt: For a given company and a molecule, while calculating price dispersion,should we look at the range of prices of a brand within that molecule or across all brands? --&gt;
+
+&lt;!-- - Doubt: For a given molecule, while calculating price dispersion I am simply taking a difference b/w max and min price. But I highly doubt that this is the right way to go about it coz then I am simply comparing uncomparables within a molecule. --&gt;
+
+
+---
+# .center.pull[Results]
+
+&lt;img src="Table_9_B.png" width="385" style="display: block; margin: auto;" /&gt;
+---
+
+#.center.pull[Event Study Estimates]
+
+- Estimating standard double DID and Triple DID estimates  over the two periods:
+
+
+  
+$$
+`\begin{aligned}
+ y_{fmt} = \alpha_{f}  + \alpha_{m} + \alpha_{t} + \alpha_{m}*calendarmonth_{t}+ \alpha_{m}*\alpha_{f} + X_{fmt} \\ + \sum_{k = k_*}^{k^*} \delta_k D_{fmt} + \sum_{k = k_*}^{k^*}\gamma^{DDD}_K D_{fmt}*MNC_{f} + \epsilon_{fmt}
+\end{aligned}`
+$$
+  - where all fe terms follow from previous specifications, and `\(\delta_k\)`, `\(\gamma_k^{DDD}\)` are the double and triple interaction coefficients on the lead/lag indicators for months around treatment. 
+
+- Here also, I will restrict the estimates to 18 and 20 months pre and post treatment respectively.
+
+- `\(y_{mt}\)` corresponds to all the outcome variables that we have considered so far. 
+
+- The error bars represent confidence intervals at 95% level constructed from the robust s.e.'s clustered at the molecule-firm level.
+
+---
+
+# .center.pull[Results]
+
+&lt;img src="Fig_17_B.png" width="50%" /&gt;&lt;img src="Fig_18_B.png" width="50%" /&gt;
+
+---
+
+# .center.pull[Results]
+
+&lt;img src="Table_10_B.png" width="381" style="display: block; margin: auto;" /&gt;
+
+---
+
+# .center.pull[Results]
+
+&lt;img src="Fig_19_B.png" width="50%" /&gt;&lt;img src="Fig_20_B.png" width="50%" /&gt;
+
+&lt;img src="Table_11_B.png" width="392" style="display: block; margin: auto;" /&gt;
+
+
+---
+# .center.pull[Summary]
+
+- There is substantial evidence of contraction in the market of abandoned products following the bans.
+
+- No effect on the change in pricing strategy, price volatility, or price dispersion at different levels.
+
+- This shows that regulation had a huge impact on the market structure of Indian pharma-industry.
+
+- However, results are open to scrutiny due to the imperfection of the utilized estimator in delivering consistent estimates.
+
+# .center.pull[Future Work]
+
+- Repeat the same analysis with a smaller set of narrow controls.
+
+- Extending the analysis to capture the products that were banned b/w the period of 2014-2019.
+
+- Corroborate our findings by utilizing the IQVIA database to tease out the contraction in market induced by the demand-side of the market.
+
+- Also apply Goodman-Bacon decomposition to see the breakdown of the 2x2 diff-in-diff estimates and the weights associated with them. This would help us in identifying the main force behind the final estimate. (i.e. Is it control vs treated or early treated vs late treated, etc.)
+
+---
+# .center.pull[Appendix: Results with Narrow set of Controls]
+
+
+&lt;img src="Table_1_N.png" width="454" style="display: block; margin: auto;" /&gt;
+
+---
+# .center.pull[Appendix]
+
+
+&lt;img src="Table_2_N.png" width="466" style="display: block; margin: auto;" /&gt;
+---
+# .center.pull[Appendix]
+
+
+&lt;img src="Table_3_N.png" width="473" style="display: block; margin: auto;" /&gt;
+
+---
+# .center.pull[Appendix]
+
+
+&lt;img src="Table_4_N.png" width="467" style="display: block; margin: auto;" /&gt;
+
+---
+# .center.pull[Appendix]
+
+
+&lt;img src="Table_5_N.png" width="424" style="display: block; margin: auto;" /&gt;
+
+---
+# .center.pull[Appendix]
+
+
+&lt;img src="Table_6_N.png" width="430" style="display: block; margin: auto;" /&gt;
+
+---
+# .center.pull[Appendix]
+
+
+&lt;img src="Table_7_N.png" width="441" style="display: block; margin: auto;" /&gt;
+
+---
+# .center.pull[Appendix]
+
+
+&lt;img src="Table_8_N.png" width="437" style="display: block; margin: auto;" /&gt;
+
+---
+# .center.pull[Appendix]
+
+
+&lt;img src="Table_9_N.png" width="442" style="display: block; margin: auto;" /&gt;
+---
+# .center.pull[Appendix]
+
+
+&lt;img src="Table_10_N.png" width="443" style="display: block; margin: auto;" /&gt;
+---
+# .center.pull[Appendix]
+
+&lt;img src="Table_11_N.png" width="447" style="display: block; margin: auto;" /&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"extra_dependencies": "xcolor",
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

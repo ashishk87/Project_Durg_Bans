@@ -1,0 +1,155 @@
+\documentclass[12pt,english]{article}
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\usepackage{adjustbox}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage[authoryear]{natbib}
+\usepackage{rotating}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=false]
+ {hyperref}
+\usepackage{breakurl}
+
+\begin{document}
+
+\title{Regression Results for Malaria Project}
+\author{}
+\maketitle
+
+\begin{table}[H] \centering 
+	\caption{How U.S. President's promotion of CHLOROQUINE and HYDROXYCHLOROQUINE affected Indian Market} 
+	\label{} 
+	\footnotesize 
+	\begin{tabular}{@{\extracolsep{1pt}}lccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-4} 
+		& Panel A: HC & Panel B: C & Panel C: HC and C \\ 
+		\\[-1.8ex] & (1) & (2) & (3)\\ 
+		\hline \\[-1.8ex] 
+		Treatment*Post & 1,177.510$^{***}$ & $-$731.609$^{***}$ & 222.950 \\ 
+		& (180.571) & (180.571) & (716.792) \\ 
+		\hline \\[-1.8ex] 
+		Molecule FE & Y & Y & Y \\ 
+		Time FE & Y & Y & Y \\ 
+		Observations & 1,188 & 1,188 & 1,254 \\ 
+		R$^{2}$ & 0.968 & 0.963 & 0.965 \\ 
+		Adjusted R$^{2}$ & 0.966 & 0.960 & 0.962 \\ 
+		Residual Std. Error & 388.286 (df = 1104) & 403.544 (df = 1104) & 406.822 (df = 1169) \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+		& \multicolumn{3}{r}{Robust clustered standard errors at the molecule level are provided in parentheses} \\ 
+	\end{tabular} 
+\end{table} 
+
+
+\begin{table}[H] \centering 
+	\caption{How U.S. President's promotion of  HYDROXYCHLOROQUINE affected Indian Market} 
+	\label{} 
+	\footnotesize 
+	\begin{tabular}{@{\extracolsep{1pt}}lccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-4} 
+		\\[-1.8ex] & \multicolumn{3}{c}{HC} \\ 
+		\\[-1.8ex] & (1) & (2) & (3)\\ 
+		\hline \\[-1.8ex] 
+		Treatment*Post Ban & 50.897$^{***}$ & 60.954$^{***}$ & 57.436$^{***}$ \\ 
+		& (4.973) & (5.481) & (5.366) \\ 
+		N_Firms & 10.675$^{***}$ &  & 10.675$^{***}$ \\ 
+		& (0.772) & (0.000) & (0.798) \\ 
+		\hline \\[-1.8ex] 
+		Treatment*Time & Y & Y & Y \\ 
+		Time FE & Y & Y & Y \\ 
+		Molecule FE & Y & Y & Y \\ 
+		Geography Dummy & Y & Y & Y \\ 
+		Molecule*Geography & N & Y & N \\ 
+		Geography*Time & N & N & Y \\ 
+		Observations & 31,680 & 31,680 & 31,680 \\ 
+		R$^{2}$ & 0.890 & 0.952 & 0.894 \\ 
+		Adjusted R$^{2}$ & 0.890 & 0.951 & 0.886 \\ 
+		Residual Std. Error & 26.455 (df = 31501) & 17.588 (df = 31023) & 26.879 (df = 29521) \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+		& \multicolumn{3}{r}{Robust clustered standard errors at the molecule-geography level are provided in parentheses} \\ 
+	\end{tabular} 
+\end{table} 
+
+\begin{table}[H] \centering 
+	\caption{How U.S. President's promotion of  CHLOROQUINE affected Indian Market} 
+	\label{} 
+	\footnotesize 
+	\begin{tabular}{@{\extracolsep{1pt}}lccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-4} 
+		\\[-1.8ex] & \multicolumn{3}{c}{C} \\ 
+		\\[-1.8ex] & (1) & (2) & (3)\\ 
+		\hline \\[-1.8ex] 
+		Treatment*Post Ban & $-$37.827$^{***}$ & $-$39.433$^{***}$ & $-$36.682$^{***}$ \\ 
+		& (5.887) & (6.249) & (4.672) \\ 
+		N_Firms & 10.349$^{***}$ &  & 10.349$^{***}$ \\ 
+		& (0.782) & (0.000) & (0.808) \\ 
+		\hline \\[-1.8ex] 
+		Treatment*Time & Y & Y & Y \\ 
+		Time FE & Y & Y & Y \\ 
+		Molecule FE & Y & Y & Y \\ 
+		Geography Dummy & Y & Y & Y \\ 
+		Molecule*Geography & N & Y & N \\ 
+		Geography*Time & N & N & Y \\ 
+		Observations & 31,680 & 31,680 & 31,680 \\ 
+		R$^{2}$ & 0.881 & 0.948 & 0.885 \\ 
+		Adjusted R$^{2}$ & 0.880 & 0.947 & 0.877 \\ 
+		Residual Std. Error & 26.908 (df = 31501) & 17.854 (df = 31023) & 27.273 (df = 29521) \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+		& \multicolumn{3}{r}{Robust clustered standard errors at the molecule-geography level are provided in parentheses} \\ 
+	\end{tabular} 
+\end{table} 
+
+\begin{table}[H] \centering 
+	\caption{How U.S. President's promotion of  HYDROXYCHLOROQUINE and CHLOROQUINE affected Indian Market} 
+	\label{} 
+	\footnotesize 
+	\begin{tabular}{@{\extracolsep{1pt}}lccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-4} 
+		\\[-1.8ex] & \multicolumn{3}{c}{HC and C} \\ 
+		\\[-1.8ex] & (1) & (2) & (3)\\ 
+		\hline \\[-1.8ex] 
+		Treatment*Post Ban & 10.760 & 11.271 & $-$36.682$^{***}$ \\ 
+		& (7.786) & (7.154) & (4.672) \\ 
+		N_Firms & 10.331$^{***}$ &  & 10.349$^{***}$ \\ 
+		& (0.772) & (0.000) & (0.808) \\ 
+		\hline \\[-1.8ex] 
+		Treatment*Time & Y & Y & Y \\ 
+		Time FE & Y & Y & Y \\ 
+		Molecule FE & Y & Y & Y \\ 
+		Geography Dummy & Y & Y & Y \\ 
+		Molecule*Geography & N & Y & N \\ 
+		Geography*Time & N & N & Y \\ 
+		Observations & 33,726 & 33,726 & 31,680 \\ 
+		R$^{2}$ & 0.882 & 0.948 & 0.885 \\ 
+		Adjusted R$^{2}$ & 0.882 & 0.947 & 0.877 \\ 
+		Residual Std. Error & 27.317 (df = 33546) & 18.327 (df = 33037) & 27.273 (df = 29521) \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+		& \multicolumn{3}{r}{Robust clustered standard errors at the molecule-geography level are provided in parentheses} \\ 
+	\end{tabular} 
+\end{table} 
+
+\end{document}

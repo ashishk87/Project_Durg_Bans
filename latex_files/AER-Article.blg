@@ -1,0 +1,86 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: AER-Article.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: chicago.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: References.bib
+I was expecting a `,' or a `}'---line 387 of file References.bib
+ :  
+ :  journal={Travel Medicine and Infectious Disease},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 531 of file References.bib
+ : @article{amaral2019mums
+ :                        ,
+I'm skipping whatever remains of this entry
+Warning--no number and no volume in afsana2020towards
+Warning--page numbers missing in afsana2020towards
+Warning--no journal in amaral2019mums
+Warning--no number and no volume in amaral2019mums
+Warning--page numbers missing in amaral2019mums
+Warning--no number and no volume in bansal2020hydroxychloroquine
+Warning--no journal in bonnyearly
+Warning--no number and no volume in bonnyearly
+Warning--page numbers missing in bonnyearly
+Warning--no number and no volume in buskens2020spreading
+Warning--page numbers missing in buskens2020spreading
+Warning--no number and no volume in gautret2020hydroxychloroquine
+Warning--no journal in gottfried2016news
+Warning--no number and no volume in gottfried2016news
+Warning--page numbers missing in gottfried2016news
+Warning--no number and no volume in india2011census
+Warning--page numbers missing in india2011census
+Warning--no number and no volume in kamp2020chloroquine
+Warning--page numbers missing in lamontagne2021living
+Warning--no number and no volume in magagnoli2020outcomes
+Warning--page numbers missing in magagnoli2020outcomes
+Warning--no number and no volume in rathi2020hydroxychloroquine
+Warning--page numbers missing in rathi2020hydroxychloroquine
+Warning--no journal in wasserman1994social
+Warning--no number and no volume in wasserman1994social
+Warning--page numbers missing in wasserman1994social
+Warning--no number and no volume in yao2020vitro
+Warning--page numbers missing in yao2020vitro
+You've used 63 entries,
+            2861 wiz_defined-function locations,
+            996 strings with 17802 characters,
+and the built_in function-call counts, 51748 in all, are:
+= -- 4026
+> -- 4768
+< -- 4
++ -- 1496
+- -- 1580
+* -- 5216
+:= -- 9525
+add.period$ -- 186
+call.type$ -- 63
+change.case$ -- 544
+chr.to.int$ -- 63
+cite$ -- 91
+duplicate$ -- 1152
+empty$ -- 2667
+format.name$ -- 1784
+if$ -- 9522
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 63
+newline$ -- 313
+num.names$ -- 630
+pop$ -- 388
+preamble$ -- 1
+purify$ -- 923
+quote$ -- 0
+skip$ -- 1195
+stack$ -- 0
+substring$ -- 2487
+swap$ -- 384
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1250
+warning$ -- 28
+while$ -- 577
+width$ -- 0
+write$ -- 817
+(There were 2 error messages)

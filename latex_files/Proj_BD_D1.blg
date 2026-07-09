@@ -1,0 +1,83 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Proj_BD_D1.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: chicago.bst
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+Database file #1: References_BD.bib
+Warning--no number and no volume in aggarwal2020can
+Warning--page numbers missing in aggarwal2020can
+Warning--no number and no volume in aggarwal2020science
+Warning--page numbers missing in aggarwal2020science
+Warning--page numbers missing in aguirre2019oligopoly
+Warning--page numbers missing in akerlof1970market
+Warning--no volume for alger2004theory
+Warning--page numbers missing in alger2004theory
+Warning--no number and no volume in arrow1978uncertainty
+Warning--no number and no volume in bansal2021politics
+Warning--page numbers missing in bansal2021politics
+Warning--no number and no volume in fernandez1991resistance
+Warning--no number and no volume in fong2005experts
+Warning--no number and no volume in greer1981medical
+Warning--no number and no volume in greve1995jumping
+Warning--empty school in kennedy2011diffusion
+Warning--no journal in kroszner1998political
+Warning--no number and no volume in kroszner1998political
+Warning--page numbers missing in kroszner1998political
+Warning--no number and no volume in mushkinhealth
+Warning--no number and no volume in prager1990firm
+Warning--no number and no volume in PSCHFW
+Warning--page numbers missing in PSCHFW
+Warning--no number and no volume in ATR
+Warning--no number and no volume in rasmusen2011monopoly
+Warning--page numbers missing in rasmusen2011monopoly
+Warning--page numbers missing in retchin2007overcoming
+Warning--page numbers missing in srinivasan2018fixed
+Warning--no journal in tilton1997regulatory
+Warning--no number and no volume in tilton1997regulatory
+Warning--page numbers missing in tilton1997regulatory
+Warning--no number and no volume in varpaei2020
+Warning--page numbers missing in varpaei2020
+Warning--no number and no volume in venkatesh2003user
+You've used 90 entries,
+            2861 wiz_defined-function locations,
+            1125 strings with 21790 characters,
+and the built_in function-call counts, 62586 in all, are:
+= -- 5211
+> -- 4729
+< -- 2
++ -- 1444
+- -- 1627
+* -- 5754
+:= -- 11500
+add.period$ -- 267
+call.type$ -- 90
+change.case$ -- 660
+chr.to.int$ -- 89
+cite$ -- 124
+duplicate$ -- 1581
+empty$ -- 3692
+format.name$ -- 1858
+if$ -- 11454
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 88
+newline$ -- 448
+num.names$ -- 898
+pop$ -- 434
+preamble$ -- 1
+purify$ -- 1201
+quote$ -- 0
+skip$ -- 1684
+stack$ -- 0
+substring$ -- 3397
+swap$ -- 507
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1746
+warning$ -- 34
+while$ -- 893
+width$ -- 0
+write$ -- 1169
+(There were 34 warnings)

@@ -1,0 +1,1278 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.6)  8 AUG 2022 07:10
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Proj_BD_D1.tex
+(./Proj_BD_D1.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (./AEA.cls
+Document Class: AEA 2011/07/24 American Economic Association Article Classes
+(./multicol.sty
+Package: multicol 2004/02/14 v1.6e multicolumn formatting (FMi)
+\c@tracingmulticols=\count185
+\mult@box=\box50
+\multicol@leftmargin=\dimen138
+\c@unbalance=\count186
+\c@collectmore=\count187
+\doublecol@number=\count188
+\multicoltolerance=\count189
+\multicolpretolerance=\count190
+\full@width=\dimen139
+\page@free=\dimen140
+\premulticols=\dimen141
+\postmulticols=\dimen142
+\multicolsep=\skip47
+\multicolbaselineskip=\skip48
+\partial@page=\box51
+\last@line=\box52
+\mult@rightbox=\box53
+\mult@grightbox=\box54
+\mult@gfirstbox=\box55
+\mult@firstbox=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\c@columnbadness=\count191
+\c@finalcolumnbadness=\count192
+\last@try=\dimen143
+\multicolovershoot=\dimen144
+\multicolundershoot=\dimen145
+\mult@nat@firstbox=\box74
+\colbreak@box=\box75
+) (./setspace.sty
+Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
+
+Package: `setspace' 6.7 <2000/12/01>
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen146
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen147
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count193
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count194
+\leftroot@=\count195
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count196
+\DOTSCASE@=\count197
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box76
+\strutbox@=\box77
+\big@size=\dimen148
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count198
+\c@MaxMatrixCols=\count199
+\dotsspace@=\muskip16
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
+\tag@help=\toks17
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
+\andhelp@=\toks18
+\eqnshift@=\dimen149
+\alignsep@=\dimen150
+\tagshift@=\dimen151
+\tagwidth@=\dimen152
+\totwidth@=\dimen153
+\lineht@=\dimen154
+\@envbody=\toks19
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+Journal Selected: 
+Mode Selected: final
+\abstractIndent=\skip52
+\abstractWidth=\skip53
+\c@part=\count271
+\c@section=\count272
+\c@subsection=\count273
+\c@subsubsection=\count274
+\c@paragraph=\count275
+\c@subparagraph=\count276
+\c@figure=\count277
+\c@table=\count278
+\abovecaptionskip=\skip54
+\belowcaptionskip=\skip55
+\bibindent=\dimen155
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/breqn/breqn.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-02-24 L3 programming layer (loader) 
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count279
+\l__pdf_internal_box=\box78
+))
+Package: breqn 2021/10/28 v0.98l Breaking equations
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen156
+\Gin@req@width=\dimen157
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/breqn/flexisym.sty
+Package: flexisym 2021/10/28 v0.98l Make math characters macros
+LaTeX Info: Redefining \textprime on input line 299.
+LaTeX Info: Redefining \not on input line 357.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/breqn/cmbase.sym
+File: cmbase.sym 2007/12/19 v0.92
+LaTeX Info: Redefining \hbar on input line 324.
+LaTeX Info: Redefining \surd on input line 326.
+LaTeX Info: Redefining \angle on input line 334.
+LaTeX Info: Redefining \neq on input line 335.
+LaTeX Info: Redefining \mapsto on input line 336.
+LaTeX Info: Redefining \cong on input line 337.
+LaTeX Info: Redefining \notin on input line 340.
+LaTeX Info: Redefining \rightleftharpoons on input line 341.
+LaTeX Info: Redefining \doteq on input line 342.
+LaTeX Info: Redefining \hookrightarrow on input line 343.
+LaTeX Info: Redefining \hookleftarrow on input line 344.
+LaTeX Info: Redefining \bowtie on input line 345.
+LaTeX Info: Redefining \models on input line 346.
+LaTeX Info: Redefining \Longrightarrow on input line 347.
+LaTeX Info: Redefining \longrightarrow on input line 348.
+LaTeX Info: Redefining \Longleftarrow on input line 349.
+LaTeX Info: Redefining \longleftarrow on input line 350.
+LaTeX Info: Redefining \longmapsto on input line 351.
+LaTeX Info: Redefining \longleftrightarrow on input line 352.
+LaTeX Info: Redefining \Longleftrightarrow on input line 353.
+LaTeX Info: Redefining \cdots on input line 357.
+LaTeX Info: Redefining \vdots on input line 360.
+LaTeX Info: Redefining \ddots on input line 365.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/breqn/mathstyle.sty
+Package: mathstyle 2021/10/28 v0.98l Tracking mathstyle implicitly
+LaTeX Info: Redefining \displaystyle on input line 95.
+LaTeX Info: Redefining \textstyle on input line 97.
+LaTeX Info: Redefining \scriptstyle on input line 99.
+LaTeX Info: Redefining \scriptscriptstyle on input line 101.
+LaTeX Info: Redefining \genfrac on input line 149.
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count280
+\calc@Bcount=\count281
+\calc@Adimen=\dimen158
+\calc@Bdimen=\dimen159
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count282
+\calc@Cskip=\skip58
+)
+\inf@bad=\count283
+\maxint=\count284
+\listwidth=\dimen160
+\eqnumsep=\dimen161
+\eqmargin=\dimen162
+\eqlinespacing=\skip59
+\eqlineskip=\skip60
+\eqlineskiplimit=\dimen163
+\eqbinoffset=\muskip17
+\eqdelimoffset=\muskip18
+\eqindentstep=\dimen164
+\eqstyle=\toks22
+\eqbreakdepth=\count285
+\eqinterlinepenalty=\count286
+\intereqpenalty=\count287
+\intereqskip=\skip61
+\prerelpenalty=\count288
+\prebinoppenalty=\count289
+\Dmedmuskip=\muskip19
+\Dthickmuskip=\muskip20
+\eqleftskip=\skip62
+\eqrightskip=\skip63
+\eq@vspan=\skip64
+\eq@binoffset=\muskip21
+\EQ@box=\box79
+\EQ@copy=\box80
+\EQ@numbox=\box81
+\eq@wdNum=\dimen165
+\GRP@numbox=\box82
+\grp@wdNum=\dimen166
+\eq@lines=\count290
+\eq@curline=\count291
+\eq@badness=\count292
+\EQ@vims=\count293
+\eq@dp=\dimen167
+\eq@wdL=\dimen168
+\eq@wdT=\dimen169
+\eq@wdMin=\dimen170
+\grp@wdL=\dimen171
+\grp@wdR=\dimen172
+\grp@wdT=\dimen173
+\eq@wdRmax=\dimen174
+\eq@firstht=\dimen175
+\eq@wdCond=\dimen176
+\eq@indentstep=\dimen177
+\eq@linewidth=\dimen178
+\grp@linewidth=\dimen179
+\eq@hshift=\dimen180
+\eq@given@sidespace=\dimen181
+\mathindent=\dimen182
+\eq@final@linecount=\count294
+\eq@wdR=\dimen183
+\EQ@continue=\toks23
+\lr@level=\count295
+\GRP@queue=\toks24
+\GRP@box=\box83
+\GRP@wholebox=\box84
+\darraycolsep=\skip65
+\cur@row=\count296
+\cur@col=\count297
+\conditionsep=\skip66
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks25
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count298
+\float@exts=\toks26
+\float@box=\box85
+\@float@everytoks=\toks27
+\@floatcapt=\box86
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip67
+\@affilsep=\skip68
+\c@Maxaffil=\count299
+\c@authors=\count300
+\c@affil=\count301
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tfrupee/tfrupee.sty
+Package: tfrupee 2010/12/15 LaTeX Support for the TechFat Rupee symbols by Tech
+Fat (http://techfat.blogspot.com/2010/07/new-open-source-india-rupee-font.html)
+. Adapted for use with TeX by Palle Jorgensen, hamselv(a)pallej.dk
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks28
+\thm@bodyfont=\toks29
+\thm@headfont=\toks30
+\thm@notefont=\toks31
+\thm@headpunct=\toks32
+\thm@preskip=\skip69
+\thm@postskip=\skip70
+\thm@headsep=\skip71
+\dth@everypar=\toks33
+
+
+! LaTeX Error: Command \proof already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.440 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/mathptmx.sty
+Package: mathptmx 2020/03/25 PSNFSS-v9.3 Times w/ Math, improved (SPQR, WaS) 
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+\symbold=\mathgroup7
+\symitalic=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
+LaTeX Info: Redefining \hbar on input line 50.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip72
+\bibsep=\skip73
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count302
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip74
+\multirow@cntb=\count303
+\multirow@dima=\skip75
+\bigstrutjot=\dimen184
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2021/04/25 v1.2e Bold Symbol Support (DPC/FMi)
+Package bm Info: No bold for \OT1/ztmcm/m/n, using \pmb.
+Package bm Info: No bold for \OML/ztmcm/m/it, using \pmb.
+Package bm Info: No bold for \OMS/ztmcm/m/n, using \pmb.
+Package bm Info: No bold for \OMX/ztmcm/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+\symboldlasy=\mathgroup9
+Package bm Info: No bold for \OT1/ptm/bx/n, using \pmb.
+Package bm Info: No bold for \OT1/ptm/m/it, using \pmb.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+\epsfxsize=\dimen185
+\epsfysize=\dimen186
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip22
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip76
+\LTright=\skip77
+\LTpre=\skip78
+\LTpost=\skip79
+\LTchunksize=\count304
+\LTcapwidth=\dimen187
+\LT@head=\box87
+\LT@firsthead=\box88
+\LT@foot=\box89
+\LT@lastfoot=\box90
+\LT@gbox=\box91
+\LT@cols=\count305
+\LT@rows=\count306
+\c@LT@tables=\count307
+\c@LT@chunks=\count308
+\LT@p@ftn=\toks34
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen188
+\lightrulewidth=\dimen189
+\cmidrulewidth=\dimen190
+\belowrulesep=\dimen191
+\belowbottomsep=\dimen192
+\aboverulesep=\dimen193
+\abovetopsep=\dimen194
+\cmidrulesep=\dimen195
+\cmidrulekern=\dimen196
+\defaultaddspace=\dimen197
+\@cmidla=\count309
+\@cmidlb=\count310
+\@aboverulesep=\dimen198
+\@belowrulesep=\dimen199
+\@thisruleclass=\count311
+\@lastruleclass=\count312
+\@thisrulewidth=\dimen256
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen257
+\captionmargin=\dimen258
+\caption@leftmargin=\dimen259
+\caption@rightmargin=\dimen260
+\caption@width=\dimen261
+\caption@indent=\dimen262
+\caption@parindent=\dimen263
+\caption@hangindent=\dimen264
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionski
+p \sbox \@tempboxa {\captionstyle \captionsize #1#2}\ifdim \wd \@tempboxa >\hsi
+ze {\captionstyle \captionsize #1#2}\par \else \global \@minipagefalse \hb@xt@ 
+\hsize {\hfil \box \@tempboxa \hfil }\fi \vskip \belowcaptionskip  on input lin
+e 1176.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count313
+\c@continuedfloat=\count314
+Package caption Info: float package is loaded.
+Package caption Info: longtable package is loaded.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/bbold/bbold.sty
+Package: bbold 1994/04/06 Bbold symbol package
+LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 42.
+)
+
+Package amsthm Warning: Unknown theoremstyle `theorem' on input line 27.
+
+\c@res=\count315
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tabulary/tabulary.sty
+Package: tabulary 2014/06/11 v0.10 tabulary package (DPC)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen265
+\ar@mcellbox=\box92
+\extrarowheight=\dimen266
+\NC@list=\toks35
+\extratabsurround=\skip80
+\backup@length=\skip81
+\ar@cellbox=\box93
+)
+\TY@count=\count316
+\TY@linewidth=\dimen267
+\tymin=\dimen268
+\tymax=\dimen269
+\TY@tablewidth=\dimen270
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/appendixnumberbeamer/appendixnumb
+erbeamer.sty)
+! Undefined control sequence.
+l.33 	\insertshorttitle
+                       \hfill\insertframenumber\,/\,\inserttotalframenumber}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2021/12/15 v3.1 ragged2e Package
+\CenteringLeftskip=\skip82
+\RaggedLeftLeftskip=\skip83
+\RaggedRightLeftskip=\skip84
+\CenteringRightskip=\skip85
+\RaggedLeftRightskip=\skip86
+\RaggedRightRightskip=\skip87
+\CenteringParfillskip=\skip88
+\RaggedLeftParfillskip=\skip89
+\RaggedRightParfillskip=\skip90
+\JustifyingParfillskip=\skip91
+\CenteringParindent=\skip92
+\RaggedLeftParindent=\skip93
+\RaggedRightParindent=\skip94
+\JustifyingParindent=\skip95
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/quoting/quoting.sty
+Package: quoting 2014/01/28 v0.1c Consolidated environment for displayed text
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count317
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+\quo@toppartop=\skip96
+)
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 6
+7.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+(./Proj_BD_D1.aux
+
+LaTeX Warning: Label `Table-R-3' multiply defined.
+
+
+LaTeX Warning: Label `Table-R-3' multiply defined.
+
+
+LaTeX Warning: Label `Fig_R_5' multiply defined.
+
+
+LaTeX Warning: Label `Fig_R_5' multiply defined.
+
+
+LaTeX Warning: Label `Fig_R_5' multiply defined.
+
+
+LaTeX Warning: Label `Fig_R_5' multiply defined.
+
+
+LaTeX Warning: Label `Fig_R_5' multiply defined.
+
+
+LaTeX Warning: Label `Fig_R_5' multiply defined.
+
+
+LaTeX Warning: Label `Fig_R_5' multiply defined.
+
+
+LaTeX Warning: Label `Fig_R_5' multiply defined.
+
+
+LaTeX Warning: Label `Fig_R_5' multiply defined.
+
+
+LaTeX Warning: Label `Fig_R_5' multiply defined.
+
+)
+\openout1 = `Proj_BD_D1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+ (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count318
+\scratchdimen=\dimen271
+\scratchbox=\box94
+\nofMPsegments=\count319
+\nofMParguments=\count320
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count321
+\MPscratchDim=\dimen272
+\MPnumerator=\count322
+\makeMPintoPDFobject=\count323
+\everyMPtoPDFconversion=\toks37
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
+ 86.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
+ 86.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
+ 86.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
+ 86.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 86
+.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 86.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 86.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 86.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 86.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 86.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 8
+6.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 86.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 86.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Overfull \hbox (78.47151pt too wide) in paragraph at lines 102--102
+[][]$\OT1/cmtt/m/n/8 https : / / www . businesstoday . in / sectors / pharma / 
+what-[]are-[]fdc-[]drugs-[]and-[]why-[]has-[]the-[]govt-[]decided-[]to-[]ban-[]
+them /
+ []
+
+[3]
+<Fig_1.jpeg, id=18, 867.24pt x 578.16pt>
+File: Fig_1.jpeg Graphic file (type jpg)
+<use Fig_1.jpeg>
+Package pdftex.def Info: Fig_1.jpeg  used on input line 106.
+(pdftex.def)             Requested size: 385.53484pt x 257.02014pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+[5 <./Fig_1.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]|\OT1/ptm/m/n/8 FDCs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 avail-able
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 in In-dia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]|\OT1/ptm/m/n/8 FDCs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 ap-proved
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 by CD-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 SCO %
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]|\OT1/ptm/m/n/8 FDCs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 avail-able
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 in UK
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]|\OT1/ptm/m/n/8 FDCs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 avail-able
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 in US
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]|\OT1/ptm/m/n/8 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 brands
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 of these
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 FDCs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]|\OT1/ptm/m/n/8 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 Sales
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 of Oral
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 Drugs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 (in INR
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]|\OT1/ptm/m/n/8 % Sales
+ []
+
+
+Underfull \hbox (badness 3590) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 of FDCs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 (out of
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 to-tal oral
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\OT1/ptm/m/n/8 drug
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+[]|\OT1/ptm/m/n/8 % of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\OT1/ptm/m/n/8 FDC
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\OT1/ptm/m/n/8 sales
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 145--146
+\OT1/ptm/m/n/8 from un-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\OT1/ptm/m/n/8 ap-proved
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\OT1/ptm/m/n/8 FDCs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\OT1/ptm/m/n/8 (out of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\OT1/ptm/m/n/8 to-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\OT1/ptm/m/n/8 FDC
+ []
+
+
+Overfull \hbox (2.73376pt too wide) in paragraph at lines 156--156
+[]|\OT1/ptm/m/n/8 Antidepressants| 
+ []
+
+
+Overfull \hbox (2.73376pt too wide) in paragraph at lines 160--160
+[]|\OT1/ptm/m/n/8 Antidepressants| 
+ []
+
+
+Overfull \hbox (33.24966pt too wide) in paragraph at lines 138--170
+ [] 
+ []
+
+[6] [7] [8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+[][]\OT1/ptm/m/n/8 See:$\OT1/cmtt/m/n/8 http : / / 164 . 100 . 47 . 5 / newcomm
+ittee / reports / englishcommittees / committee % 20on % 20health %
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 209--209
+[][]\OT1/ptm/m/n/8 See:$\OT1/cmtt/m/n/8 https : / / dineshthakur . com / wp-[]c
+ontent / uploads / 2016 / 03 / 2016 . 03 . 11-[]PIL-[]1-[]Annexure-[]C-[]5 .
+ []
+
+
+Underfull \hbox (badness 4467) in paragraph at lines 211--211
+[][]\OT1/ptm/m/n/8 See: $\OT1/cmtt/m/n/8 https : / / cdsco . gov . in / opencms
+ / export / sites / CDSCO _ WEB / Pdf-[]documents / Committee / dtab _
+ []
+
+
+Underfull \vbox (badness 2269) has occurred while \output is active []
+
+ [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+Underfull \hbox (badness 10000) in paragraph at lines 230--230
+[][]\OT1/ptm/m/n/8 See: $\OT1/cmtt/m/n/8 https : / / cdsco . gov . in / opencms
+ / opencms / system / modules / CDSCO . WEB / elements / download \
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--231
+[][]\OT1/ptm/m/n/8 EphMRA Anatom-i-cal Clas-si-fi-ca-tion Guide-lines,2014.See:
+ $\OT1/cmtt/m/n/8 ephmra . org / media / 4973 /
+ []
+
+[13]
+Overfull \hbox (29.86378pt too wide) in paragraph at lines 240--266
+ [] 
+ []
+
+
+Overfull \hbox (213.989pt too wide) in paragraph at lines 269--269
+[][]\OT1/ptm/m/n/8 See: $\OT1/cmtt/m/n/8 https : / / www . reuters . com / arti
+cle / us-[]india-[]health-[]drugs / india-[]bans-[]328-[]combination-[]drugs-[]
+in-[]setback-[]for-[]pharma-[]companies-[]idUKKCN1LT155$| 
+ []
+
+[14]
+Overfull \hbox (27.70813pt too wide) in paragraph at lines 277--301
+ [] 
+ []
+
+<Descriptive_2.jpeg, id=55, 1228.59pt x 722.7pt>
+File: Descriptive_2.jpeg Graphic file (type jpg)
+<use Descriptive_2.jpeg>
+Package pdftex.def Info: Descriptive_2.jpeg  used on input line 305.
+(pdftex.def)             Requested size: 385.53484pt x 226.78053pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15] [16 <./Descriptive_2.jpeg>]
+Underfull \vbox (badness 1057) has occurred while \output is active []
+
+ [17]
+Overfull \hbox (16.72751pt too wide) detected at line 339
+[]
+ []
+
+[18]
+<ES_Baseline_R_SR.jpeg, id=72, 1084.05pt x 650.43pt>
+File: ES_Baseline_R_SR.jpeg Graphic file (type jpg)
+<use ES_Baseline_R_SR.jpeg>
+Package pdftex.def Info: ES_Baseline_R_SR.jpeg  used on input line 346.
+(pdftex.def)             Requested size: 385.53484pt x 231.31613pt.
+ [19 <./ES_Baseline_R_SR.jpeg>]
+<ES_Baseline_N_SR.jpeg, id=77, 1084.05pt x 650.43pt>
+File: ES_Baseline_N_SR.jpeg Graphic file (type jpg)
+<use ES_Baseline_N_SR.jpeg>
+Package pdftex.def Info: ES_Baseline_N_SR.jpeg  used on input line 363.
+(pdftex.def)             Requested size: 385.53484pt x 231.31613pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20 <./ES_Baseline_N_SR.jpeg>]
+Overfull \hbox (58.9495pt too wide) detected at line 384
+[][][]
+ []
+
+[21]
+Overfull \hbox (75.67981pt too wide) in paragraph at lines 392--431
+ [] 
+ []
+
+[22]
+<ES_Hetro_AC.jpeg, id=87, 1084.05pt x 650.43pt>
+File: ES_Hetro_AC.jpeg Graphic file (type jpg)
+<use ES_Hetro_AC.jpeg>
+Package pdftex.def Info: ES_Hetro_AC.jpeg  used on input line 436.
+(pdftex.def)             Requested size: 385.53484pt x 231.31613pt.
+ [23 <./ES_Hetro_AC.jpeg>]
+Underfull \hbox (badness 5302) in paragraph at lines 452--452
+[][]\OT1/ptm/m/n/8 See: $\OT1/cmtt/m/n/8 https : / / www . investindia . gov . 
+in / sector / pharmaceuticals# : [] : text = The % 20country % 20is %
+ []
+
+<Descriptive_3.jpeg, id=91, 1228.59pt x 722.7pt>
+File: Descriptive_3.jpeg Graphic file (type jpg)
+<use Descriptive_3.jpeg>
+Package pdftex.def Info: Descriptive_3.jpeg  used on input line 456.
+(pdftex.def)             Requested size: 385.53484pt x 226.78053pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (29.60765pt too wide) in paragraph at lines 474--512
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[24] [25 <./Descriptive_3.jpeg>]
+Overfull \hbox (92.06448pt too wide) detected at line 520
+[][][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
+<ES_Hetro_Product.jpeg, id=102, 1084.05pt x 650.43pt>
+File: ES_Hetro_Product.jpeg Graphic file (type jpg)
+<use ES_Hetro_Product.jpeg>
+Package pdftex.def Info: ES_Hetro_Product.jpeg  used on input line 526.
+(pdftex.def)             Requested size: 385.53484pt x 231.31613pt.
+
+Overfull \hbox (13.67807pt too wide) in paragraph at lines 536--537
+[]\OT1/ptm/m/n/10.95 Fig-7[] con-tains the es-ti-mates from the event-study spe
+c-i-fi-ca-tion based on whether molecule
+ []
+
+[27 <./ES_Hetro_Product.jpeg>] [28]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 5359) has occurred while \output is active []
+
+ [29]
+Overfull \hbox (8.32828pt too wide) in paragraph at lines 608--644
+ [] 
+ []
+
+[30]
+<ES_Hetro_Firm.jpeg, id=115, 1084.05pt x 650.43pt>
+File: ES_Hetro_Firm.jpeg Graphic file (type jpg)
+<use ES_Hetro_Firm.jpeg>
+Package pdftex.def Info: ES_Hetro_Firm.jpeg  used on input line 654.
+(pdftex.def)             Requested size: 385.53484pt x 231.31613pt.
+ [31] [32 <./ES_Hetro_Firm.jpeg>] [33]
+Underfull \vbox (badness 5359) has occurred while \output is active []
+
+ [34]
+(./Proj_BD_D1.bbl [35] [36] [37] [38] [39] [40]) [41]
+! Undefined control sequence.
+\appendix -> \xdef \mainend {\theframenumber 
+                                             } \immediate \write \@auxout {\...
+l.692 \appendix
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\appendix ...ainend }} \appendixorig \headcommand 
+                                                  {\gdef \inserttotalframenu...
+l.692 \appendix
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: No counter 'framenumber' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.692 \appendix
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[42]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43]
+[44]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<ES_Media_MNC.jpeg, id=162, 1084.05pt x 650.43pt>
+File: ES_Media_MNC.jpeg Graphic file (type jpg)
+<use ES_Media_MNC.jpeg>
+Package pdftex.def Info: ES_Media_MNC.jpeg  used on input line 931.
+(pdftex.def)             Requested size: 385.53484pt x 231.31613pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<ES_Media_Exporters.jpeg, id=163, 1084.05pt x 650.43pt>
+File: ES_Media_Exporters.jpeg Graphic file (type jpg)
+<use ES_Media_Exporters.jpeg>
+Package pdftex.def Info: ES_Media_Exporters.jpeg  used on input line 944.
+(pdftex.def)             Requested size: 385.53484pt x 231.31613pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<ES_Media_Local.jpeg, id=164, 1084.05pt x 650.43pt>
+File: ES_Media_Local.jpeg Graphic file (type jpg)
+<use ES_Media_Local.jpeg>
+Package pdftex.def Info: ES_Media_Local.jpeg  used on input line 956.
+(pdftex.def)             Requested size: 385.53484pt x 231.31613pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<ES_High_Media_Firms.jpeg, id=165, 1084.05pt x 650.43pt>
+File: ES_High_Media_Firms.jpeg Graphic file (type jpg)
+<use ES_High_Media_Firms.jpeg>
+Package pdftex.def Info: ES_High_Media_Firms.jpeg  used on input line 968.
+(pdftex.def)             Requested size: 385.53484pt x 231.31613pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<ES_Low_Media_Firms.jpeg, id=166, 1084.05pt x 650.43pt>
+File: ES_Low_Media_Firms.jpeg Graphic file (type jpg)
+<use ES_Low_Media_Firms.jpeg>
+Package pdftex.def Info: ES_Low_Media_Firms.jpeg  used on input line 980.
+(pdftex.def)             Requested size: 385.53484pt x 231.31613pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<ES_Doctors_MNC.jpeg, id=167, 1084.05pt x 650.43pt>
+File: ES_Doctors_MNC.jpeg Graphic file (type jpg)
+<use ES_Doctors_MNC.jpeg>
+Package pdftex.def Info: ES_Doctors_MNC.jpeg  used on input line 996.
+(pdftex.def)             Requested size: 385.53484pt x 231.31613pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<ES_Doctors_Exporters.jpeg, id=168, 1084.05pt x 650.43pt>
+File: ES_Doctors_Exporters.jpeg Graphic file (type jpg)
+<use ES_Doctors_Exporters.jpeg>
+Package pdftex.def Info: ES_Doctors_Exporters.jpeg  used on input line 1009.
+(pdftex.def)             Requested size: 385.53484pt x 231.31613pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<ES_Doc_Local.jpeg, id=169, 1084.05pt x 650.43pt>
+File: ES_Doc_Local.jpeg Graphic file (type jpg)
+<use ES_Doc_Local.jpeg>
+Package pdftex.def Info: ES_Doc_Local.jpeg  used on input line 1021.
+(pdftex.def)             Requested size: 385.53484pt x 231.31613pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<ES_High_Doc_Firms.jpeg, id=170, 1084.05pt x 650.43pt>
+File: ES_High_Doc_Firms.jpeg Graphic file (type jpg)
+<use ES_High_Doc_Firms.jpeg>
+Package pdftex.def Info: ES_High_Doc_Firms.jpeg  used on input line 1036.
+(pdftex.def)             Requested size: 385.53484pt x 231.31613pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<ES_Low_Doc_Firms.jpeg, id=171, 1084.05pt x 650.43pt>
+File: ES_Low_Doc_Firms.jpeg Graphic file (type jpg)
+<use ES_Low_Doc_Firms.jpeg>
+Package pdftex.def Info: ES_Low_Doc_Firms.jpeg  used on input line 1048.
+(pdftex.def)             Requested size: 385.53484pt x 231.31613pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+! Undefined control sequence.
+\pageatend -> \xdef \appendixend {\theframenumber 
+                                                  } \ifnum \mainend >0\immed...
+l.1065 \end{document}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1065 \end{document}
+                     
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+[45] [46] [47] [48 <./ES_Media_MNC.jpeg>] [49 <./ES_Media_Exporters.jpeg>]
+[50 <./ES_Media_Local.jpeg>] [51 <./ES_High_Media_Firms.jpeg>] [52 <./ES_Low_Me
+dia_Firms.jpeg>] [53 <./ES_Doctors_MNC.jpeg>] [54 <./ES_Doctors_Exporters.jpeg>
+] [55 <./ES_Doc_Local.jpeg>] [56 <./ES_High_Doc_Firms.jpeg>] [57 <./ES_Low_Doc_
+Firms.jpeg>] (./Proj_BD_D1.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 8061 strings out of 478268
+ 135932 string characters out of 5846348
+ 446172 words of memory out of 5000000
+ 26093 multiletter control sequences out of 15000+600000
+ 505218 words of font info for 109 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 70i,10n,85p,2398b,464s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/tfrupee/tfrupee.pfb></usr/local/texlive/202
+2/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2022/texmf-dis
+t/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2022/texmf-dist/fonts/typ
+e1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/tim
+es/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a
+.pfb>
+Output written on Proj_BD_D1.pdf (57 pages, 47879778 bytes).
+PDF statistics:
+ 268 PDF objects out of 1000 (max. 8388607)
+ 165 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+

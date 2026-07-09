@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Background}{2}{0}{1}
+\beamer@sectionintoc {2}{Main Findings}{48}{0}{2}
+\beamer@sectionintoc {3}{Heterogeneity in firm response in molecule markets with varying elasticity}{55}{0}{3}
+\beamer@sectionintoc {4}{Heterogeneity in firm response in molecule markets with varying competition}{63}{0}{4}

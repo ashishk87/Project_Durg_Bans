@@ -1,0 +1,1150 @@
+orrie% AER-Article.tex for AEA last revised 22 June 2011
+\documentclass[AER]{AEA}
+\usepackage{breqn}
+\usepackage{graphicx}
+\usepackage{enumerate}   
+\usepackage{float}
+\usepackage{amssymb,latexsym,amsmath}     % Standard packages
+\usepackage{graphicx}
+\usepackage{authblk}
+\usepackage{dsfont}
+\usepackage{tfrupee}  
+\usepackage{amsthm}
+\renewcommand\qedsymbol{$\blacksquare$}
+\usepackage{color}
+\usepackage{mathptmx}
+\usepackage{natbib}
+\usepackage{amssymb,amsmath,enumerate}
+\usepackage{multirow}
+\usepackage{bm}
+\usepackage{epsfig}
+\usepackage{multicol}        % used for the two-column index
+\usepackage{url}
+\usepackage{longtable} % new
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{bbold}
+\theoremstyle{theorem}
+\newtheorem{res}{Result}
+\usepackage{tabulary}
+\usepackage{appendixnumberbeamer}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+	\insertshorttitle\hfill\insertframenumber\,/\,\inserttotalframenumber}
+\usepackage{ragged2e}
+%\usepackage{dirtytalk}
+\usepackage[]{quoting}
+
+\urldef{\FFive}\url{http://www.cdsco.nic.in/writereaddata/fdcexpert%2019.1.2016.pdf}
+\urldef{\FSix}\url{http://164.100.47.5/newcommittee/reports/englishcommittees/committee%20on%20health%20and%20family%20welfare/59.pdf}
+\urldef{\FEight}\url{https://cdsco.gov.in/opencms/export/sites/CDSCO_WEB/Pdf-documents/Committee/dtab_sub_report.pdf}
+\urldef{\FTwentytwo}\url{https://www.investindia.gov.in/sector/pharmaceuticals#:~:text=The%20country%20is%20home%20to,of%20over%2010%2C500%20manufacturing%20facilities}
+
+
+% The mathtime package uses a Times font instead of Computer Modern.
+% Uncomment the line below if you wish to use the mathtime package:
+%\usepackage[cmbold]{mathtime}
+% Note that miktex, by default, configures the mathtime package to use commercial fonts
+% which you may not have. If you would like to use mathtime but you are seeing error
+% messages about missing fonts (mtex.pfb, mtsy.pfb, or rmtmi.pfb) then please see
+% the technical support document at http://www.aeaweb.org/templates/technical_support.pdf
+% for instructions on fixing this problem.
+
+% Note: you may use either harvard or natbib (but not both) to provide a wider
+% variety of citation commands than latex supports natively. See below.
+
+% Uncomment the next line to use the natbib package with bibtex 
+%\usepackage{natbib}
+
+% Uncomment the next line to use the harvard package with bibtex
+%\usepackage[abbr]{harvard}
+
+% This command determines the leading (vertical space between lines) in draft mode
+% with 1.5 corresponding to "double" spacing.
+\draftSpacing{1.5}
+%\usepackage[margin=0.9in]{geometry} % Use this to adjust margins.
+
+\begin{document}
+
+\title{ A Face-Off between Markets and Institutions: Evidence from  En-Masse Pharmaceutical Product Ban in India }
+\shortTitle{}
+\author{Anindya S. Chakrabarti, Chirantan Chatterjee, Ashish Kumar\thanks{Chakrabarti: Indian Institute of Management-Ahmedabad, anindyac@iima.ac.in. Chatterjee: Indian Institute of Management-Ahmedabad, chirantanc@iima.ac.in. Kumar: Indian Institute of Management-Ahmedabad, ashishk@iima.ac.in.}}
+\date{\today}
+\pubMonth{}
+\pubYear{}
+\pubVolume{}
+\pubIssue{}
+\JEL{}
+\Keywords{}
+
+\begin{abstract}
+	Informational asymmetries in the marketplace leading to market failure is a well-tested fact in economics. Corrective measures undertaken by public regulators through varying instruments of litigation, or public administrative control are often driven by the intention to correct those asymmetries, and enhance social welfare. However, the impact of those policies depends on multitude of factors ranging from the strength and maturity of the regulatory apparatus of a region to the political willingness to intervene and correct market distortions. We examine a particular episode in that context, where, Government of India, in March 2016 banned the manufacture, sale and distribution of 344 Fixed-Dose-Combination (FDCs) drugs, thus striking a huge blow to gigantic 500 billion rupees pharmaceutical industry's arm involved in the production of FDCs, to which banned FDCs contribution was substantial. The fundamental objection  surrounding these products stem from the lack of therapeutic justification behind the concerned combinations formulating the FDCs, and are therefore classified by government as irrational products. Using difference-in-difference model coupled with event study design framework, we find a heterogeneous response by different product-markets as well as firm-markets. Additionally, the response of producers operating in competitive markets diverged from those in concentrated markets.
+%	In particular, we find that multinational firm's sale involving these banned FDCs fell  sharply compared to their domestic peers. In addition, we also see that the banned drugs belonging to chronic category displayed a muted response in comparison to the acute category drugs. 
+	That alludes to the possibility of rich dynamics emanating from the interplay between different agents and different  markets in order to avoid compliance with an objective to recoup investments and minimize losses. And perhaps weak regulatory environment of India abetted them in their pursuit as indicated by our evidence. Our results holds after controlling for varied forms of unobserved regional heterogeneity, and other controlling factors. 
+%	Our findings, perhaps the first to evaluate the market response to an \textit{En-Masse} product bans in the context of pharmaceutical markets have practical policy implications for designing the future regulatory response in any sector of the economy in general and healthcare sector in particular.
+\end{abstract}
+\maketitle
+\pagebreak
+
+\section{Introduction}
+
+Technology adoption and its subsequent diffusion is a very well-studied topic and especially so in the context of medical domain where new technologies not only carry the potential to make healthcare affordable for all but in addition comprises the scope to cure hitherto incurable diseases. In contrast, the equally imperative and related topic of technological abandonment has been paid scarce attention with the exception of some studies (\cite{finkelstein1985scientific},\cite{greenwood2017and}). The issue becomes even more pertinent when technology abandonment is induced by the efficacy concerns surrounding the product. In that case, analyzing the behavior of agents involved in those abandoned product markets becomes crucial from the standpoint of both regulatory and ethical concerns. Ideally, agents ought to exit the abandoned product markets as soon as the validity or effectiveness of a product is marked as harmful or dubious. However, very scant evidence has had been collected till date to study the ensuing behavior of agents in the product markets following their abandonment. More importantly, to study this phenomenon in the context of a developing country where the regulatory apparatus is immature and institutions constantly evolving could potentially shed light on various fixes that could further strengthen the regulatory environment. This paper aims to partially fill this gap in the literature by analyzing the effects of an \textit{En-Masse} drug ban levied by the Government of India, in March 2016 to eliminate the irrational Fixed-Dose-Combination (FDCs from hereon) drugs on the subsequent behavior of multiple agents in heterogeneous product markets in terms of their production and pricing decisions.
+
+Product abandonment could result from various reasons. Perhaps, one obvious reason necessitating abandonment could be the emergence of a  better technology leading to its widespread adoption, thereby resulting in the elimination of the older technology (\cite{gort1982time}, \cite{abrahamson1993institutional}, \cite{kennedy2009institutionalization}, \cite{venkatesh2003user}, \cite{kapoor2015complementarities}). Better technology would result in higher output, not only by raising the productivity of capital, but in addition, may also increase the associated productivity of its complimentary factor (say labor). Therefore, adopters would be at a comparative advantage compared to the non-adopters, and they might force the latter group towards exit. And that may trigger an industry wide abandonment of the outdated technology or the product (\cite{adner2010old}, \cite{adner2016innovation}, \cite{greer1981medical}, \cite{rogers2010diffusion}, \cite{2002technologies}, \cite{acemoglu2002directed}, \cite{christensen2013innovator}).
+
+Another reason triggering the abandonment of products could stem from the release of some information, which either questions the efficacy of the product, or labels it as dubious and harmful for consumers. Some studies have documented the resulting market dynamics following the delegitimation of technology (\cite{howard2012comparative}, \cite{aggarwal2020science} , \cite{finkelstein1985scientific}, \cite{greve1995jumping}, \cite{kennedy2011diffusion}). To measure the response in such cases becomes even more imperative, so as  to see if the market responds instantaneously or in a lagged manner. Different pathways could lead to multiple equilibrium positions entailing distinct welfare implications for different agents involved. For instance: An instantaneous abandonment of the invidious products or harmful technology by the producers in that market would be the first-best outcome for the consumers, albeit that would come at the expense of the substantive losses that sellers have had to incur to offset failed investments. Analogously, gradual withdrawal of such products would offer producers a window to recoup their investments at the expense of the consumer welfare. Such trade-offs reflect the intricacies involved in designing an apt policy response to curb the potentially harmful products and/or technologies.  
+
+The En-Masse ban on the manufacturing, sale, and distribution of 344 FDCs  by the Government of India in March-2016 was an earnest effort to curb the expansion of irrational products in the domestic pharmaceutical markets. The aim of the paper is to disentangle the complex market dynamics following the flagging and/or labeling of products as dangerous or irrational by the regulatory agencies. Moroever, it becomes even more imperative to conduct this analysis in the area of healthcare, where stakes are alarmingly high to identify, flag and curb the usage of products/technologies possessing any potential to harm. Unfortunately, there have been multiple instances where inertia on the part of  regulators resulted in the continued existence of  medical practices  fraught with danger in terms of their clinical outcomes (\cite{gawande2015avalanche}). Many medical services prove to be of very little value in improving the medical condition of patients, mainly because those are prescribed to fill the coffers of hospitals (\cite{schwartz2014measuring}). In particular, the study examines frequent cases of patients being prescribed one of twenty-six tests or treatments that are determined by scientific and medical community to be of no use or in some cases could pose a substantial health risk.
+
+
+Fixed Dose Combination drugs (FDCs) are combination of two or more medicines. The reason to justify two or more drugs in a FDC could stem from various reasons such as (a) improvement in therapeutic efficiency, (b) diminish the incidence of adverse effects of a drug , (c) increase drug compliance by reducing pill burden, (d) superior in terms of pharmacokinetic attribute, (e) shrinking the possibility of drug resistance, (f) more cost-effective, etc. Any FDC in the market citing such reasons ought to provide scientific evidence substantiating their claims. In contrast, any FDC formed without care could do more harm than good (\cite{poudel2008irrational}, \cite{sharma2014irrational}). Irrational combination of medications in the form of FDCs can sometimes result in reduced therapeutic efficiency or exhibit different characteristics and safety mechanisms than they do in their individual form. Any carelessness or flouting of norms from the part of either pharmaceutical companies, drug regulators, or healthcare providers could prove lethal if such bizarre combinations are allowed to operate in the market. That would allow patients to come in contact of these ineffective or  harmful combinations and which potentially could turn into a community wide health hazard. 
+
+It is in this context, that one needs to see the En-Masse drugs ban levied by the Government of India. Indian FDC drug market is gigantic, as it constitute 45-50\% of the overall \rupee~1 lakh crore  sales recorded in the pharmaceutical sector at the time of the ban. And some studies (\cite{srinivasan2018fixed}) estimate that close to 50\% of the FDC market is composed of irrational cocktails, which roughly amounts to \rupee~22k-25k crores.\footnote{\url{https://www.businesstoday.in/sectors/pharma/what-are-fdc-drugs-and-why-has-the-govt-decided-to-ban-them/story/282350.html}} The astronomical rise in the market share of FDC drugs could be attributed to the cost shedding opportunities that they present to both producers and consumers. For customers, it seems like a better deal as rather than purchasing  two-three medicines each for a different treatment, they could instead buy a single FDC, thus an effective measure in terms of costs, compliance, and adherence. And for pharmaceutical companies, FDCs offer a unique avenue to reduce costs in different parts of the supply-chain- involving production, packaging and distributional logistics. Moroever, FDCs provide companies an avenue to circumvent the price reduction mandated by the National List of Essential Medicines ordinance (NLEM 2011)  and the Drug Price Control Orders (DPCO 2013), two vital actions taken by the central government to make drugs affordable for all. By combining drugs in the NLEM and DRPO lists, companies are not only able to circumvent the price control mandates, but in addition they can also deploy this ruse for any combination of preexisting drugs to make a new cocktail product instead of inventing and manufacturing new medicines. That coupled with the company's predatory marketing and sales strategy of showcasing FDCs as a better alternative to drugs enlisted in  NLEM (2011) and DPCO (2013) ordinances has had exacerbated the already elevated levels of informational asymmetries present in the market. Adding to this lethal mix, the huge lapses displayed by the government in reinvigorating drug regulatory agencies, oversight from the part of medical practitioners (\cite{goswami2013evaluation}, \cite{roy2007drug}, \cite{bhaskarabhatla2017role}), and improper self medication by general public serves as a perfect recipe for a public-health disaster.
+
+\begin{figure}[h!]
+	\caption{Trend of approvals for FDCs from CDSCO (1971-2019).}
+	\includegraphics[width=\columnwidth]{Fig_1}
+	\begin{figurenotes}
+		FDC approvals granted between 1961-2019 by the Central Drugs Standard Control Organization.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+       Central Drugs Standard Control Organization.
+	\end{figurenotes}
+	\label{Fig_1}
+\end{figure}
+
+
+Many studies in economics have documented the existence of widespread information asymmetries in the healthcare markets (\cite{mushkinhealth}, \cite{arrow1978uncertainty}, \cite{muntaner2006uncertain}, \cite{d2007effect}, \cite{retchin2007overcoming}). Even before the advent of any specialized theory on information asymmetry induced equilibrium outcomes, Arrow presented his profound insight regarding the subject especially in the context of healthcare markets. In particular, he reckoned that healthcare markets are characterized by extreme amount of uncertainty, which stems from patient's incognizance about the quality of medical treatments they are subjected to receive. And their limited capability to acquire knowledge coupled with the intricate nature of the medical discipline exacerbate the information asymmetry problem-``\textit{Uncertainity as to the quality of the product is perhaps more intense here than in any other important commodity. Recovery from disease is unpredictable as is its incidence. Further, the amount of uncertainity, measured in terms of utility variability, is certainly much greater for medical care in sever cases than for, say, houses or automobiles, even though there may be considerable residual uncertainity}'' (\cite{arrow1978uncertainty}). Furthermore, Arrow purports that some agents in market would be better informed than others. ``\textit{Like other commodities, it has a cost of production, and a cost of transmission, and so it is naturally not spread out over the entire population but constrained among those who can profit from it}''(\cite{arrow1978uncertainty}). That is not only true for the services that physicians offer, but also holds true for the entire range of medical products. Not only consumers have less information about the product's value/quality, it is  inherently difficult to evaluate it even after careful inspection.
+
+Arrow's insights helps to decipher the current predicament of Indian pharmaceutical markets. That profit-driven pharmaceutical companies  taking advantage of information wedge in the concerned arena by flooding markets with useless and potentially harmful products in order to generate returns, is a classic prediction of  the asymmetric information theory that says in the absence of information on quality, the market has to settle with the lowest possible class of products- a market failure where trade involving higher quality products never takes place (\cite{akerlof1970market}). It's not astonishing then that the actual number of FDCs operating in Indian market is around 6000 (\cite{gupta2016fixed}), while official estimates show that only 1292 FDCs (see Fig-\ref{Fig_1}) were granted permission by the Central Drugs Standard Control Organization (CDSCO) till 2018, which also acts as the Central Licensing Authority (CLA). Furthermore, the number of brands associated with the FDCs runs into tens of thousands (\cite{gupta2016fixed}). Such dire and grave situation cannot be the onslaught by a single agent, rather, it is a manifestation of some shrewd stakeholders working in close proximity in the hope of seeking rents by rigging the system (\cite{bhaskarabhatla2017role}). A recent survey finding substantiates our claim, as they found that out 81\% of the physicians did not possess appropriate knowledge about the rationality of inquired FDCs, and only 43\% were able to recall one FDC drug that got banned in 2016 (\cite{roy2007drug}).
+Moreover, our evidence also supports the claim that some healthcare areas encompass more uncertainty and are therefore more susceptible to malfeasance engendered by some avaricious agents involved in the market. Our evidence show a strategic divergent response by sellers while deciding the pace of abandoning banned drugs in acute and chronic categories. While they quickly offloaded banned products belonging to acute category, however the same intensity (or willingness) to withdraw from market was absent in case of banned FDCs belonging to chronic category. And this divergent behavior amplifies when we restrict our attention to domestic producers. Perhaps, sellers anticipated that since chronic diseases are persistent in nature, the demand schedule of chronic drugs would be impervious to the ban and therefore chronic product markets offer a unique opportunity to clear stocks and recoup investments.
+
+%\begin{figure}[h!]
+%	\caption{Comparison of Numbers of FDCs and brands belonging to certain therapeutic groups in India relative to developed countries.}
+%	\includegraphics[width=\columnwidth]{Fig_2}
+%	\begin{figurenotes}
+%		Study across four therapeutic groups in India in 2011-12.
+%	\end{figurenotes}
+%	\begin{figurenotes}[Source]
+%     \cite{mcgettigan2015use}
+%	\end{figurenotes}
+%	\label{Fig_2}
+%\end{figure}
+
+\begin{table}[h!] \centering
+	\caption{Comparison of numbers of FDCs and brands belonging to certain therapeutic groups in India relative to developed countries} 
+	\label{Table-I} 
+	\footnotesize
+ \begin{tabular}{|p{1.7cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|p{1.1cm}|}
+	\hline 
+     \multicolumn{1}{|c|}{ }& \multicolumn{4}{c|} {} & \multicolumn{1}{c|}{  } & \multicolumn{3}{c|} { }\\
+	\multicolumn{1}{|c|}{Therapeutic }& \multicolumn{4}{c|} {FDC related } & \multicolumn{1}{c|}{FDC related  } & \multicolumn{3}{c|} {FDC related }\\
+	\multicolumn{1}{|c|}{Groups(use)}& \multicolumn{4}{c|} {formulations as of 2012} & \multicolumn{1}{c|}{Brands } & \multicolumn{3}{c|} {Sales}\\
+	\cline{2-9}
+    &  & &  &  & & & & \\
+	& {FDCs available in India (No.)} & {FDCs approved by CDSCO \% (No.)} & {FDCs available in UK (No.)} & {FDCs available in US (No.)} & {Total brands of these FDCs (No.) }& {Total Sales of Oral Drugs (in INR crore)} & {\% Sales of FDCs (out of total oral drug sales) }& {\% of FDC sales from unapproved FDCs (out of total FDC sales) }\\
+	\hline
+        &  & &  &  & & & & \\
+	 	NSAID & 124 & 27\% (30) & 6\% & 10 & 2739 & 1181 & 62\% & 61\%\\
+	 (painkillers)  &  & &  &  & & & & \\
+	\hline 
+	  &  & &  &  & & & & \\
+    Metformin 	& 25 & 80\% (20) & 8 & 10 & 536 & 817 & 56\% & 99.7\% \\
+	(for Diabetes)  &  & &  &  & & & & \\
+	\hline
+     &  & &  &  & & & & \\
+	 	Antidepressants & 16 & 19\% (3) & 0 & 1 & 301 & 356 & 57\% & 57\% \\
+	   &  & &  &  & & & & \\
+	\hline
+	 &  & &  &  & & & & \\
+	Antidepressants  & 10& 30\% (3) & 0 &  1 & 211 & 116  & 6\% & 6\% \\
+		   &  & &  &  & & & & \\
+    \hline 
+\end{tabular}
+	\begin{tablenotes}
+	Study across four therapeutic groups in India in 2011-12 
+	\end{tablenotes}
+	\begin{tablenotes}[Source]
+		(\cite{mcgettigan2015use})
+	\end{tablenotes}
+\end{table} 
+
+In addition, many studies have highlighted the institutional differences that exist between developed and developing countries, which dramatically affects the operational regulatory standards in those countries (\cite{banerjee1997theory}, \cite{bertrand2007obtaining}, \cite{fisman2004tax}, \cite{acemoglu2005unbundling}, \cite{acemoglu2005institutions}, \cite{acemoglu2006simple}). Regulation is crucial to safeguard consumer's interests, but sometimes excessive regulation could be inimical to innovation and process of creative destruction (\cite{aghion2021impact}). However, in our case state agencies did not regulate the bizarre FDC drug market for several years. And as we show in the next section, not only companies took full advantage of the institutional loopholes, in addition they fought relentlessly in courts to preserve the status-quo by subduing the long-overdue regulation. It shows that developing economies especially with their fledgling institutions are precarious and more susceptible to fall prey to the malpractices engineered by profit seeking companies. A study (\cite{mcgettigan2015use}) contrasted the situation of FDC drugs in four different therapeutic categories in some well-regulated and developed countries like USA, and UK to that of India. Results from the study displayed in Table-\ref{Table-I} are astonishing. Not only is India leading in terms of approved FDC drugs, but the number of non-approved drugs and their associated brands co-existing in the drug market is abhorrent. That displays the ignorance and oblivion shown by both regulators and government in taking the appropriate course of action to redress the problem. More broadly, it shows a dramatic wedge in the underlying institutional setup among different countries situated distantly on the economic ladder. A more pertinent question that remains to be answered is that whether regulators and government were successful in their target to cleanse Indian drug market from irrational FDCs and to what extent companies showed resistance to such measures.
+
+By utilizing the aggregate demand data that comes from All India Organization of Chemists and Druggists (AIOCD), an organization responsible for maintaining database Pharmatrac$^{TM}$, we treat timing of the En-Masse drug bans as an exogenous regulatory shock to the Indian drug market dealing in irrational FDCs. We investigate whether there was a dramatic market shift in the observed sales of banned FDCs in comparison to other classes of drugs belonging to the same group. Here group comprises similar molecules/drugs in terms of their specific mechanism of action based on the route of administration.\footnote{AIOCD data comes with five different set of classification of drugs. The coarsest classification is \textbf{Therapy} which is based on the target of therapeutic action of the drug. \textbf{Supergroup} is the next  category which classifies drugs based on the broader categorization of targets. \textbf{Class} forms the next category which includes drugs similar in terms of their mode of action on target. \textbf{Group} is next to the last classification which includes drugs that share same mechanism of action based on route of administration. The most narrow classification is \textbf{Subgroup} which is  based on the Molecules/Active Ingridients/ Compositions.}$^{,}$\footnote{Note that the drug ban was levied at the \textbf{Subgroup} level, and we are selecting our control group-one level up from the \textbf{Group} category. In particular, we select all the residual molecules from all those groups where atleast one banned FDC drug was found.} We conduct this analysis for the period January 2011 to December 2019. Many prior studies have used the same data for various market evaluations (\cite{dutta2011free}, \cite{bhaskarabhatla2017role}, \cite{adbi2020stakeholder}, \cite{aggarwal2020can}, \cite{aggarwal2020science},  \cite{bansal2021politics}). 
+
+Our results show that the regulatory action led to abandonment of the banned products albeit the dynamics vary based on product and company attributes. In particular, multinational firms abandoned banned FDCs at a higher pace compared to their domestic counterparts. And, that trend aggravate when we restrict our sample to FDCs belonging to chronic drugs category. In fact, our evidence show that market share of  domestic producers increased in the irrational FDCs pertaining to chronic drugs category, and especially so for small local companies. Overall, we witness a steep abandonment behavior in the irrational FDCs belonging to acute drugs category and a very muted response in the chronic drugs category both nationally, and sub-nationally after accounting for regional heterogeneity. 
+
+
+Our findings perhaps the first to evaluate the market response to a nationwide En-Masse product ban contributes to important strands in the literature. First, we document evidence on the market response to a big regulatory shock and analyze whether firms comply with the regulation and abandon harmful products. This adds to the recent literature on adverse information induced technological abandonment 
+(\cite{finkelstein1985scientific}, \cite{greve1995jumping}, \cite{kennedy2011diffusion}, \cite{howard2012comparative}, \cite{agarwal2014abandoning}, \cite{greenwood2017and}, \cite{aggarwal2020science}). Our study analyzes how agents strategically design their response to regulation based on the inherent uncertainties and complexities in different product markets adds to a host of studies evaluating agents behavior in different markets marked with varied amount of information asymmetries (\cite{levitt2008market}, \cite{fong2005experts}, \cite{giannakas2002information}, \cite{alger2004theory}). Associatedly, our evidence also shed light on the heterogeneous response to a regulatory event exhibited by domestic vis-a-vis MNC firms when their actions refect a trade-off between profits and ethics (\cite{cheah2007corporate}, \cite{haunschild2004role}, \cite{jarrell1985impact}, \cite{rhee2006liability}). Relatedly, it also adds to the debate on the role played by reputation concerns in the strategic decision-making by MNCs in host countries. Not only they share (with their domestic peers) the fear of stringent punitive action if they don't comply with rules and regulations, in addition they are also concerned of long-lasting damage induced by trust erosion among local public mainly because of their multinational stature and foreignness (\cite{aggarwal2020science}, \cite{campbell2012multinationals}, \cite{zaheer1997dynamics}, \cite{zaheer1995overcoming}). Lastly, our study adds to the vast literature discussing the underlying role of institutions in empowering the economic and political systems of a country (\cite{banerjee1997theory}, \cite{bertrand2007obtaining}, \cite{fisman2004tax}, \cite{acemoglu2005unbundling}, \cite{acemoglu2005institutions}) .
+%Many episodes of market failures  can be avoided by reinvigorating and strengthening regulatory bodies, increasing public awareness, fixing the accountability of different stakeholders in the system, etc.
+%Lastly, our study adds to the vast literature on the  empower institutions and strengthen regulatory apparatus to avoid the possibility of market failures in areas as sensitive and fragile as healthcare (). 
+
+The layout of the paper is as follows. Next section provides the institutional background underlying FDC drug markets and the circumstances that led to the En-Masse ban. Section \RNum{3} describes our data and provide some descriptive analysis. Section \RNum{4} lays out our identification strategy coupled with the econometric specifications, and event-study design framework to analyze the market response to an exogenous regulatory shock, and in further sub-sections we provide our baseline findings along with a heterogeneity analysis. Lastly, we conclude by summarizing our findings and discussing some policy-relevant insights emanating from our study. In appendix, we supplement the intuition of our results with a simple model describing the market dynamics in the aftermath of a product ban.
+
+
+\section{Institutional Background}
+
+Any pharmaceutical ingredient or drug is a combination of meticulously processed chemicals and it must possess some therapeutic justification for it to get ratified for human use. Essentially, the inspection process carefully weighs therapeutic advantage of a drug to that of its side effects and if the former outweigh latter then the manufacturer is granted approval to market the drug. If any pharmaceutical manufacturer/company wish to manufacture/sell/market any drug within India, it has to act  as a Market Authorization Holder (MAH), and seek approval from Central Drug Standard Control Organization (CDSCO). In addition to providing  data from various clinical trial stages, the MAH is entrusted to keep a vigil on any adverse effects stemming from the human usage of the drug, and report the same to the CDSCO.
+
+Most of the pharmaceutical drugs are prepared from raw materials often called 'bulk drugs' and are refined as formulations- a final product intended for human/animal usage. These formulations are then carefully tested, and based on those evaluations, certain daily dosage forms are prescribed for human usage. In majority cases, these prescriptions are composed of 'Single-Dose Formulations' (SDF's). However, certain diseases warrants the use of multiples of such formulations in fixed ratios, to defeat the causative drug underlying that disease. Many infectious diseases like tuberculosis, HIV  as well as  non-infectious ailments like- cardiovascular diseases, diabetes and other chronic diseases are best served through combination of multiple drug formulations. Moroever, this category of drugs also serves the purpose of enhancing compliance and adherence by reducing the ever-increasing pill-burden. Also, some instances merits their use to overcome the bacterial resistance through collective action of multiple drugs in fixed ratios. That forms the underlying rationale behind the promotion of some rationale FDCs  by many clinical experts and global health institutions like WHO (\cite{blomberg2001rationale}).\footnote{In the WHO list of essential medicines, 27 out of 414 medicines are FDCs. Analogously, in the Government of India's National List of Essential medicines (NLEM 2015), 24 out of 376 drugs belong to FDC category.} 
+
+
+FDC technology is also exceedingly cost-effective in terms of production, packaging, and distribution related aspects, which led to the surge in its popularity among pharmaceutical companies. Nevertheless, scientific or therapeutic justification should never be replaced by pecuniary concerns, especially in case of drugs, where the damage from a potential adverse reaction could be substantial. However, in the past two decades, Indian drug market was flooded with alarmingly rising number of irrational FDCs lacking any scientific or therapeutic justification.
+In the same period, pharmaceutical industry was struck by two major shocks. The passage of TRIPS agreement in 2005 coupled with the price mandates imposed through government decrees forced the pharmaceutical companies to explore unconventional avenues to generate returns. By combining certain drugs in fixed proportions and relabeling them as a new product is way cheaper than spending billions of rupees in research to invent a new drug, and therefore augurs well for companies to overcome intense competition in the race to a new patent. In addition, a new product prepared from the combination of drugs in the NLEM list falls outside the purview of price controls. Perhaps, above cited reasons led to the emergence of thousands of FDCs and their excessive promotion by pharma-companies.
+
+\subsection*{Missing Regulation: A Historical Account}
+
+One of the biggest reason behind the astronomical rise of the market share of  irrational FDCs could be attributed to the disconnect between state and central drug regulatory agencies of India. FDCs were present in Indian market from 1960 onward, but regulators took cognizance of their presence in 1988 when they sought to first regulate them by making changes to the Drug \& Cosmetic Act, 1940. As per the  Rule 122E of Drugs and Cosmetics Act 1940, FDCs are considered as New Drugs and CDSCO after careful examination of clinical trial data on the therapeutic efficiency, rationality and safety profile of the concerned drug,  grants or denies approval. Only after CDSCO's approval, a State Licensing Authority (SLA) can issue license for the manufacturing, import, marketing, or sales of the concerned drug. However, SLA's all over the country  granted approvals to FDCs on their own, i.e. the requirement to submit a no-objection certificate from CDSCO was not binding while seeking license from SLA. SLA's themselves lacked any technical expertise or access to resources to examine the validity of the  drugs, and that led to proliferation of irrational FDCs in India.
+%Also, as mentioned earlier, every company upon receiving the CDSCO approval acts as MAH and document varied health outcomes stemming from the consumption of that particular drug. And MAH's are mandated to submit this post-marketing surveillance  data to CDSCO, which helps them to determine the suitability of the drug across larger population groups.
+That coordination-failure and disconnect between SLA's and CDSCO was extensively used by companies not only to promote and sell illegitimate FDC drugs, in addition, they used the same loophole to shield themselves when regulatory action was eventually taken to redress the problem.
+
+\subsection*{Feeble Regulatory Response}
+
+For a long time Indian Government as well as regulatory agencies were dormant on resolving this issue, and ignored the presence of illegitimate combination drugs. However, that changed with the central government order of 2007, in which all the State Drug Controllers (SDCs) were asked to withdraw 294 FDCs which were illegitimate in nature, i.e. approval of Drug Controller General of India (DGCI) was not taken prior to issuing the marketing license. However, affected pharma-companies resisted the ban and once again exploited the same loophole they were using to sell the FDCs. In particular, they contended that central government does not have any authority to repudiate the licenses issued by the states, and therefore succeeded in getting a stay order from Madras High Court.\footnote{For more details please refer to CDSCO- Report of Expert Committee on Fixed Dose Combinations (FDCs) licensed by SLAs for Manufacture without Approval of DCG. Available from: \FFive}. In the interregnum between 2008-2012, CDSCO tried many sporadic ways to weed out irrational FDCs, yet none of them bear any results.
+
+Further inaction of regulators prompted the scrutiny of the 59th Parliamentary Standing Committee. In particular, the 59th Department Related Parliamentary Standing Committtee on Health and Family Welfare (PSCHW) report on the Functioning of the Central Drugs Standard Control Organization (CDSCO), was tabled in both upper and lower house of Indian Parliament.\footnote{See:\FSix}. The Committee investigated  reasons behind the continued existence of invalid FDCs and questioned the intent of the regulatory bodies and government in doing so when they had the legal means at their disposal to eliminate the concerned drugs. In particular, the Committee noted: ``\textit{To remove such unauthorized FDCs from the market, the Central Government can either issue directions under Section 33p (of the Drugs and Cosmetics Act) to states to withdraw the licenses of FDCs granted without prior DCGI approval or the Central Government can itself ban such FDCs under Section 26A }'' (\cite{PSCHFW} page no-26). Furthermore, the report highlighted that government could have taken aid of the provisions laid out in section 26 A of the Drug \& Cosmetics Act: ``\textit{It is also possible to ban FDCs, not authorized by CDSCO by invoking Section 26A which empowers the Central Government to ban any drug to protect public health. The Committee was informed that the Government has not evoked Section 26A either so far. No explanation was offered for not using powers under Section 26A.}'' (\cite{PSCHFW} page no-27). And so the committee recommended to draft a policy to responsibly examine and approve FDCs in future alongside a swift legal action intended to eliminate all illegitimate FDCs.
+
+However, in the 66th Action Taken Report (ATR)\footnote{See:\url{https://dineshthakur.com/wp-content/uploads/2016/03/2016.03.11-PIL-1-Annexure-C-5.pdf}} on the 59th PSCHW report, the parliamentary committee noted that neither the Ministry of Health and Family Welfare nor any regulatory body took any  action as was prescribed in the report. In that report, CDSCO, DGCI and government were severely  rebuked for their continued inaction and complacent behavior on such a pressing matter. The Commiitte noted: ``\textit{Even after the passage of several months these drugs continue to be marketed with impunity though their exact effect, harmful or otherwise, is yet to be ascertained. The Government without caring a bit about the ramifications is still contemplating referring the issues related to continued marketing of these drugs and updating of their product monographs in the light of recent knowledge and regulatory changes overseas to NDAC for examination and review. The continued inaction of the Government on this vital matter of public health needs to be deprecated in strongest terms. The Committee also recommends that the Ministry should come out of its contemplation mode and take action as recommended by the Committee in the context of these  drugs without any further loss of time}''(\cite{ATR} page no-20).
+
+Parliamentary scrutiny coupled with pressure from NGOs resulted in swift government action this time. The DCGI notified all manufacturers who were selling FDCs without prior approval from CDSCO to submit safety and efficacy data of their FDC drugs, and in case of non-compliance their licenses would be revoked. After some resistance, pharmaceutical industry complied. The order covered all FDCs that were approved between Sep 29, 1988 and October 1, 2012, and the deadline to submit the data was set for July 14, 2014. Although, CDSCO has an in-house technical committee that evaluates and examines the efficacy and validity of new drugs, however, given that number of applications exceeded 6,000, so to speed up examination process CDSCO appointed a committee of experts under the leadership of Professor C.K. Kokate (henceforth called Kokate Committee) in September, 2014. Kokate committee submitted its report\footnote{See: \FEight} in February, 2016 and classified FDC drugs into three categories.  Out of 6,220 FDCs, 15 percent were outrightly labeled as irrational drugs representing 344 FDCs, while another 30 percent either required more data or further careful examination. Rest 42\% of the drugs were deemed to be rational based on the available scientific evidence and literature. Prompted by the committee's recommendation, government banned the prescribed irrational FDC drugs  in March, 2016. 
+\pagebreak
+
+\subsection*{An Ugly Brawl}
+
+The events that transpired following the ban could be aptly described as delay tactics deployed by affected pharmaceutical companies to buy some time to empty their inventories of fraudulent products. In particular, affected pharmaceutical companies responded with an onslaught of lawsuits in courts all over the country with an objective to throw sand in the gears of the long-due regulatory measure aimed at cleansing Indian drug market. Again, quite interestingly companies worked out a loophole to stall the ban as Delhi High Court initially stayed the ban order  on March 14, 2016. However, not all courts acted in an uniform manner. The Madras High Court refused to stay the ban of 344 FDCs at the same time. Since, Delhi High court had stayed the ban  in favor of few companies who filed their original lawsuit there, that resulted in remaining companies flocking to Delhi High court with their respective lawsuits. And after due deliberations Delhi High court finally quashed it on December 1, 2016 citing the singular reason of not consulting the statuary body-Drugs Technical Advisory Board (DTAB) which was deemed to be necessary before invoking Section 26A of the Drugs and Cosmetics Act to ban any drug. Ironically, the ban levied solely based on the recommendations made by a committee appointed by CDSCO itself (parent body of DTAB), was classified as infructuous because government did not consult DTAB (a sub-body of CDSCO).
+%As, government orders solely relied on the recommendations made by the Kokate committee (an external body), though appointed by CDSCO (parent body of DTAB), and did not consult DTAB, therefore the ban was classified as infructuous.
+That safety of millions of people was deemed less important than the qualification of an irrelevant provision is akin to mocking the entire regulatory apparatus on face. It  furthered the impression that venal companies could set the terms of  regulation without suffering any loss in the entire regulatory episode, which was ensured by the repose provided by the Indian courts to them. 
+
+The pharmaceutical industry's challenge that the recommendation of banning drugs came outside of the purview of CDSCO was further contested in the Supreme Court when both central government and other NGOs swiftly moved to apex court in 2017 after their defeat in Delhi High court. The Supreme Court in turn directed government to evaluate the claims through DTAB or its sub-committee, following which a committee under the leadership of Dr. Nilima Kshirsagar was constituted in early 2018. The committee after evaluating the findings of Kokate committee endorsed its recommendations, and finally Government revived the ban on September, 2018 albeit this time for 328 FDC drugs.
+
+Pharmaceutical companies knew the true quality of the FDC products they owned, and when faced with an abrupt regulatory shock in the form of an En-Masse drug ban, they took aid of litigations to soften the blow. As our results show, companies started abandoning banned drugs, right after the March 2016 ban, albeit at varying speed. That companies were abandoning their products even when Delhi High court handed them victory  evince to the fact they were cognizant of their eventual fate, and were only using courts as their last resort to sell illegitimate drugs in order to minimize losses (from sunk costs) and recoup investments. This resistance from the companies to stall and set regulation on their own terms is at the heart of the debate weighing the role played by the nature of institutions and their strength in avoiding/or engendering market failures.
+
+\section{Data and Descriptive Analysis}
+
+\subsection{Data Description}
+
+For this study our main data comes from the database of retails sales concerning pharmaceutical drugs which we obtain from the All India Origin of Chemists and Druggists (henceforth referred as AIOCD data) Pharmatrac$^{TM}$. This data is collected through a joint effort between The National Pharmacist Trade Union, AIOCD, and a private pharmaceutical research company. It includes drug sales data from more than half a million retailers and/or stockists associated with AIOCD, representing upto 60\% of drug sales in India. The data is specified at the stock-keeping unit (SKU)-region-month level and contains information on the manufacturers and their domicile status, quantities sold, price offered to retailers, maximum retail price in addition to the product characteristics information like dosage form (tablets/capsules), their respective strength, etc. The same data has been used in prior academic studies trying to analyze Indian pharmaceutical market in various contexts (\cite{dutta2011free}, \cite{bhaskarabhatla2017role}, \cite{adbi2020stakeholder}, \cite{aggarwal2020can}, \cite{aggarwal2020science},  \cite{bansal2021politics}). For current analysis, our baseline data ranges from January 2011 to December 2019 with monthly data consisting of 984 molecules sold by 850 companies all over India.
+
+Data on banned drugs comes from Central Drugs Standard Organization (CDSCO), the government body responsible for both approving and banning the pharmaceutical drugs in India. On 10th March, 2016 a gazette notification\footnote{See: \url{https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download\_file\_division.jsp?num\_id=MTA2MQ==}} was released by CDSCO on behalf of The Government of India notifying the proscription of 344 FDCs in accordance with the recommendations made by the Kokate committee. That notification comprised FDC formulations  ranging from pairs (composed of two drugs) to quintuples (composed of five drugs). Out of the 344 drugs that were banned, we were only able to match 96 molecules in our AIOCD database during 2011-2019 period, which otherwise contains data on 3300 molecules.\footnote{A typical FDC drug that got banned looked like- Aceclofenac + Paracetamol + Rabeprazole. Now, there are 6 possible ways through which this drug can show up in our database. To account for that, we first tokenized both the list of banned molecules as well as molecules in AIOCD database, and then conducted the element-wise matching for each FDC. Our matching results are robust to different similarity thresholds which account for minor differences between elements of a FDC.}
+That is our treatment group constitute those 96 banned molecules that we were successfully able to match. In our database drugs are classified at five different levels based on the European Pharmaceutical Market Research Association (EphMRA) system. EphMRA along with Pharmaceutical Business Intelligence and Research Group (PBIRG), has had developed and maintained anatomical classification of drugs since 1971.\footnote{EphMRA Anatomical Classification Guidelines,2014.See: \url{ephmra.org/media/4973/atc-guidelines-2021-final.pdf} }. \textbf{Subgroup} classification (which is the formulation level) is the narrowest one containing molecule names while coarsest classification- \textbf{Therapy} is based on the target of therapeutic action of the drug. For our analysis, we focus on \textbf{Group} classification, which lies one step above to \textbf{Subgroup} in the classification ladder. A particular group comprises molecules/drugs that share same mechanism of action based on route of administration. Therefore, our control group consists of all the residual molecules (888) from all those groups where atleast one FDC drug was found. 
+
+Finally, to distinguish big domestic exporting firms who invest in reputation from small domestic manufacturers who cater to local geographic areas, we see if a domestic manufacturer possess at least one World Health Organization Good Manufacturing Practices (WHO GMP) plant approval. Large drugs procurement agenicies such as UNICEF or the Global Fund to Fight AIDS, Tuberculosis and Malaria, in addition to countries purchasing drugs in bulk require that products should meet WHO-GMP standards. Thus, firms holding the above certification are generally exporters. In addition, the above certification is also correlated with the company size, as all top 20 companies headquartered in India possess WHO-GMP certificate for atleast one of their plants. The data for same is published by the CDSCO, and is published in the format of a report ``WHO GMP Certified Manufacturing Units for Certificate of Pharmaceutical Products (COPP) in Various States of India''. That report provides the names and addresses of all WHO GMP Ceertified manufacturers in India (Central Drugs Standard Control Organization, 2015).\footnote{See: \url{https://www.cdscoonline.gov.in/CdscoManuals/WHO\_GMP.pdf}}
+
+\subsection{Indian FDC Market before and after En-Masse Drug Ban}
+
+\begin{table}[h!] \centering 
+	\caption{Summary Statistics of Banned Drugs by Producer Type} 
+	\label{Table-1} 
+	\begin{tabular}{ccccccc}
+		\toprule
+		& \multicolumn{2}{c}{Number of Firms} & \multicolumn{2}{c}{Total Sales (in mg dosage)} & \multicolumn{2}{c}{Total Revenue (in INR)} \\ 
+		\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+		Firm Type & Total & In \% & Mean (in millions) & In \% & Mean (in millions) & In \% \\ 
+		\midrule
+		&  & Panel (a): & Jan 2011-Feb 2016 &  &  &  \\ 
+		\midrule
+		MNCs & $25$ & $4.80$ & $12244$ & $7.78$ & $1081$ & $32.1$ \\ 
+		Exporters & $149$ & $28.54$ & $138335$ & $87.97$ & $2172$ & $64.4$ \\ 
+		Local  & $348$ & $66.67$ & $6679$ & $4.25$ & $119$ & $3.5$ \\ 
+		\midrule
+		&  & Panel (b):  & Mar 2016-Dec 2019 &  &  &  \\
+		\midrule
+		MNCs & $16$ & $3.96$ & $5773$ & $3.85$ & $798$ & $23.96$ \\ 
+		Exporters & $127$ & $31.44$ & $136919$ & $91.34$ & $2399$ & $72.04$ \\ 
+		Local  & $261$ & $64.6$ & $7206$ & $4.8$ & $133$ & $4$ \\ 
+		\toprule 
+	\end{tabular}
+	\begin{tablenotes}
+		Summary statistics of irrational FDC drugs distributed over different segments of producers in the period leading to the ban (Jan 2011-Feb 2016), and in the post ban period (March 2016-Dec 2019). The sales and revenue figures correspond to monthly average of total sales and revenue over the specified time period.
+		The current sample only comprises treated drugs, i.e. drugs that were banned by Government of India in March, 2016. The sales and revenue information is quoted in millions. Sales variable, has been transformed to daily dosage format specified in terms of mg.
+	\end{tablenotes}
+	\begin{tablenotes}[Source]
+		AIOCD Pharmatrac (2011-19)
+	\end{tablenotes}
+\end{table} 
+
+
+Some studies estimate that at the time of the ban around half of the 1 trillion rupees (\$ 13.33 billion) Indian drug market dealt in FDCs out of which 50\% were completely irrational (\cite{srinivasan2018fixed}). However, the regulatory ban impacted  only a fraction of it, as some experts suggest that 16 billion rupees (\$222 million)  worth of FDC drug market fell under  ambit of the ban.\footnote{See: \url{https://www.reuters.com/article/us-india-health-drugs/india-bans-328-combination-drugs-in-setback-for-pharma-companies-idUKKCN1LT155}} Even then it was a huge blow to the pharmaceutical industry's most valuable arm responsible for churning out huge profits. But more important question is how different market players responded to these bans. 
+
+For our analysis, we divide the set of firms into three distinct categories- multinationals, exporters, and small local firms. Any domestic firm holding a WHO-GMP plant approval certificate is classified as Exporter and rest of the domestic manufacturers fall under the category of small local firms. Table-\ref{Table-1} shows the distribution of firms dealing in FDC market before and after the imposition of ban, and associated  sales and revenue statistics. Notice that, MNCs and exporters were together responsible for 96\% of the sales and revenues of irrational products prior to regulation. However, in the post-ban period, MNCs could be seen abandoning irrational FDC drugs as is apparent from the sharp dip in their market share of revenue and sales, averaged over the corresponding months in the specified time period. In contrast, the increased market shares  as well as soaring average revenue figures in case of exporters and local firms insinuate that they expanded their market presence in the post-ban period.
+
+
+\begin{table}[h!] \centering 
+	\caption{Summary Statistics of Banned Drugs by Product Type} 
+	\label{Table-2} 
+	\begin{tabular}{ccccccc}
+        \toprule
+		& \multicolumn{2}{c}{Number of Brands} & \multicolumn{2}{c}{Total Sales (in mg dosage)} & \multicolumn{2}{c}{Total Revenue (in INR)} \\ 
+		\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+		Drug Type & Total & In \% & Mean (in millions) & In \% & Mean (in millions) & In \% \\ 
+		\midrule
+		&  & Panel (a): & Jan 2011-Feb 2016 &  &  &  \\ 
+		\midrule
+		Acute & $1366$ & $72.62$ & $59512$ & $37.8$ & $2048$ & $61$ \\ 
+		Chronic & $515$ & $27.38$ & $97745$ & $62.2$ & $1323$ & $39$ \\ 
+		\midrule
+		&  & Panel (b):  & Mar 2016-Dec 2019 &  &  &  \\
+		\midrule
+		Acute & $923$ & $70.9$ & $47900$ & $32$ & $1717$ & $52$ \\ 
+		Chronic & $379$ & $29.1$ & $101998$ & $68$ & $1613$ & $48$ \\ 
+		\toprule 
+	\end{tabular}
+	\begin{tablenotes}
+      Summary statistics of irrational FDC drugs distributed over chronic and acute category in the period leading to the ban (Jan 2011-Feb 2016), and in the post ban period (March 2016-Dec 2019). The sales and revenue figures correspond to monthly average of total sales and revenue over the specified time period.
+       The current sample only comprises treated drugs, i.e. drugs that were banned by Government of India in March, 2016. The sales and revenue information is quoted in millions. Sales variable, has been transformed  to daily dosage format specified in terms of mg.
+	\end{tablenotes}
+	\begin{tablenotes}[Source]
+		AIOCD Pharmatrac (2011-19)
+	\end{tablenotes}
+\end{table} 
+
+\begin{figure}[h!]
+	\caption{Average Trends for Treated and Control Drugs by Producers and Product Markets}
+	\includegraphics[width=1\textwidth]{Descriptive_2}
+	\begin{figurenotes}
+		This figure show the monthly national averages of banned FDC drugs vis-a-vis their control counterparts for a cumulative time period of January 2011 to December-2019. Panel-(a) corresponds to trends in the drugs belonging to chronic category disaggregated by producer type. Analogously, Panel-(b) corresponds to average trends in the drugs falling in acute category. Panel-(c) aggregate average trends by producer types, and last column does that for all markets. Sales variable, has been transformed  to daily dosage format specified in terms of mg. The three vertical lines refer to important regulatory shocks experienced by the overall market. Black vertical line corresponds to the first exogenous ban imposed by The Government of India in March, 2016. Red dotted line refers to December, 2016-when Delhi High Court quashed the original ban. Finally, golden vertical line corresponds to Sep-2018 when government re-imposed the ban.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_3}
+\end{figure}
+
+
+A similar analysis for different segments of product markets show that average response varied based on drug characteristics, especially based on their targeted disease. In particular, Table-\ref{Table-2} provides evidence that FDCs belonging to acute category experienced a steep decline in terms of sales and revenue, while at the same time, average sale and revenue numbers soared in case of banned FDCs belonging to chronic category in the post-ban period. Many studies in the past have shown that patients with chronic diseases are less sensitive to drug price changes than acute diseases (\cite{jimenez2016consumo}, \cite{tur2012estimates}, \cite{hernandez2019effect}, \cite{grootendorst2002drug}, \cite{contoyannis2005estimating}). Among many reasons that could be driving this result, two reasons stand out. One reason could be that chronically ill patients may perceive their medications as very instrumental for their well-being and survival and therefore they are averse to consumption changes induced by price shocks (\cite{andersson2006policy}, \cite{blais2001impact}, \cite{pilote2002effects}). Another unique feature underlying chronic drugs market is that once patient starts taking the concerned medicine then it's highly plausible that medication would go on for a long time mainly because of the nature of disease.\footnote{Although, non-compliance behavior could lead to some periods of gaps in medication.}$^{,}$\footnote{Chronic drug markets include drugs meant for treating diabetes, cholestrol, asthma, hypertension, multiple sclerosis, HIV, etc., all of which are huge markets for pharma-companies in terms of no. of customers and revenue in India.} And that may lead to chronically ill patients to start self-medicating after a certain point based on their past prescriptions mainly due to habit formation in the usage of drugs (\cite{varpaei2020}). All these factors may result in chronic drugs market being price as well as shock insensitive. Since, price (and shock)-inelastic sub-market provides ample rent-seeking opportunities and perhaps that forms the rationale behind the preferential abandonment behavior of pharmaceutical companies concerning banned drugs in chronic vis-a-vis acute markets.
+
+
+Figure-\ref{Fig_3} provides an overview of the shifting market structure in the affected drug markets while disaggregating the post-ban dynamics at the level of firm as well as product markets. In particular, each panel comprises monthly average trends of treatment and their respective control drugs, where upper and middle panel corresponds to chronic and acute markets respectively, while bottom-panel aggregates the dynamics for three uniquely classified market players. Black vertical line  corresponds to the March, 2016 period when government abruptly banned 344 irrational FDCs, red dashed line refers to the event of Delhi High Court  order in December, 2016 quashing the original ban orders, and golden line corresponds to the resurrection of the ban by the government in September, 2018. An important point worth noticing is the steep departure between the abandonment behavior in chronic vis-a-vis acute drugs by all three type of firms. The depiction of gradual abandonment strategy deployed by all firms in chronic drug category compared to their behavior in acute market points to the special accordance that all drug-makers grant to chronic-markets due to its shock and price insensitive nature which fares well with their objective of reaping maximum profits albeit at the expense of consumer welfare. Furthermore, all three firms respond differentially not only in chronic but also acute markets. That behavior could be imputed to the reputation concerns along with the knowledge of local regulatory environment they possess. As evident from the figure, MNCs swiftly abandon banned drugs in comparison to their domestic peers in all product categories. Among domestic firms, it seems that exporters exhibit a modicum of extra urgency while abandoning banned products compared to their local counterparts. That trend asserts  that firms not only care about maximizing short-run profits, in addition they also invest in preserving their reputation which is indispensable for their survival in the long run, and especially so in case of  multinationals who put special emphasis on latter to avoid trust erosion of local public which could be costly to rebuild on account of their foreignness and multinational stature.
+
+Lastly, we observe no substantial evidence that pharmaceutical companies renewed their presence in the banned drugs market after Delhi High Court accorded them a win in December, 2016, though that was immediately challenged in the apex court of India by the central government.\footnote{Although we observe that companies increased their presence in chronic markets during the interregnum of December-2016 and September-2018.} That itself provides credence to our hypothesis that companies were fully cognizant of the true quality of their products as well as their eventual fate, and all their actions were motivated to stall the regulatory process in order to minimize their losses, and recoup investments. And it seems they were largely successful in their endeavor given their specialized knowledge of the institutional loopholes inherent in the fragile regulatory environment of India. In the next section, we systematically analyze firm behavior in different markets using difference-in-difference econometric specification and event-study design framework.
+
+\section{Causal Evidence \& Empirical Identification Strategy}
+
+\subsection{Baseline Findings}
+
+This section provides more rigorous causal evidence of the shift in market structure induced by the En-Masse drug ban levied by The Government of India in March, 2016. In particular, our empirical identification strategy treats the latter event as an exogenous shock while controlling for various forms of unobserved heterogeneity that could otherwise confound our results. Our baseline econometric specification investigates the impact of the En-Masse drug ban on the sales of banned FDCs in terms of milligrams sold every month sub-nationally and nationally across India.\footnote{We were succesful in converting only 34,652 out of 47,286 SKUs to mg dosage format. Above constraint forces us to conduct analysis with only 78.5\% of our sample, which leaves us with 74 out of 96 treated molecules and 763 out of 888 control molecules in our original sample. This holds for regressions involving both sales and revenue as dependent variable.}$^{,}$\footnote{We follow a standard approach to convert SKUs to mg format. For a typical oral dosage (comprising tablets and capsules) such as: COSCOLD 2.5/10/500/30 MG TABLET 10, the total mg content will be 542.5*10 = 5425. Analogously, for non-oral dosages (we retained only injections), a standard conversion for an injection like 3 CEF NOVO 1000/500 MG INJECTION 1 is 1500 mg. Due to lack of any standard procedure to convert daily dosage information to mg format in case of Liquids, Inhalants and some other very rare types, we dropped all such categories from our sample.} Our baseline specifications at the regional\footnote{Our sample comprises 31 state regions and 837 molecules in our final sample. At national level, therefore we have 837 product markets, and at sub-national sample we have 25,947 product markets.} and national level examines whether timing of the ban is orthogonal to unobserved factors affecting our outcome variable of interest- by investigating how these outcomes evolves in the months leading to the one in which initial ban takes effect:
+
+
+\begin{equation}\label{Eq_1}
+	\begin{aligned}
+y_{mgt} =& \alpha_{0} + \alpha_{m}  + \alpha_{g} + \alpha_{t} +  \delta \cdot X_{mgt} +  \gamma \cdot Treatment_{m} \cdot \alpha_{t} + \alpha_{g} \cdot \alpha_{t} + \alpha_{m} \cdot \alpha_{g} \\
+  & + \sum_{k = -48}^{45}\beta_{k} \cdot \mathbf{I}\{\text{k months since ban}\}_{mgt} +  \epsilon_{mgt}
+	\end{aligned}
+\end{equation}
+
+\begin{align}\label{Eq_2}
+	y_{mt} = \alpha_{0} + \alpha_{m} + \alpha_{t} + \delta \cdot X_{mt} + \gamma \cdot Treatment_{m} \cdot \alpha_{t} +  \sum_{k = -48}^{45}\beta_{k} \cdot \mathbf{I}\{\text{k months since ban}\}_{mt} + \epsilon_{mt}  
+\end{align}  
+
+where $y_{mt}$ either corresponds to log of milligrams sold or log revenue (in INR) for a particular molecule m present in geography g in month t, where subscript mgt corresponds to a sub-national sample, and mt refers to a national sample. $\text{Treatment}_{m}$ is a dummy indicator for all FDCs in our data that come under the purview of March, 2016 ban (1 for our treatment group), or they belong to control group (as was defined earlier). We also define $\text{Post}_{t}$ which takes value 1 for months after the En-Masse ban (March 2016 and after), and zero otherwise. Additional controls like HHI are included in $X_{t}$ to control for the competition in the respective product markets. Our leading coefficients of interest is $\beta_{k}$ which represents the change in the growth rate of our treatment group's average sales (specified in mg)/ or average revenue (in INR) in k months before or after the En-Masse ban.\footnote{Analogously, the coefficient could also be interpreted as the  percentage change in average sales/revenue of treatment group. For that, we need to exponentiate our coefficients to get precise results. In particular (exp($\beta$)-1)*100 gives us the percentage change in the dependent variable.}
+
+
+\begin{figure}[h!]
+	\caption{Event-study (E.S.) estimates at the sub-national level for the log of revenue and log of sales before and after the FDC ban in March 2016.}
+	\includegraphics[width=1\textwidth]{ES_Baseline_R_SR}
+	\begin{figurenotes}
+		The black and blue line represents the estimated coefficients for the indicator variable corresponding to the number of months before and after the ban of irrational FDCs in March, 2016 for log sales and log revenue respectively. The econometric specification at sub-national level is provided in Equation-\ref{Eq_1}. There is some indication of pre-trends and we see a secular decline in the post-ban period . Sample comprises 837 molecules \& 34,652 SKUs. The error bar represent the 95 percent confidence intervals with standard errors clustered at the geography-molecule level. Time period of sample is March-2012 to December-2019.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_R_1}
+\end{figure}
+
+
+In the above specifications, we control for time ($\alpha_{t}$) and molecule specific ($\alpha_{m}$) unobserved  heterogeneity . Both, molecule and time level fixed effects subsume \textit{Treatment} and \textit{Post} dummies; therefore we do not need to insert them separately. In addition, we also control for time-trend of treatment molecules by including the interaction between $Treatment_{m}$ and month dummies in order to account for any possibility of seasonality (\cite{green2014did}). Region specific idiosyncrasies ($\alpha_{g}$) are accounted for by incorporating geography-level fixed effects. Different regions with their peculiar characteristics may strike distinct equilibrium in a particular drug market on account of historical path dependency, variation in healthcare infrastructure varying over region time, constantly changing economic well-being, changing disease prevalence over region time, and other such latent factors. To account for that, we also employ molecule-geography (time-invariant) paired fixed effects ($\alpha_{m}$*$\alpha_{g}$), and geography-time paired fixed effects ($\alpha_{g}$*$\alpha_{t}$).
+
+We provide our estimates from Equation-\ref{Eq_1} \& \ref{Eq_2} in Fig-\ref{Fig_R_1} and Fig-\ref{Fig_R_2} for both log-sales and log-revenue. In particular, both  figures display the evolution of growth rate in sales and revenue of banned FDCs (relative to control group) before and after the ban is imposed from an event study version of our baseline specifications at the sub-national and national level.
+
+\begin{figure}[h!]
+	\caption{Event-study (E.S.) estimates at the national level for the log of revenue and log of sales before and after the FDC ban in March 2016.}
+	\includegraphics[width=1\textwidth]{ES_Baseline_N_SR}
+	\begin{figurenotes}
+		The black and blue line represents the estimated coefficients for the indicator variable corresponding to the number of months before and after the ban of irrational FDCs in March, 2016 for log sales and log revenue respectively. The econometric specification at national level is provided in Equation-\ref{Eq_2}. There is no substantial evidence for pre-trends and we see a secular decline in the post-ban period . Sample comprises 837 molecules \& 34,652 SKUs. The error bar represent the 95 percent confidence intervals with standard errors clustered at the molecule level. Time period of sample used in this figure goes from March-2012 to December-2019.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_R_2}
+\end{figure}
+
+Prior to the imposition of the ban we do not observe any significant departure in the growth rates of sales and revenue\footnote{At the sub-national level, we see some pre-trends, and we have provided an explanation behind their potential cause in the subsequent analysis.} for treatment and control drugs, however following  March, 2016 ban there is steep decline in the sales of banned FDCs albeit that varies based on the time-window we choose to analyze. In figure-\ref{Fig_R_1} where we conduct our investigation after accounting for unobserved regional heterogeneity, between March, 2016 and December, 2016 (when Delhi HC quashed the ban) the speed of decline in sales is 5.5 percent per month, while that in the alternative time window of January-2017 to August, 2018 is 0.67 percent per month.\footnote{Essentially, we first exponentiate the estimates and then calculate the gradient in the stipulated time window.} That shows how repose provided by Delhi High Court led to deceleration of the speed of abandonment of banned FDC products. After, the re-imposition of ban, the speed of abandonment experienced a modest increase to 0.7 percent per month. Overall on average, sales in banned FDCs declined by 88\% in sub-national results, and 85\% in national results. Analogous figures for revenue are 79\% and 76\% at sub-national and national level, respectively. Although, absence of any suitable benchmark or prior evidence to which we can compare the speed of abandonment in the period following regulation in our case constrain us to draw parallels, nevertheless, the regulatory interventions that ensued in the post-ban period, helps us to pin down the essential role that strong institutions play in ensuring the efficient roll-out of any regulatory measure. That pharmaceutical companies were able to exploit institutional loopholes to extend their presence in the irrational FDC market shows how developing countries with their fragile regulatory system are not only more susceptible to malevolent behavior engendering market failures, in addition it's even more difficult for them to escape that bad equilibrium despite all their efforts. Next, we analyze how market response diverged in different product markets exhibiting distinctive characteristics.
+
+\subsection{Tracing Abandonment Behavior through Product Attributes}
+
+In this section we systematically analyze the differential trends in various product markets within the set of banned drugs that we observe in our descriptive analysis, by utilizing the framework of triple difference in difference models. Moroever, we also attempt to uncover the real driving force behind the abandonment behavior in product markets with different market structures. But first, we restrict our attention to two crucial product markets in which we witness prejudicial response by almost all market players. Fig-\ref{Fig_3} displays that all producers were disinterested in abandoning chronic markets which is evident from their biased response to the ban in chronic vis-a-vis acute markets. To investigate the statistical significance of these differences, we estimate the following equation:
+
+\begin{equation}\label{Eq_3}
+	\begin{aligned}
+		y_{mgt} =& \alpha_{0} + \alpha_{m}  + \alpha_{g} + \alpha_{t} +  \delta \cdot X_{mgt} +  \gamma \cdot Treatment_{m} \cdot \alpha_{t} + \alpha_{g}\cdot\alpha_{t} + \alpha_{m} \cdot \alpha_{g} + \beta \cdot Treatment_{m} \cdot Post_{t} \\
+	&	 + \eta \cdot Treatment_{m} \cdot \mathbf{I}\{Acute\}_{m} + \mu \cdot Post_{t} \cdot \mathbf{I}\{Acute\}_{m} + \delta \cdot Treatment_{m} \cdot Post_{t} \cdot \mathbf{I}\{Acute\}_{m} +  \epsilon_{mgt}
+	\end{aligned}
+\end{equation}
+
+in which $\mathbf{I}\{Acute\}_{m}$ is an indicator variable equal to one if the molecule m belongs to acute drug category and zero if it falls under chronic category, and all other variables are same as defined in equation-\ref{Eq_1}. Our leading coefficient of interest is $\delta$ which represents the change in dependent variable (log of sales, log of revenue) for a molecule/drug falling in the acute category compared to molecules falling in chronic category. That would give us a relative measure of speed with which abandonment was carried out in acute vis-a-vis chronic drug markets.
+
+\begin{table}[h!] \centering
+	\caption{How drug ban in March, 2016 affected sales in the FDCs belonging to chronic v/s acute markets} 
+	\label{Table-R-1} 
+	\footnotesize
+\begin{tabular}{@{\extracolsep{2pt}}lcccccccc} 
+	\\[-1.8ex]\hline 
+	\hline \\[-1.8ex] 
+	& \multicolumn{8}{c}{\textit{Dependent variable:}} \\ 
+	\cline{2-9} 
+	\\[-1.8ex] & \multicolumn{4}{c}{Log\_Sales} & \multicolumn{4}{c}{Log\_Revenue} \\ 
+	\cline{2-5} \cline{6-9} 
+	\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)\\ 
+	\hline \\[-1.8ex] 
+	Treatment*Post Ban & $-$1.160$^{***}$ & $-$1.083$^{***}$ & $-$1.161$^{***}$ & $-$1.084$^{***}$ & $-$1.166$^{***}$ & $-$1.084$^{***}$ & $-$1.166$^{***}$ & $-$1.085$^{***}$ \\ 
+	& (0.205) & (0.205) & (0.206) & (0.205) & (0.160) & (0.158) & (0.160) & (0.158) \\ 
+	HHI & $-$6.337$^{***}$ & $-$7.503$^{***}$ & $-$6.317$^{***}$ & $-$7.483$^{***}$ & $-$5.657$^{***}$ & $-$6.750$^{***}$ & $-$5.642$^{***}$ & $-$6.735$^{***}$ \\ 
+	& (0.104) & (0.118) & (0.104) & (0.118) & (0.089) & (0.100) & (0.089) & (0.101) \\ 
+%	Treatment*Acute &  &  &  &  &  &  &  &  \\ 
+%	&  &  & & &  &  &  &  \\ 
+%	Post*Acute & $-$1.192$^{***}$ & $-$1.116$^{***}$ & $-$1.193$^{***}$ & $-$1.118$^{***}$ & $-$1.200$^{***}$ & $-$1.123$^{***}$ & $-$1.201$^{***}$ & $-$1.124$^{***}$ \\ 
+%	& (0.059) & (0.058) & (0.059) & (0.058) & (0.053) & (0.052) & (0.053) & (0.052) \\ 
+	Treatment*Post*Acute & $-$1.161$^{***}$ & $-$1.201$^{***}$ & $-$1.162$^{***}$ & $-$1.201$^{***}$ & $-$0.462$^{**}$ & $-$0.512$^{***}$ & $-$0.463$^{**}$ & $-$0.512$^{***}$ \\ 
+	& (0.257) & (0.257) & (0.257) & (0.257) & (0.198) & (0.196) & (0.198) & (0.196) \\ 
+	\hline \\[-1.8ex] 
+	Treatment*Time & Y & Y & Y & Y & Y & Y & Y & Y \\ 
+	Time FE & Y & Y & Y & Y & Y & Y & Y & Y \\ 
+	Molecule FE & Y & Y & Y & Y & Y & Y & Y & Y \\ 
+	Geography Dummy & Y & Y & Y & Y & Y & Y & Y & Y \\ 
+	Molecule*Geography & N & Y & N & Y & N & Y & N & Y \\ 
+	Geography*Time & N & N & Y & Y & N & N & Y & Y \\ 
+	Observations & 1,988,880 & 1,988,880 & 1,988,880 & 1,988,880 & 1,988,880 & 1,988,880 & 1,988,880 & 1,988,880 \\ 
+	R$^{2}$ & 0.680 & 0.759 & 0.681 & 0.759 & 0.687 & 0.766 & 0.688 & 0.767 \\ 
+	Adjusted R$^{2}$ & 0.680 & 0.756 & 0.680 & 0.756 & 0.687 & 0.764 & 0.687 & 0.764 \\ 
+	\hline 
+	\hline \\[-1.8ex] 
+	\textit{Note:}  & \multicolumn{8}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+	\begin{tablenotes}
+		This table provides our findings corresponding to Equation-\ref{Eq_3}  employing ordinary least squares regressions. Column (1)-(4) depicts results for log sales and column (5)-(8) shows for log-revenue. All columns  depicts results at the sub-national level. We see that the coefficients are negative for both sales and revenue albeit former dominates latter. Sample comprises 837 molecules \& 34,652 SKUs. The evidence suggests that there is a negative and statistically significant effect in the sales especially in case of acute markets where the abandonment speed is way higher than their chronic counterparts.Constant term along with separate interactions of acute dummy with Treatment and Post dummy are included but not reported.For sub-national results  robust clustered standard errors at the molecule-geography level are provided in parentheses.
+	\end{tablenotes}
+	\begin{tablenotes}[Source]
+		AIOCD Pharmatrac
+	\end{tablenotes}
+\end{table} 
+Table-\ref{Table-R-1} contains the estimates from equation-\ref{Eq_3}, where column (1)-(4) corresponds to log sales as outcome variable and rest of the columns corresponds to log revenue. In all four specifications, we control for various kinds of unobserved heterogeneity, and our results seem robust across all models. In particular, we observe that $\delta$ is statistically significant and indeed very high in magnitude. Even in the weakest case (column-1), the estimate shows on average an additional decline of 68\% sales in acute markets-relative to the effect for chronic drugs-following the ban. It means that, acute drugs facing bans were offloaded at one and half times of the speed at which their chronic counterparts were abandoned. Unfortunately, our data does not allow us to test for the exact mechanism-as to  why pharmaceutical companies preferred chronic over acute markets to recoup their investments in order to avoid massive losses inflicted by the ban. However some prior evidence coupled with our institutional knowledge suggests that, perhaps chronically-ill patients with their inexorable drug schedules induced by long-term health concerns as well as habit-formation leads to chronic markets being more price (and shock) insensitive which augurs well for profit-seeking companies to exploit that setting to even sell their illegitimate drugs without any resistance or hassle (\cite{jimenez2016consumo}, \cite{tur2012estimates}, \cite{hernandez2019effect}, \cite{grootendorst2002drug}, \cite{contoyannis2005estimating},\cite{andersson2006policy}, \cite{blais2001impact}, \cite{pilote2002effects}, \cite{gemmil2008price}, \cite{piette2006conceptually}, \cite{solomon2009cost}). 
+
+\begin{figure}[h!]
+	\caption{Event-study (E.S.) estimates at the sub-national level for the log of sales before and after the FDC ban in March 2016 by product type.}
+	\includegraphics[width=1\textwidth]{ES_Hetro_AC}
+	\begin{figurenotes}
+		The black and blue line represents the estimated coefficients for the indicator variable corresponding to the number of months before and after the ban of irrational FDCs in March, 2016 for log sales in case of acute and chronic drugs respectively. The econometric specification at the sub-national level is provided in Equation-\ref{Eq_1}. There is no substantial evidence for pre-trends and we see a secular decline in the post-ban period especially in case of acute drug market and not so much for chronic drug market. Sample comprises 837 molecules \& 34,652 SKUs. The error bar represent the 95 percent confidence intervals with standard errors clustered at the geography-molecule level. Time period of sample used in this figure goes from March-2012 to December-2019.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_R_3}
+\end{figure}
+
+Figure-\ref{Fig_R_3} contains the event-study coefficients based on whether a molecule belongs to acute or chronic category. Prior to the imposition of the ban, sales of molecules were trending similarly irrespective of the drug category. However, right after the ban, there is a sharp decline in the sales for both chronic and acute drugs, but that trend flips in case of chronic drugs right after the intervention of Delhi High Court, and thereafter we see little or no change in the sale of chronic drugs while average sale trends for acute drugs kept plummeting. This again suggests that judicial intervention had a mediating effect on curbing of irrational drugs in the post-ban period. And, that effect varied based on product market characteristics as suppliers had their own preference ordering over type of drug-markets they can exploit to their advantage. 
+
+Our evidence, so far suggests that the roll-out of the regulatory measure although well-intended  was yet marred with various interventions prompting it to fall short of its original purpose of swift cleansing of Indian drug market. However, an open question is to see if the speed of abandonment was tied to any attribute of the market structure? 
+
+\subsection{Tracing Abandonment Behavior through Market Attributes}
+
+India is home to more than 3,000 pharmaceutical companies \footnote{See: \FTwentytwo }, and most of them are local firms producing generic drugs. Some studies estimate that sales and revenue are highly concentrated among very few firms (\cite{chitra2020pharmaceutical}). Also, there is evidence that high-value drugs are produced by more number of firms in India than in any other developed countries where generally those molecules are produced by single firm holding the patent (\cite{duggan2016market}). In our sample, 22\% of molecules are being produced by one company, while 50\% of them involve less than 6 firms. Only 11\% of the molecules were produced by more than 50 companies. The firm-distribution in case of treatment group follows a similar trend. Not only number of firms producing a molecule are skewed in the drug-markets we analyze, in addition number of products as well as brands belonging to a molecule closely mimics the distribution of firms.\footnote{The correlation coefficient between distribution of firms and products is 91\%. And the same statistic between firm-distribution and brand-distribution over molecules is close to 98\% .} That is monopoly drug markets not only have fewer alternatives (in terms of SKUs), in addition number of brands in those markets are also low. 
+
+\begin{figure}[h!]
+	\caption{Breakdown of Average Sale Trends of Banned Drugs by Different Indicators of Competitiveness }
+	\includegraphics[width=1\textwidth]{Descriptive_3}
+	\begin{figurenotes}
+		This figure show the monthly national averages of sales for banned FDC drugs in markets with different competition indicators. The time period ranges from January 2011 to December-2019. Column-1 divides the drug markets based on the median number of firms, where more than median number is categorized as competitive markets, and the other half is labeled as non-competitive. Analogously, the same method is used to classify molecules based on number of products (SKUs), and number of brands in column-2 \& 3 respectively. Sales variable, has been transformed  to daily dosage format specified in terms of mg. The three vertical lines refer to important regulatory shocks experienced by the overall market. Black vertical line corresponds to the first exogenous ban imposed by The Government of India in March, 2016. Red dotted line refers to December, 2016-when Delhi High Court quashed the original ban. Finally, golden vertical line corresponds to the time period when government re-imposed the ban in September, 2018.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_4}
+\end{figure}
+
+
+In Figure-\ref{Fig_4} we have disaggregated the market response by three key indicators measuring the competitiveness of a market. Column-(1) classifies the banned molecules based on the number of firms involved in their production. Our classification threshold is based on the median number of firms producing a molecule, which in our case is five. Similarly, we use the same measure to distinguish molecule markets with very few products and brands from  molecules comprising lot of producers and alternatives(column-2 \& 3). And results across all three categories conveys a similar story. Right after the imposition of March, 2016 ban we could see a general trend of decline in sales. However, after the intervention of Delhi High Court till the ban was reimposed in September, 2018 there is a sharp divergence in the response of non-competitive molecules compared to competitive drug markets. While  HC ruling did not led former group to alter their abandonment strategy, it is clearly visible that the latter group took advantage of the repose and ceased to abate their market presence until resumption of the ban again triggered there market exit. So, what could have led to the divergence of response in different segments of markets?
+
+
+\begin{table}[h!] \centering
+	\caption{How drug ban in March, 2016 affected sales in the FDCs belonging to low-competitive v/s highly competitive markets} 
+	\label{Table-R-2} 
+	\footnotesize
+	\begin{tabular}{@{\extracolsep{3pt}}lcccccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-7} 
+		\\[-1.8ex] & \multicolumn{3}{c}{Log\_Sales} & \multicolumn{3}{c}{Log\_Revenue} \\ 
+		\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+		\hline \\[-1.8ex] 
+		Treatment*Post Ban & $-$0.277$^{**}$ & $-$0.135 & $-$0.007 & $-$0.199$^{**}$ & $-$0.041 & 0.026 \\ 
+		& (0.114) & (0.117) & (0.112) & (0.087) & (0.088) & (0.086) \\ 
+		HHI & $-$7.782$^{***}$ & $-$7.746$^{***}$ & $-$7.763$^{***}$ & $-$7.013$^{***}$ & $-$6.985$^{***}$ & $-$6.997$^{***}$ \\ 
+		& (0.121) & (0.121) & (0.121) & (0.104) & (0.104) & (0.104) \\ 
+		Treatment*Post Ban*Few Firms & $-$4.327$^{***}$ &  &  & $-$3.262$^{***}$ &  &  \\ 
+		& (0.242) &  &  & (0.178) &  &  \\ 
+		Treatment*Post Ban**Few Products &  & $-$4.496$^{***}$ &  &  & $-$3.511$^{***}$ &  \\ 
+		&  & (0.235) &  &  & (0.173) &  \\ 
+		Treatment*Post Ban**Few Brands &  &  & $-$4.806$^{***}$ &  &  & $-$3.672$^{***}$ \\ 
+		&  &  & (0.233) &  &  & (0.172) \\ 
+		\hline \\[-1.8ex] 
+		Treatment*Time & Y & Y & Y & Y & Y & Y \\ 
+		Time FE & Y & Y & Y & Y & Y & Y \\ 
+		Molecule FE & Y & Y & Y & Y & Y & Y \\ 
+		Geography Dummy & Y & Y & Y & Y & Y & Y \\ 
+		Molecule*Geography & Y & Y & Y & Y & Y & Y \\ 
+		Geography*Time & Y & Y & Y & Y & Y & Y \\ 
+		Observations & 1,988,880 & 1,988,880 & 1,988,880 & 1,988,880 & 1,988,880 & 1,988,880 \\ 
+		R$^{2}$ & 0.760 & 0.760 & 0.761 & 0.767 & 0.767 & 0.767 \\ 
+		Adjusted R$^{2}$ & 0.757 & 0.757 & 0.757 & 0.763 & 0.764 & 0.764 \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+	\end{tabular} 
+	\begin{tablenotes}
+		This table provides our findings corresponding to Equation-\ref{Eq_4}  employing ordinary least squares regressions. Column (1)-(3) depicts results for log sales, and column (4)-(6) shows for log-revenue. All columns depicts results at the sub-national level. Sample comprises 837 molecules \& 34,652 SKUs. The evidence suggests that there is a negative and statistically significant effect in the sales especially for the molecules belonging to low-competitive markets. Constant term along with separate interactions of Low Comp dummy with Treatment and Post dummy are included but not reported.For sub-national results robust clustered standard errors at the molecule-geography level are provided in brackets.
+	\end{tablenotes}
+	\begin{tablenotes}[Source]
+		AIOCD Pharmatrac
+	\end{tablenotes}
+\end{table} 
+There are many potential reasons to believe that response to regulation would vary based on the market structure. First, it seems plausible that product markets with very few firms would be more wary of the bans, simply because identifying the offender in those markets would be relatively easier if and when regulator wish to carry out an inspection. For instance: a monopolist by the virtue of being the sole producer could reap super-normal profits and swiftly recoup its investments and sunk costs in the post-ban period, however, the dread from surely getting caught in the event of an inspection would surely put a hindrance for him to continue with unabated selling of illegitimate products. While there's no special incentive for firms operating in more competitive environment  to operate without any fear of regulatory action in the event of non-compliance, however, they do not suffer the same alarm of singularly attracting regulatory oversight like a monopolist. But the above reasoning does not explain the divergent response in the interregnum between two bans, when courts guarded all firms from any regulatory action by quashing the ban. A more reasonable line of reasoning suggest that since firms were themselves aware of the true quality of their products, and knowing that courts can save them only for so long, they had to decide on their strategy of abandonment. That is where market conditions become salient. It's highly plausible that firms/products/brands operating in non-competitive setting would draw more public-attention which could lead to substantial reputation loss. While the same does not hold definitely for firms/products/brands operating in dense markets where the sheer number of players and products makes it difficult to pin down blame on any particular firm or product. Moroever, in most cases these competitive markets are populated with small and medium size firms unlike firms operating in monopoly settings whose scale of operations are large and they care for their reputation. We test the statistical significance of the above differences more formally, by estimating the following triple difference-in-difference model:
+\begin{equation}\label{Eq_4}
+	\begin{aligned}
+		y_{mgt} =& \alpha_{0} + \alpha_{m}  + \alpha_{g} + \alpha_{t} +  \delta \cdot X_{mgt} +  \gamma \cdot Treatment_{m} \cdot \alpha_{t} + \alpha_{g}\cdot\alpha_{t} + \alpha_{m} \cdot \alpha_{g} + \beta \cdot Treatment_{m} \cdot Post_{t} \\
+		&	 + \eta \cdot Treatment_{m} \cdot \mathbf{I}\{Less Comp\}_{m} + \mu \cdot Post_{t} \cdot \mathbf{I}\{Less Comp\}_{m} + \delta \cdot Treatment_{m} \cdot Post_{t} \cdot \mathbf{I}\{Less Comp\}_{m} \\
+		& + \epsilon_{mgt}
+	\end{aligned}
+\end{equation}
+
+in which $\mathbf{I}\{Less Comp\}$ is an indicator variable equal to one if the molecule m belongs to low competitive markets as per our choice of measure and zero otherwise. All other variables follow from equation-\ref{Eq_1}. In column-1 \& 4 of table-\ref{Table-R-2}, if number of firms producing a particular molecule is less than or equal to the median number, which in our case is 5, then we label it as few firms (low competition market). Similarly, column-(2,5) \& (3,6) segregate molecules using median quantity of products (nine), and brands (six) into two classes. First three column corresponds to log sales as outcome variable and rest refers to log-revenue results. Results indicate that product abandonment was primarily driven by the molecules belonging to low-competitive markets with a reserved estimate of 98\% more reduction in their average sales relative to the average decline observed in the sales of molecules belonging to highly-competitive markets. That holds true for any measure - number of firms, number of products, or number of brands. Again, our preferred line of reasoning suggests that reputation costs are inducing differential response with players in less crowded markets abandoning faster to avoid ignominious notoriety.
+
+\begin{figure}[h!]
+	\caption{Event-study (E.S.) estimates for the log of sales before and after the FDC ban in March 2016 by competitive v/s non-competitive markets}
+	\includegraphics[width=1\textwidth]{ES_Hetro_Product}
+	\begin{figurenotes}
+		The black and blue line represents the estimated coefficients for the indicator variable corresponding to the number of months before and after the ban of irrational FDCs in March, 2016 for log sales in case of molecules comprising fewer and higher than median quantity of products respectively. The econometric specification at the sub-national level is provided in Equation-\ref{Eq_1}. There is no substantial evidence for pre-trends in case of competitive markets while some pre-trends are visible in case of non-competitive markets .Sample comprises 837 molecules \& 34,652 SKUs. The error bar represent the 95 percent confidence intervals with standard errors clustered at the geography-molecule level. Time period of sample used in this figure goes from March-2012 to December-2019.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_R_4}
+\end{figure}
+
+Fig-\ref{Fig_R_4} contains the estimates from the event-study specification based on whether molecule belongs to low-competitive market setting or high-competition markets, where we measure competition using number of products (SKUs) present within a molecule market. The estimates suggest that markets comprising few products have pre-trends. One possible rationalization of it could be the regulatory steps that preceded the March, 2016 ban. Although, our claim is that the timing of the ban was exogenous to the market, however, firms were aware of the developments and steps that regulators were taking to curb irrational FDCs (see section-B). Now low-competitive markets not only have fewer substitute products but also number of firms and brands existing in those markets are comparatively few. The negative pre-trends in-fact provide credence to the channel that we propose to be the driving force of product abandonment. Firms were fully aware of the true quality of their products, and perhaps their suspicion of strict regulatory action grew stronger with the formation of Kokate committee (see brown vertical line), and that may have accelerated the abandonment of products even before the ban. Now, this happened only in the low-competitive markets indicates that the real mechanism of abandonment was to avoid reputation loss emanating from  public and media attention that could have targeted markets especially comprising fewer firms and products. More crowded markets populated with lot of small and medium size firms does not share the same concern mainly because of their small scale of operations and also the sheer number of co-producers within a molecule market makes it hard for anyone to pin-point and hold any particular firm responsible for the entire situation. Even after the ban we see response of two sub-markets diverging sharply especially during the interregnum provided by the High Court. Perhaps, fear of regulatory action led to the convergence of responses between two markets following the re-imposition of the ban in 2018. In the next section, we examine how  product abandonment strategies vary based on firms having different reputation concerns.
+
+\subsection{Tracing Abandonment Behavior through Firm Identity}
+
+In this section, we turn to capture the inter-firm heterogeneity in abandoning banned drugs more formally that we observed in our descriptive results (Fig-\ref{Fig_3}). For that we estimate firm sales in daily dosage format by shifting our observation to the firm-molecule-geography-time level in the following triple difference-in-difference specification:
+
+\begin{equation}\label{Eq_5}
+	\begin{aligned}
+		y_{fmgt} =& \alpha_{0} + \alpha_{m} + \alpha_{f}  + \alpha_{g} + \alpha_{t}  + \alpha_{g}\cdot\alpha_{t} + \alpha_{m} \cdot \alpha_{g} + \alpha_{m}\cdot\alpha_{f} + \alpha_{m}\cdot \text{Calendar month}_{t} \\
+		 &+ \beta \cdot Treatment_{m} \cdot Post_{t}  + \eta \cdot Treatment_{m} \cdot \mathbf{I}\{MNC\}_{f} + \mu \cdot Post_{t} \cdot \mathbf{I}\{MNC\}_{f}  \\
+		& + \delta \cdot Treatment_{m} \cdot Post_{t} \cdot \mathbf{I}\{MNC\}_{f} + \epsilon_{fmgt}
+	\end{aligned}
+\end{equation}
+
+where $y_{fmgt}$ corresponds to the sales of a particular firm f concerning molecule m in region g at time period t. All variables remain identical to previous specifications except that we add a dummy variable $\mathbf{I}\{MNC\}$ which takes value 1 if the concerned firm f is MNC and zero otherwise. In addition, we also control for firm-specific unobserved heterogeneity ($\alpha_{f}$). Also, we account for molecule-firm level idiosyncrasies (such as time-invariant firm capability in producing a specific molecule) by controlling for  molecule-firm paired fixed effects. And to remove seasonal changes in molecule sales (prevalence of disease during a particular season or weather driving the molecule sales ) we control for seasonality using molecule and calendar month fixed effects ($\alpha_{m}\cdot \text{Calendar month}_{t}$) where latter refers to all twelve months observed in a year. And region-specific fixed effects to account for region-level unobserved heterogeneity remain similar to what we  had defined in our earlier specification. We cluster the standard errors at the molecule-firm-geography level. Our leading coefficient of interest is $\delta$ which tells us the  relative change observed in the average sales of MNC firms compared to their domestic peers in the post-ban period.
+
+Our analysis would shed light on whether MNCs differed in their response to product bans in comparison to domestic firms. The main reason to believe in the existence of such a difference rests on the crucial insight that MNCs would place additional weight on sustaining their reputation compared to their domestic peers, since any wrong-doing on their part could lead to trust erosion not only among local-public in that specific country but may have world-wide spillovers leading to serious damage to their overall sales and operations. In addition, corporate ethics may vary depending upon the size and operations of the firm, and while small firms catering to local geographies may not subscribe to industry norms and standards, the large corporations serving in different countries are more inclined to follow rules and regulations to avoid conflict and maintain the quality of their products. However, MNCs and domestic firms vary based on other factors too. Perhaps, domestic players have special knowledge of the domestic market along with the internal bureaucratic machinery responsible for regulating it. And perhaps that knowledge assist them to evade regulation to some extent. That may work against the channel that we propose.
+
+Therefore, to pin-down the exact mechanism we do a comparison between response rates of two set of domestic firms. As described earlier, we label any given domestic firm as an exporter if atleast one of its plant is WHO-GMP certified. The crucial reason underlying above classification is to distinguish domestic firms with large operations  who adhere to industry-defined standards from small companies catering to local geographies. And WHO-GMP classification which certifies exporters who meet their required quality standards serves well for that purpose. With origin of firms and their knowledge set constant, any differential response rate  between exporters and local firms in the post-ban period could help us see if the reputation concerns are effective in steering firm-strategy in response to any regulatory measure. For that reason, we also estimate a version of equation-\ref{Eq_5} where we replace $\mathbf{I}\{MNC\}$ with $\mathbf{I}\{Exporters\}$ while restricting our sample to only domestic firms.
+
+Table-(5) documents our results corresponding to log sales as the outcome variable, where panel-(1) covers the entire market and in panel-(2) \& (3) we focus on acute and chronic sub-markets to see if firm behavior vary across different drug markets. Column-(1) contains the estimates from full sample comparing MNCs and all domestic firms, and indicates that average sale of banned FDCs in case of MNCs declined by an additional factor of 95\% compared to the average response of domestic firms in the post-ban period.
+
+
+\begin{table}[h!] \centering
+	\caption{Inter-Firm variability in response to the En-Masse drug ban in March, 2016} 
+	\label{Table-R-3} 
+	\footnotesize
+\begin{tabular}{@{\extracolsep{1pt}}lcccccc} 
+	\\[-1.8ex]\hline 
+	\hline \\[-1.8ex] 
+	& \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+	\cline{2-7} 
+	\\[-1.8ex] & \multicolumn{6}{c}{Log\_Sales} \\ 
+	& \multicolumn{2}{c}{Panel A: Full Sample} & \multicolumn{2}{c}{Panel B: Acute Sample} & \multicolumn{2}{c}{Panel C: Chronic Sample} \\ 
+	\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+	\hline \\[-1.8ex] 
+	Treatment*Post & $-$1.428$^{***}$ & $-$0.655$^{***}$ & $-$1.779$^{***}$ & $-$0.717$^{***}$ & $-$0.971$^{***}$ & $-$0.695$^{***}$ \\ 
+	& (0.047) & (0.091) & (0.065) & (0.112) & (0.065) & (0.156) \\ 
+	Treatment*Post*MNC & $-$3.033$^{***}$ &  & $-$5.216$^{***}$ &  & 0.020 &  \\ 
+	& (0.191) &  & (0.222) &  & (0.252) &  \\ 
+	Treatment*Post*Exporters &  & $-$1.136$^{***}$ &  & $-$1.714$^{***}$ &  & $-$0.265 \\ 
+	&  & (0.111) &  & (0.140) &  & (0.185) \\ 
+	\hline \\[-1.8ex] 
+	Molecule FE & Y & Y & Y & Y & Y & Y \\ 
+	Time FE & Y & Y & Y & Y & Y & Y \\ 
+	Firm FE & Y & Y & Y & Y & Y & Y \\ 
+	Molecule*Calendar Month & Y & Y & Y & Y & Y & Y \\ 
+	Molecule*Firm FE & Y & Y & Y & Y & Y & Y \\ 
+	Geography Dummy & Y & Y & Y & Y & Y & Y \\ 
+	Molecule*Geography & Y & Y & Y & Y & Y & Y \\ 
+	Observations & 20,391,288 & 18,598,548 & 13,330,512 & 12,214,464 & 7,060,776 & 6,384,084 \\ 
+	R$^{2}$ & 0.550 & 0.541 & 0.509 & 0.500 & 0.634 & 0.624 \\ 
+	Adjusted R$^{2}$ & 0.549 & 0.540 & 0.507 & 0.499 & 0.633 & 0.624 \\ 
+	\hline 
+	\hline \\[-1.8ex] 
+	\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+	\begin{tablenotes}
+		This table provides our findings corresponding to Equation-\ref{Eq_5}  employing ordinary least squares regressions. Column (1)-(3)-(5) depicts differential response of MNCs vis-a-vis all domestic firms while column (2)-(4)-(6) investigate the response speed within domestic market between large exporters and local firms. All columns depicts results at the firm-molecule-region-time level. Sample comprises 837 molecules \& 34,652 SKUs. The evidence suggests that there is a negative and statistically significant effect in the sales especially in case of MNCs followed by large exporters. Constant term along with separate interactions of MNC (Exporter) dummy with Treatment and Post dummy are included but not reported. Robust clustered standard errors at the molecule-geography-firm level are provided in brackets.
+	\end{tablenotes}
+	\begin{tablenotes}[Source]
+		AIOCD Pharmatrac
+	\end{tablenotes}
+\end{table} 
+
+Column-(2) compares the differential response rate between exporters and local manufacturers, and estimate suggest that large exporters on average lowered their sales by an extra 67\% compared to the sales reduction carried out by local companies. Not only are these differences statistically significant but also substantial in terms of magnitude. It shows that the product abandonment behavior to some extent monotonically increases with the company's concern for reputation. While MNCs with their global operations would endure lasting reputation damage by not abiding to the regulation, similarly, big exporting domestic firms could be discredited by their foreign customers, and global health institutions in response to supplying illegitimate drugs. However, columns (3)-(6) suggest that companies tailor their responses in different product markets. The entire difference between speed of abandonment between MNCs and domestic firms was limited to the acute drug markets. Similarly, difference between exporters and local companies speed of abandoning illegitimate drugs vanish in chronic drug markets. Again, it shows the special emphasis that drug-makers across the spectrum put on chronic-markets by fearlessly operating in them even after severe regulation. While our results show that the response rate of firms differ between chronic and acute product markets, nevertheless we have not provided any empirical channel to rationalize the result albeit prior evidence in literature discussed above suggests that  special features of chronic markets can explain the differences.
+
+
+\begin{table}[h!] \centering
+	\caption{Inter-Firm variability in response to the En-Masse drug ban in March, 2016} 
+	\label{Table-R-4} 
+	\footnotesize
+\begin{tabular}{@{\extracolsep{3pt}}lcccccc} 
+	\\[-1.8ex]\hline 
+	\hline \\[-1.8ex] 
+	& \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+	\cline{2-7} 
+	\\[-1.8ex] & \multicolumn{6}{c}{Log\_Revenue} \\ 
+	& \multicolumn{2}{c}{Panel A: Full Sample} & \multicolumn{2}{c}{Panel B: Acute Sample} & \multicolumn{2}{c}{Panel C: Chronic Sample} \\ 
+	\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+	\hline \\[-1.8ex] 
+	Treatment*Post & $-$1.239$^{***}$ & $-$0.742$^{***}$ & $-$1.326$^{***}$ & $-$0.671$^{***}$ & $-$1.083$^{***}$ & $-$0.923$^{***}$ \\ 
+	& (0.031) & (0.057) & (0.039) & (0.065) & (0.050) & (0.112) \\ 
+	Treatment*Post*MNC & $-$1.292$^{***}$ &  & $-$2.118$^{***}$ &  & 0.445$^{**}$ &  \\ 
+	& (0.130) &  & (0.159) &  & (0.197) &  \\ 
+	Treatment*Post*Exporters &  & $-$0.651$^{***}$ &  & $-$0.934$^{***}$ &  & $-$0.093 \\ 
+	&  & (0.069) &  & (0.082) &  & (0.131) \\ 
+	\hline \\[-1.8ex] 
+	Molecule FE & Y & Y & Y & Y & Y & Y \\ 
+	Time FE & Y & Y & Y & Y & Y & Y \\ 
+	Firm FE & Y & Y & Y & Y & Y & Y \\ 
+	Molecule*Calendar Month & Y & Y & Y & Y & Y & Y \\ 
+	Molecule*Firm FE & Y & Y & Y & Y & Y & Y \\ 
+	Geography Dummy & Y & Y & Y & Y & Y & Y \\ 
+	Molecule*Geography & Y & Y & Y & Y & Y & Y \\ 
+	Observations & 24,517,392 & 22,410,228 & 16,642,080 & 15,275,052 & 7,875,312 & 7,135,176 \\ 
+	R$^{2}$ & 0.563 & 0.555 & 0.538 & 0.531 & 0.615 & 0.605 \\ 
+	Adjusted R$^{2}$ & 0.562 & 0.554 & 0.537 & 0.530 & 0.614 & 0.604 \\ 
+	\hline 
+	\hline \\[-1.8ex] 
+	\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+	\begin{tablenotes}
+		This table provides our findings corresponding to Equation-\ref{Eq_5}  employing ordinary least squares regressions. Column (1)-(3)-(5) depicts differential response of MNCs vis-a-vis all domestic firms while column (2)-(4)-(6) investigate the response speed within domestic market between large exporters and local firms. All columns depicts results at the firm-molecule-region-time level. Sample comprises 837 molecules \& 34,652 SKUs. The evidence suggests that there is a negative and statistically significant effect in the sales especially in case of MNCs followed by large exporters. Constant term along with separate interactions of MNC (Exporter) dummy with Treatment and Post dummy are included but not reported. Robust clustered standard errors at the molecule-geography-firm level are provided in brackets.
+	\end{tablenotes}
+	\begin{tablenotes}[Source]
+		AIOCD Pharmatrac
+	\end{tablenotes}
+\end{table} 
+
+Table-\ref{Table-R-4} examines the relative change in revenue earnings by different firms. We observe similar differences in terms of directionality between different set of firms albeit the lower magnitude of coefficients reflect the increase in prices that accompanied during post-ban period. Note that, overall MNC revenue earnings emanating from FDC drugs declined, however in chronic drug markets they managed to generate more revenues even with illegitimate drugs. That shows even MNCs strategically planned their exit strategy by weighing the costs and benefits of continuous sale of banned drugs. And they exited only those markets where costs trumped benefits, and their abandonment was not entirely driven out of their benevolence and their concerns for ethical conduct.
+
+Lastly, figure-\ref{Fig_R_5} displays the evolution of the log sales for 48 months before and 45 months after the imposition of the ban from an event study version of the equation-\ref{Eq_5} in case of all three type of firms in our sample. Prior to the imposition of March, 2016 ban, molecule sales were trending similarly regardless of the type of firms selling them. However, in the months following the ban and before the Delhi High-Court intervention there is a sudden and substantial decrease in sales for molecules owned by MNC firms followed by exporters and local firms. The sharp immediate differences in their response rates between three firms could be led by the reputation concerns among other factors.
+
+
+
+\begin{figure}[h!]
+	\caption{Event-study (E.S.) estimates for the log-sales before and after the March, 2016 ban by firm type }
+	\includegraphics[width=1\textwidth]{ES_Hetro_Firm}
+	\begin{figurenotes}
+		The black, blue and gray line represents the estimated coefficients for the indicator variable corresponding to the number of months before and after the ban of irrational FDCs in March, 2016 for log sales in case of molecules sold by MNCs, exporters, and local firms respectively. The econometric specification at the firm sub-national level is provided in Equation-\ref{Eq_5}. There is no substantial evidence for pre-trends in case of sales involving any firm type. Sample comprises 837 molecules \& 34,652 SKUs. The error bar represent the 95 percent confidence intervals with standard errors clustered at the firm-geography-molecule level. Time period of sample used in this figure goes from March-2012 to December-2019.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_R_5}
+\end{figure}
+
+The more interesting feature of the above graph is that it helps us to decipher the  post-ban dynamics, especially with regards to two subsequent major interventions that took place and how different firms adapted their initial response. Apparently, as established earlier, the Delhi HC intervention mediated the effect of ban as speed of abandonment faltered in case of all firms. However, the most astonishing part is how MNCs retracted their strategy of abandonment and lowered their speed to the levels of local companies even after the ban was re-instated. Given that it was Pfizer (a giant MNC) who first succeeded to get stay orders for their banned FDC drug in Delhi HC by exploiting loopholes in the March, 2016 ban order,\footnote{To read more about how Pfizer managed to get the first stay order in Delhi HC against March, 2016 ban please refer to \cite{srinivasan2018fixed}.} which subsequently led to quashing of bans for all 344 drugs in December, 2016. That shows how companies undermined regulation and the weak regulatory framework of India abetted them in their endeavor. 
+
+\section{Conclusion}
+
+In this paper, we analyze how market forces in correspondence to the prevailing institutions in a developing country respond to a big regulatory shock. In March, 2016 Indian Government through an executive order proscribed the manufacturing, distribution, and sale of 344 irrational FDC drugs thus rendering them unmarketable. The big regulatory event followed from a decade long fight of regulators with recalcitrant pharmaceutical industry to weed out the irrational FDC drugs that flushed Indian drug market though without any therapeutic justification. The En-Masse drug ban was both unique and vast in its scope and ambition. While the ban was enforced to cleanse Indian drug market of useless and potentially harmful drugs using a one-shot interdiction, which perhaps astounded entire pharmaceutical industry, however, the market dynamics that followed in the post-ban period were not so unfamiliar and surprising. Looking at our aggregate statistics imputed from a longitudinal data, we find that regulatory reform was perturbed by the shrewd tactics that pharmaceutical companies pursued to resist massive losses that could have resulted with the flawless execution of the reform. And the fragile regulatory environment coupled with the institutional loopholes that our legal bodies valued more than the overall public-health, abetted pharmaceutical companies in their push-back against the massive reform.
+
+Our baseline results suggest that speed of product abandonment peaked right after the ban until Delhi High Court's intervention which led to the breakdown of momentum though sales of banned FDC drugs kept plummeting at a much lower pace. More importantly, we observe post-ban dynamics varied considerably by different product markets as well as type of firms involved in their production. In particular, our results show that  speed of abandonment was primarily driven by acute FDC drugs whereas chronic drug-markets displayed a muted response especially after the HC intervention. While we were unable to empirically analyze the underlying mechanism behind the divergent response apparent in two markets, our intuition and some prior evidence suggests that chronic markets are relatively shock-resistant for reasons discussed earlier which makes them a profitable avenue for producers to sell illegitimate drugs. In addition, we document that MNCs on average withdrew from the banned FDC markets more swiftly in comparison to domestic producers. And within domestic producers, big exporter companies were more prompt in abandoning illegitimate FDCs compared to the small local companies. However, that behavior was limited to only acute drugs as we find no substantial evidence of differential response by different players in case of chronic markets after the initial ban.
+
+Our results remain robust after eliminating  unobserved regional heterogeneity as well as firm-level idiosyncrasies and controlling for seasonality. We also shed light on the potential mechanisms that are driving the speed of abandonment. Our results indicate that competitive markets comprising more producers, products, or brands exhibited a lackadaisical response compared to markets with very few firms, products, or brands which we labeled as non-competitive markets. The divergence is even more sharp in the interregnum between quashing of orders and re-imposition of the ban. Our preferred line of reasoning suggests that firms in non-competitive markets were more wary of the public and media attention as market conditions in which they operate makes it highly plausible for them to be singularly drawn and denounced for selling illegitimate products. And the ensuing reputation loss could have diminished their future business prospects. In contrast, in more crowded markets it's highly unlikely that blame would fall on the shoulders of any one particular firm or producer, and therefore we observe those markets are reluctant to reduce their presence in banned FDC market. That partly also explains the pre-trends that we observe as firms in non-competitive market settings rushed out of the markets involving controversial FDC drugs after the formation of Kokate committee (long-before the first ban) while we do not witness any such trends in case of competitive drug markets comprising banned FDCs. Moroever, our results also indicate how big MNC firms as well as large exporters who serve global markets, displayed more urgency in abandoning illegitimate products, perhaps to preserve their reputation which is essential for them to secure big contracts from multilateral organizations and even more so to operate globally.
+
+Our study contributes to many important strands of literature. First, it adds to the scarce literature on product and technology abandonment (\cite{finkelstein1985scientific}, \cite{greve1995jumping}, \cite{kennedy2011diffusion}, \cite{howard2012comparative}, \cite{agarwal2014abandoning}, \cite{greenwood2017and}, \cite{aggarwal2020science}). Relatedly, it informs us of the resistance shown by the market players in response to a big regulatory upheaval (\cite{fernandez1991resistance}, \cite{aldous2014police}, \cite{helm2006regulatory}, \cite{kroszner1998political}, \cite{tilton1997regulatory}). Our results show substantial heterogeneity in abandonment behavior within two important segments of drug markets-chronic and acute which sheds light on their inherent peculiarities which in turn market players exploit to their own advantage (\cite{gemmil2008price}, \cite{piette2006conceptually}, \cite{solomon2009cost}, \cite{goldman2004pharmacy}, \cite{skipper2013demand}). This differential treatment of sub-segments within drug markets in the event of a negative regulatory shock may have long-run welfare implications concerning patient health outcomes that need be estimated in future. In addition, a careful analysis to understand the causes driving those differences would help policy-makers to prepare well to design a general regulation for pharmaceutical industry in future.
+
+We also add to the debate on the role played by reputation concerns in steering firm behavior especially in case of MNCs on account of their non-indigenous and foreignness stature (\cite{zaheer1997dynamics}, \cite{rhee2006liability}). More generally, our study provides evidence that less-competitive markets are more sensitive to preserve their reputation compared to players in more competitive markets (\cite{prager1990firm}, \cite{bouvard2018two}, \cite{rasmusen2011monopoly}). Lastly, our study adds to the conversation on how institutions and regulations interact to engender or prevent market failures (\cite{cherry2013enforcing}, \cite{breen2012corruption}, \cite{moshirian2011global},\cite{strauss1998strong}).
+
+Our study have some limitations. While our results documents the average market trends in response to a big-regulatory shock, however, due to absence of any prior evidence recording market response to such a large shock in the context of any other country, we fail to assess the efficacy in the roll-out of the regulatory measure and its subsequent implementation. We have tried to overcome that limitation by comparing inter-market and inter-firm trends to analyze the factors that were responsible for swift abandonment of banned products. Additionally, it would be interesting to conduct a welfare analysis to see if the benefits (of not overlooking some petty loopholes) stemming from delayed implementation of bans exceeded the costs (adverse drug reactions from consuming banned FDCs), especially so in a country where public health system is debilitated with years of under-investment and continued ignorance. Also, it would also be interesting to quantify the speed of abandonment in different product markets as well as firm-markets, about which our study provides average trends only.
+
+Overall, our study provides some insights for policy-makers on the shifting market structure in response to a major regulation, and some lessons on the tactics deployed by dominant players to resist and weaken the reforms. Although, well-intended our results indicate that the massive drug-banned failed to leave a lasting impression, and perhaps that reflects the length to which  markets would go to preserve their dominance if they are left to self-govern themselves.
+
+%This divergence in response between products with different market structures
+
+
+
+
+
+
+\bibliographystyle{chicago}
+\bibliography{References_BD}
+\newpage
+\appendix
+\section{Appendix}
+
+
+
+In this section, we present a simple model to see how dynamics vary between two firms with different reputation costs in two sub market segments exhibiting different characteristics. In particular, we use a multi-market Cournot oligopoly model, and to further simplify the dynamics we assume there are only two firms in the market. Normally, the firms have to incur some fixed costs along with marginal costs for every extra unit of production. However, our setting is different. We try to analyze the market of illegitimate products, right after the ban is enacted. To simplify matters, we assume that firms would not produce any additional units once their product is banned, rather they would only try to empty their inventories of all the banned products that they had produced earlier. In that sense, it helps us to model, how market outcomes are shaped up by some critical factors in the aftermath of the ban. With that assumption, all the expenditure that the firm had incurred in producing a banned product automatically becomes sunk costs. However, in our setting firms face an additional reputation cost of supplying illegitimate products, and we assume that it vary with the quantity of the products supplied. It also means that firms aiming to recoup their sunk costs would strategically try to sell products in those segments of overall market where they could reap higher profits for the same amount of risk. And some earlier studies have shown that same product can generate higher returns in markets with low-price elasticity in a Cournot-competition setting with n-firms (\cite{aguirre2019oligopoly}). We will use that to assume that firms would put arbitrarily more weight on the markets who are less sensitive to change in prices. More specifically, we take MNC and domestic firms and assume reputation costs of the former exceed that of the latter. In addition, we also divide the overall banned drug market in two segments- acute and chronic drug markets, and again assume chronic drugs are price insensitive (as argued in paper), and both firms would assign more weight to chronic markets. Our objective, is to see how competitive dynamics coupled with these two critical assumptions would shape the equilibrium outcomes of different firms in different markets. 
+
+\subsection{Model}
+
+We label MNC firm as 'm', and the domestic firm as 'd'. We refer to chronic and acute markets using subscripts as c and r. The price charged and the quantity supplied by firm i in market j are denoted by $p_{j}^{i}$ and $q_{j}^{i}$ respectively. The inverse demand functions in chronic and acute markets are as follows:
+
+\begin{equation}
+	\begin{aligned}
+		p_{A} = a- b\cdot (q_{A}^{m} + q_{A}^{d} )
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+  p_{C} = a- d\cdot (q_{C}^{m} + q_{C}^{d} )
+	\end{aligned}
+\end{equation}
+
+The profit function of MNC and domestic firms is as follows:
+
+\begin{equation}
+	\begin{aligned}
+\pi^{m} = \beta\cdot(p_{A} \cdot q_{A}^{m}) + (1-\beta) \cdot (p_{C} \cdot q_{C}^{m}) - r^{m} \cdot (q^{m}_{A} + q^{m}_{C}) - s^{m}
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+\pi^{d} = \beta\cdot(p_{A} \cdot q_{A}^{d}) + (1-\beta) \cdot (p_{C} \cdot q_{C}^{d}) - r^{d} \cdot (q^{d}_{A} + q^{d}_{C}) - s^{d}
+	\end{aligned}
+\end{equation}
+
+
+where $\beta \in$ (0,1) is the weight assigned by firms to revenue accruing from acute drugs, and remaining to the sales from chronic drugs. We denote reputation costs incurred from selling illegitimate products by $r^{i}$ where i $\in \{m,d\}$, and $s^{i}$ represents the sunk costs faced by two firms. In what follows, we assume $r^{m} > r^{d} = 1$, and $0 < \beta < 0.5$. These two critical assumptions form the basis of our analysis. We have simply normalized the reputation costs of domestic producers to 1, and assumed that reputation costs of MNC firms strictly exceed this number. Secondly, as discussed earlier, we assume that producers would focus more on chronic drugs. 
+
+The first order condition for the maximization of the optimization problem of MNC and domestic firms in chronic and acute markets are:
+
+\[ \frac{\partial \pi^{m}}{\partial q_{A}^{m}} = \beta \cdot(a- 2bq_{A}^{m} - bq_{A}^{d}) - r^{m} = 0  \]
+\[\frac{\partial \pi^{m}}{\partial q_{C}^{m}} = \beta \cdot(a- 2dq_{C}^{m} - dq_{C}^{d}) - r^{m} = 0   \] 
+\[ \frac{\partial \pi^{d}}{\partial q_{A}^{d}} = \beta \cdot(a- 2bq_{A}^{d} - bq_{A}^{m}) - 1 = 0  \]
+\[ \frac{\partial \pi^{m}}{\partial q_{C}^{d}} = \beta \cdot(a- 2dq_{C}^{d} - bq_{C}^{m}) - 1 = 0  \]
+
+Solving for equilibrium quantities would give us:
+
+\begin{equation}
+	\begin{aligned}
+	 q_{A}^{m} = \frac{1}{3b}\cdot \left( a + \frac{1 - 2r^{m}}{\beta} \right)
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		q_{C}^{m} = \frac{1}{3d}\cdot \left( a + \frac{1 - 2r^{m}}{1 - \beta} \right)
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		q_{A}^{d} = \frac{1}{3b}\cdot \left( a + \frac{r^{M} - 2}{\beta} \right)
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		q_{C}^{d} = \frac{1}{3d}\cdot \left( a + \frac{r^{M} - 2}{1 - \beta} \right)
+	\end{aligned}
+\end{equation}
+
+In the next section, we discuss some of the results that follow from equilibrium outcomes which helps us analyze the dynamics within different product markets and firm markets.
+
+
+
+\subsection{Results}
+
+\begin{res}
+Output of the domestic firm  is higher in chronic drugs market than MNC firms (i.e. $q_{C}^{d} > q_{C}^{m}$)
+\end{res}
+
+\begin{proof}
+	\[q_{C}^{d} - q_{C}^{m}  =  r^{m} - 1 > 0  \]
+\end{proof}
+ 
+\begin{res}
+	Output of the domestic firm  is higher in acute drugs market than MNC firms (i.e. $q_{A}^{d} > q_{A}^{m}$)
+\end{res}
+
+\begin{proof}
+	\[q_{A}^{d} - q_{A}^{m}  =  r^{m} - 1 > 0  \]
+\end{proof}
+
+
+%\tag{$\star$} 
+
+\begin{res}
+	MNC would sell more in chronic markets than in acute markets (i.e. $q_{C}^{m} > q_{A}^{m}$)
+\end{res}
+
+\begin{proof}
+	\[q_{C}^{m} - q_{A}^{m}  =  a\cdot(b-d) - \left(2r^{m} - 1 \right)\cdot\left(\frac{b}{1-\beta} - \frac{d}{\beta}\right)   \] 
+	Also, from the non-negativity condition of $q_{A}^{m}$ we have: 
+	 \[a \geq \frac{2r^{m}-1}{\beta} \]
+	 Therefore,
+	 \[q_{C}^{m} - q_{A}^{m} \geq  \frac{2r^{m}-1}{\beta}\cdot(b-d) -\left(2r^{m} - 1 \right)\cdot\left(\frac{b}{1-\beta} - \frac{d}{\beta}\right)  \]
+	 For the R.H.S. to be strictly greater than zero:
+	 \[ \frac{b-d}{\beta} > \frac{b}{1-\beta} - \frac{d}{\beta}  \]
+	 Upon further solving, the above condition reduce to:
+	 \[1-\beta > \beta  \]
+	 Since $\beta$ $\in$ (0,0.5) the above condition holds.
+\end{proof}
+
+\begin{res}
+	Domestic firms would also sell more in chronic markets than in acute markets (i.e. $q_{C}^{d} > q_{A}^{d}$)
+\end{res}
+
+\begin{proof}
+	\[q_{C}^{d} - q_{A}^{d}  =  a\cdot(b-d) - \left( 2-r^{m}\right)\cdot\left(\frac{b}{1-\beta} - \frac{d}{\beta}\right)    \] 
+	Also, from the non-negativity condition of $q_{A}^{d}$ we have: 
+	\[a \geq \frac{2-r^{m}}{\beta} \]
+	Therefore,
+	\[q_{C}^{d} - q_{A}^{d} \geq \frac{2-r^{m}}{\beta}\cdot(b-d) -\left( 2-r^{m} \right)\cdot\left(\frac{b}{1-\beta} - \frac{d}{\beta}\right)  \]
+	For the R.H.S. to be strictly greater than zero:
+	\[ \frac{b-d}{\beta} > \frac{b}{1-\beta} - \frac{d}{\beta}  \]
+	Upon further solving, the above condition reduce to:
+	\[1-\beta > \beta  \]
+	Since $\beta$ $\in$ (0,$\frac{1}{2}$) the above condition holds.
+\end{proof}
+
+\begin{res}
+	The combined output of domestic firms would be greater than the combined output of MNC firms.
+\end{res}
+
+\begin{proof}
+The above result follows from Result-1 \& 2.
+\end{proof}
+
+
+\begin{res}
+	Overall overall supply in chronic market than in acute markets.
+\end{res}
+
+\begin{proof}
+	The above result follows from Result-3 \& 4.
+\end{proof}
+
+\begin{table}[h!] \centering
+	\caption{Inter-Firm variability in response to the En-Masse drug ban in March, 2016-High Media States} 
+	\label{Table-R-3} 
+	\footnotesize
+\begin{tabular}{@{\extracolsep{1pt}}lcccccc} 
+	\\[-1.8ex]\hline 
+	\hline \\[-1.8ex] 
+	& \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+	\cline{2-7} 
+	\\[-1.8ex] & \multicolumn{6}{c}{Log\_Sales} \\ 
+	& \multicolumn{2}{c}{Panel A: Full Sample} & \multicolumn{2}{c}{Panel B: Acute Sample} & \multicolumn{2}{c}{Panel C: Chronic Sample} \\ 
+	\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+	\hline \\[-1.8ex] 
+	Treatment*Post & $-$1.803$^{***}$ & $-$0.697$^{***}$ & $-$2.239$^{***}$ & $-$0.737$^{***}$ & $-$1.243$^{***}$ & $-$0.746$^{**}$ \\ 
+	& (0.109) & (0.208) & (0.154) & (0.269) & (0.150) & (0.329) \\ 
+	Treatment*Post*MNC & $-$2.774$^{***}$ &  & $-$4.967$^{***}$ &  & 0.380 &  \\ 
+	& (0.419) &  & (0.489) &  & (0.566) &  \\ 
+	Treatment:Post:Exporters &  & $-$1.546$^{***}$ &  & $-$2.200$^{***}$ &  & $-$0.601 \\ 
+	&  & (0.248) &  & (0.323) &  & (0.385) \\ 
+	\hline \\[-1.8ex] 
+	Molecule FE & Y & Y & Y & Y & Y & Y \\ 
+	Time FE & Y & Y & Y & Y & Y & Y \\ 
+	Firm FE & Y & Y & Y & Y & Y & Y \\ 
+	Molecule*Calendar Month & Y & Y & Y & Y & Y & Y \\ 
+	Molecule*Firm FE & Y & Y & Y & Y & Y & Y \\ 
+	Geography Dummy & Y & Y & Y & Y & Y & Y \\ 
+	Molecule*Geography & Y & Y & Y & Y & Y & Y \\ 
+	Observations & 3,854,040 & 3,514,764 & 2,497,848 & 2,288,052 & 1,356,192 & 1,226,712 \\ 
+	R$^{2}$ & 0.584 & 0.578 & 0.541 & 0.535 & 0.669 & 0.661 \\ 
+	Adjusted R$^{2}$ & 0.582 & 0.576 & 0.539 & 0.533 & 0.667 & 0.660 \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+	\end{tabular} 
+	\begin{tablenotes}
+		This table provides our findings corresponding to Equation-\ref{Eq_5}  employing ordinary least squares regressions. Column (1)-(3)-(5) depicts differential response of MNCs vis-a-vis all domestic firms while column (2)-(4)-(6) investigate the response speed within domestic market between large exporters and local firms. All columns depicts results at the firm-molecule-region-time level. Sample comprises 837 molecules \& 34,652 SKUs. The evidence suggests that there is a negative and statistically significant effect in the sales especially in case of MNCs followed by large exporters. Constant term along with separate interactions of MNC (Exporter) dummy with Treatment and Post dummy are included but not reported. Robust clustered standard errors at the molecule-geography-firm level are provided in brackets.
+	\end{tablenotes}
+	\begin{tablenotes}[Source]
+		AIOCD Pharmatrac
+	\end{tablenotes}
+\end{table} 
+
+
+
+\begin{table}[h!] \centering
+	\caption{Inter-Firm variability in response to the En-Masse drug ban in March, 2016-Low Media States} 
+	\label{Table-R-3} 
+	\footnotesize
+	\begin{tabular}{@{\extracolsep{1pt}}lcccccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-7} 
+		\\[-1.8ex] & \multicolumn{6}{c}{Log\_Sales} \\ 
+		& \multicolumn{2}{c}{Panel A: Full Sample} & \multicolumn{2}{c}{Panel B: Acute Sample} & \multicolumn{2}{c}{Panel C: Chronic Sample} \\ 
+		\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+		\hline \\[-1.8ex] 
+		Treatment*Post & $-$1.272$^{***}$ & $-$0.833$^{***}$ & $-$1.527$^{***}$ & $-$0.739$^{***}$ & $-$0.918$^{***}$ & $-$1.176$^{***}$ \\ 
+		& (0.101) & (0.197) & (0.141) & (0.238) & (0.139) & (0.352) \\ 
+		Treatment*Post*MNC & $-$3.070$^{***}$ &  & $-$5.593$^{***}$ &  & 0.299 &  \\ 
+		& (0.443) &  & (0.505) &  & (0.562) &  \\ 
+		Treatment:Post:Exporters &  & $-$0.681$^{***}$ &  & $-$1.366$^{***}$ &  & 0.462 \\ 
+		&  & (0.241) &  & (0.296) &  & (0.418) \\ 
+		\hline \\[-1.8ex] 
+		Molecule FE & Y & Y & Y & Y & Y & Y \\ 
+		Time FE & Y & Y & Y & Y & Y & Y \\ 
+		Firm FE & Y & Y & Y & Y & Y & Y \\ 
+		Molecule*Calendar Month & Y & Y & Y & Y & Y & Y \\ 
+		Molecule*Firm FE & Y & Y & Y & Y & Y & Y \\ 
+		Geography Dummy & Y & Y & Y & Y & Y & Y \\ 
+		Molecule*Geography & Y & Y & Y & Y & Y & Y \\ 
+		Observations & 4,160,856 & 3,806,760 & 2,727,684 & 2,505,588 & 1,433,172 & 1,301,172 \\ 
+		R$^{2}$ & 0.578 & 0.572 & 0.544 & 0.539 & 0.648 & 0.639 \\ 
+		Adjusted R$^{2}$ & 0.576 & 0.570 & 0.542 & 0.537 & 0.646 & 0.637 \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+	\end{tabular} 
+	\begin{tablenotes}
+		This table provides our findings corresponding to Equation-\ref{Eq_5}  employing ordinary least squares regressions. Column (1)-(3)-(5) depicts differential response of MNCs vis-a-vis all domestic firms while column (2)-(4)-(6) investigate the response speed within domestic market between large exporters and local firms. All columns depicts results at the firm-molecule-region-time level. Sample comprises 837 molecules \& 34,652 SKUs. The evidence suggests that there is a negative and statistically significant effect in the sales especially in case of MNCs followed by large exporters. Constant term along with separate interactions of MNC (Exporter) dummy with Treatment and Post dummy are included but not reported. Robust clustered standard errors at the molecule-geography-firm level are provided in brackets.
+	\end{tablenotes}
+	\begin{tablenotes}[Source]
+		AIOCD Pharmatrac
+	\end{tablenotes}
+\end{table} 
+
+
+
+\begin{figure}[h!]
+	\caption{Event-study (E.S.) estimates for the log-sales before and after the March, 2016 ban by firm type by Media- MNC }
+	\includegraphics[width=1\textwidth]{ES_Media_MNC}
+	\begin{figurenotes}
+		The black, blue and gray line represents the estimated coefficients for the indicator variable corresponding to the number of months before and after the ban of irrational FDCs in March, 2016 for log sales in case of molecules sold by MNCs, exporters, and local firms respectively. The econometric specification at the firm sub-national level is provided in Equation-\ref{Eq_5}. There is no substantial evidence for pre-trends in case of sales involving any firm type. Sample comprises 837 molecules \& 34,652 SKUs. The error bar represent the 95 percent confidence intervals with standard errors clustered at the firm-geography-molecule level. Time period of sample used in this figure goes from March-2012 to December-2019.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_R_5}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\caption{Event-study (E.S.) estimates for the log-sales before and after the March, 2016 ban by firm type by Media- MNC }
+	\includegraphics[width=1\textwidth]{ES_Media_Exporters}
+	\begin{figurenotes}
+		The black, blue and gray line represents the estimated coefficients for the indicator variable corresponding to the number of months before and after the ban of irrational FDCs in March, 2016 for log sales in case of molecules sold by MNCs, exporters, and local firms respectively. The econometric specification at the firm sub-national level is provided in Equation-\ref{Eq_5}. There is no substantial evidence for pre-trends in case of sales involving any firm type. Sample comprises 837 molecules \& 34,652 SKUs. The error bar represent the 95 percent confidence intervals with standard errors clustered at the firm-geography-molecule level. Time period of sample used in this figure goes from March-2012 to December-2019.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_R_5}
+\end{figure}
+
+\begin{figure}[h!]
+	\caption{Event-study (E.S.) estimates for the log-sales before and after the March, 2016 ban by firm type by Media- MNC }
+	\includegraphics[width=1\textwidth]{ES_Media_Local}
+	\begin{figurenotes}
+		The black, blue and gray line represents the estimated coefficients for the indicator variable corresponding to the number of months before and after the ban of irrational FDCs in March, 2016 for log sales in case of molecules sold by MNCs, exporters, and local firms respectively. The econometric specification at the firm sub-national level is provided in Equation-\ref{Eq_5}. There is no substantial evidence for pre-trends in case of sales involving any firm type. Sample comprises 837 molecules \& 34,652 SKUs. The error bar represent the 95 percent confidence intervals with standard errors clustered at the firm-geography-molecule level. Time period of sample used in this figure goes from March-2012 to December-2019.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_R_5}
+\end{figure}
+
+\begin{figure}[h!]
+	\caption{Event-study (E.S.) estimates for the log-sales before and after the March, 2016 ban by firm type by Media- MNC }
+	\includegraphics[width=1\textwidth]{ES_High_Media_Firms}
+	\begin{figurenotes}
+		The black, blue and gray line represents the estimated coefficients for the indicator variable corresponding to the number of months before and after the ban of irrational FDCs in March, 2016 for log sales in case of molecules sold by MNCs, exporters, and local firms respectively. The econometric specification at the firm sub-national level is provided in Equation-\ref{Eq_5}. There is no substantial evidence for pre-trends in case of sales involving any firm type. Sample comprises 837 molecules \& 34,652 SKUs. The error bar represent the 95 percent confidence intervals with standard errors clustered at the firm-geography-molecule level. Time period of sample used in this figure goes from March-2012 to December-2019.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_R_5}
+\end{figure}
+
+\begin{figure}[h!]
+	\caption{Event-study (E.S.) estimates for the log-sales before and after the March, 2016 ban by firm type by Media- MNC }
+	\includegraphics[width=1\textwidth]{ES_Low_Media_Firms}
+	\begin{figurenotes}
+		The black, blue and gray line represents the estimated coefficients for the indicator variable corresponding to the number of months before and after the ban of irrational FDCs in March, 2016 for log sales in case of molecules sold by MNCs, exporters, and local firms respectively. The econometric specification at the firm sub-national level is provided in Equation-\ref{Eq_5}. There is no substantial evidence for pre-trends in case of sales involving any firm type. Sample comprises 837 molecules \& 34,652 SKUs. The error bar represent the 95 percent confidence intervals with standard errors clustered at the firm-geography-molecule level. Time period of sample used in this figure goes from March-2012 to December-2019.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_R_5}
+\end{figure}
+
+
+
+
+
+\begin{figure}[h!]
+	\caption{Event-study (E.S.) estimates for the log-sales before and after the March, 2016 ban by firm type by Doctors per 10,000- MNC Firms}
+	\includegraphics[width=1\textwidth]{ES_Doctors_MNC}
+	\begin{figurenotes}
+		The black, blue and gray line represents the estimated coefficients for the indicator variable corresponding to the number of months before and after the ban of irrational FDCs in March, 2016 for log sales in case of molecules sold by MNCs, exporters, and local firms respectively. The econometric specification at the firm sub-national level is provided in Equation-\ref{Eq_5}. There is no substantial evidence for pre-trends in case of sales involving any firm type. Sample comprises 837 molecules \& 34,652 SKUs. The error bar represent the 95 percent confidence intervals with standard errors clustered at the firm-geography-molecule level. Time period of sample used in this figure goes from March-2012 to December-2019.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_R_5}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\caption{Event-study (E.S.) estimates for the log-sales before and after the March, 2016 ban by firm type by Doctors per 10,000- Exporters }
+	\includegraphics[width=1\textwidth]{ES_Doctors_Exporters}
+	\begin{figurenotes}
+		The black, blue and gray line represents the estimated coefficients for the indicator variable corresponding to the number of months before and after the ban of irrational FDCs in March, 2016 for log sales in case of molecules sold by MNCs, exporters, and local firms respectively. The econometric specification at the firm sub-national level is provided in Equation-\ref{Eq_5}. There is no substantial evidence for pre-trends in case of sales involving any firm type. Sample comprises 837 molecules \& 34,652 SKUs. The error bar represent the 95 percent confidence intervals with standard errors clustered at the firm-geography-molecule level. Time period of sample used in this figure goes from March-2012 to December-2019.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_R_5}
+\end{figure}
+
+\begin{figure}[h!]
+	\caption{Event-study (E.S.) estimates for the log-sales before and after the March, 2016 ban by firm type by Doctors per 10,000- Local Firms }
+	\includegraphics[width=1\textwidth]{ES_Doc_Local}
+	\begin{figurenotes}
+		The black, blue and gray line represents the estimated coefficients for the indicator variable corresponding to the number of months before and after the ban of irrational FDCs in March, 2016 for log sales in case of molecules sold by MNCs, exporters, and local firms respectively. The econometric specification at the firm sub-national level is provided in Equation-\ref{Eq_5}. There is no substantial evidence for pre-trends in case of sales involving any firm type. Sample comprises 837 molecules \& 34,652 SKUs. The error bar represent the 95 percent confidence intervals with standard errors clustered at the firm-geography-molecule level. Time period of sample used in this figure goes from March-2012 to December-2019.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_R_5}
+\end{figure}
+
+
+
+
+\begin{figure}[h!]
+	\caption{Event-study (E.S.) estimates for the log-sales before and after the March, 2016 ban by firm type by Media- MNC }
+	\includegraphics[width=1\textwidth]{ES_High_Doc_Firms}
+	\begin{figurenotes}
+		The black, blue and gray line represents the estimated coefficients for the indicator variable corresponding to the number of months before and after the ban of irrational FDCs in March, 2016 for log sales in case of molecules sold by MNCs, exporters, and local firms respectively. The econometric specification at the firm sub-national level is provided in Equation-\ref{Eq_5}. There is no substantial evidence for pre-trends in case of sales involving any firm type. Sample comprises 837 molecules \& 34,652 SKUs. The error bar represent the 95 percent confidence intervals with standard errors clustered at the firm-geography-molecule level. Time period of sample used in this figure goes from March-2012 to December-2019.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_R_5}
+\end{figure}
+
+\begin{figure}[h!]
+	\caption{Event-study (E.S.) estimates for the log-sales before and after the March, 2016 ban by firm type by Media- MNC }
+	\includegraphics[width=1\textwidth]{ES_Low_Doc_Firms}
+	\begin{figurenotes}
+		The black, blue and gray line represents the estimated coefficients for the indicator variable corresponding to the number of months before and after the ban of irrational FDCs in March, 2016 for log sales in case of molecules sold by MNCs, exporters, and local firms respectively. The econometric specification at the firm sub-national level is provided in Equation-\ref{Eq_5}. There is no substantial evidence for pre-trends in case of sales involving any firm type. Sample comprises 837 molecules \& 34,652 SKUs. The error bar represent the 95 percent confidence intervals with standard errors clustered at the firm-geography-molecule level. Time period of sample used in this figure goes from March-2012 to December-2019.
+	\end{figurenotes}
+	\begin{figurenotes}[Source]
+		AIOCD Pharmatrac
+	\end{figurenotes}
+	\label{Fig_R_5}
+\end{figure}
+
+
+
+
+
+
+
+
+\end{document}
+
+%
+%\begin{table}[h!] \centering
+%	\caption{How drug ban in March, 2016 affected sales in the affected FDCs at the national and sub-national level} 
+%	\label{Table-R-1} 
+%	\footnotesize
+%	\begin{tabular}{@{\extracolsep{10pt}}lcccccc} 
+%		\\[-1.8ex]\hline 
+%		\hline \\[-1.8ex] 
+%		& \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+%		\cline{2-7} 
+%		\\[-1.8ex] & \multicolumn{6}{c}{Log\_Sales} \\ 
+%		\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+%		\hline \\[-1.8ex] 
+%		Treatment*Post Ban & $-$1.711$^{***}$ & $-$0.654 & $-$1.804$^{***}$ & $-$1.764$^{***}$ & $-$1.805$^{***}$ & $-$1.765$^{***}$ \\ 
+%		& (0.562) & (0.564) & (0.112) & (0.112) & (0.112) & (0.112) \\ 
+%		HHI & $-$9.666$^{***}$ & $-$9.664$^{***}$ & $-$6.678$^{***}$ & $-$7.892$^{***}$ & $-$6.660$^{***}$ & $-$7.874$^{***}$ \\ 
+%		& (0.817) & (0.818) & (0.107) & (0.121) & (0.107) & (0.121) \\ 
+%		\hline \\[-1.8ex] 
+%		Treatment*Time & N & Y & Y & Y & Y & Y \\ 
+%		Time FE & Y & Y & Y & Y & Y & Y \\ 
+%		Molecule FE & Y & Y & Y & Y & Y & Y \\ 
+%		Geography Dummy & N & N & Y & Y & Y & Y \\ 
+%		Molecule*Geography & N & N & N & Y & N & Y \\ 
+%		Geography*Time & N & N & N & N & Y & Y \\ 
+%		Observations & 81,216 & 81,216 & 2,097,816 & 2,097,816 & 2,097,816 & 2,097,816 \\ 
+%		R$^{2}$ & 0.741 & 0.741 & 0.672 & 0.751 & 0.673 & 0.751 \\ 
+%		Adjusted R$^{2}$ & 0.738 & 0.738 & 0.672 & 0.748 & 0.672 & 0.748 \\ 
+%		\hline 
+%		\hline \\[-1.8ex] 
+%		\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+%	\end{tabular} 
+%	\begin{tablenotes}
+%		This table provides our baseline findings corresponding to Equation-\ref{Eq_1} \& \ref{Eq_2} employing ordinary least squares regressions. Column (1)-(2) depicts results at the national level, and column (3)-(7) at the sub-national level.
+%		We see that the interaction term is negative at both national as well as regional level. Sample comprises 837 molecules \& 34,652 SKUs. The evidence suggests that there is a negative and statistically significant effect in the sales especially so when we account for regional heterogeneity. Constant term is included but not reported. For national results  robust clustered standard errors at the molecule level are provided in parentheses.For sub-national results  robust clustered standard errors at the molecule-geography level are provided in parentheses.
+%	\end{tablenotes}
+%	\begin{tablenotes}[Source]
+%		AIOCD Pharmatrac
+%	\end{tablenotes}
+%\end{table} 
+%
+%We provide our baseline estimates from Equation-\ref{Eq_1}, \ref{Eq_2} in Table-\ref{Table-R-1}  for sales, and  Table-\ref{Table-R-2} in case of revenue, across multiple specifications. In the first table, the coefficient estimates are negative and statistically significant across all but one specification, depicting that growth rate of sales decreased atleast by 1.8\% after government banned the respective FDC drugs.
+%
+%\begin{table}[h!] \centering
+%	\caption{How drug ban in March, 2016 affected revenue in the affected FDCs at the national and sub-national level} 
+%	\label{Table-R-2} 
+%	\footnotesize
+%	\begin{tabular}{@{\extracolsep{10pt}}lcccccc} 
+%		\\[-1.8ex]\hline 
+%		\hline \\[-1.8ex] 
+%		& \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+%		\cline{2-7} 
+%		\\[-1.8ex] & \multicolumn{6}{c}{Log\_Revenue} \\ 
+%		\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+%		\hline \\[-1.8ex] 
+%		Treatment*Post Ban & $-$0.997$^{***}$ & $-$0.354 & $-$1.203$^{***}$ & $-$1.167$^{***}$ & $-$1.204$^{***}$ & $-$1.168$^{***}$ \\ 
+%		& (0.348) & (0.385) & (0.077) & (0.077) & (0.076) & (0.077) \\ 
+%		HHI & $-$8.217$^{***}$ & $-$8.215$^{***}$ & $-$5.546$^{***}$ & $-$6.719$^{***}$ & $-$5.530$^{***}$ & $-$6.704$^{***}$ \\ 
+%		& (0.723) & (0.723) & (0.092) & (0.105) & (0.092) & (0.105) \\ 
+%		\hline \\[-1.8ex] 
+%		Treatment*Time & N & Y & Y & Y & Y & Y \\ 
+%		Time FE & Y & Y & Y & Y & Y & Y \\ 
+%		Molecule FE & Y & Y & Y & Y & Y & Y \\ 
+%		Geography Dummy & N & N & Y & Y & Y & Y \\ 
+%		Molecule*Geography & N & N & N & Y & N & Y \\ 
+%		Geography*Time & N & N & N & N & Y & Y \\ 
+%		Observations & 81,216 & 81,216 & 2,097,816 & 2,097,816 & 2,097,816 & 2,097,816 \\ 
+%		R$^{2}$ & 0.754 & 0.754 & 0.677 & 0.756 & 0.677 & 0.757 \\ 
+%		Adjusted R$^{2}$ & 0.751 & 0.751 & 0.676 & 0.754 & 0.676 & 0.753 \\ 
+%		\hline 
+%		\hline \\[-1.8ex] 
+%		\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+%	\end{tabular} 
+%	\begin{tablenotes}
+%		This table provides our baseline findings corresponding to Equation-\ref{Eq_1} employing ordinary least squares regressions. We see that the interaction term is negative at both national as well as regional level. Sample comprises \textcolor{red}{8 molecules \& 369 SKUs} in case of sales regressions. The evidence suggests that there is a negative and statistically significant effect in the sales especially so when we account for regional heterogeneity. Constant term is included but not reported. For national results (Column (1)-(2)) robust clustered standard errors at the molecule level are provided in parentheses.For sub-national results (Column (3)-(6)) robust clustered standard errors at the molecule-geography level are provided in parentheses.
+%	\end{tablenotes}
+%	\begin{tablenotes}[Source]
+%		AIOCD Pharmatrac
+%	\end{tablenotes}
+%\end{table} 
+%
+
+
+
+%If number of firms producing a particular molecule exceeds the median number, which in our case is 5, then we label it as 
